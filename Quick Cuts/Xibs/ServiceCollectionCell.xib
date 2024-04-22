@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ServiceCollectionCell" customModule="Quick_Cuts" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="267" height="282"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="267" height="282"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Cda-x2-FyU">
+                        <rect key="frame" x="0.0" y="0.0" width="267" height="282"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ojE-UT-osR">
+                                <rect key="frame" x="0.0" y="0.0" width="267" height="282"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="zUg-zE-Ym6">
+                                        <rect key="frame" x="10" y="119.99999999999999" width="247" height="42.333333333333329"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Haircut" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OwA-qp-7pA">
+                                                <rect key="frame" x="0.0" y="0.0" width="247" height="18.666666666666668"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rs 250" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="my3-Px-Ms9">
+                                                <rect key="frame" x="0.0" y="23.666666666666657" width="247" height="18.666666666666671"/>
+                                                <fontDescription key="fontDescription" name="SFCompact-Regular" family="SF Compact" pointSize="16"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" name="D5D5D5"/>
+                                <constraints>
+                                    <constraint firstItem="zUg-zE-Ym6" firstAttribute="leading" secondItem="ojE-UT-osR" secondAttribute="leading" constant="10" id="fVs-bY-qp7"/>
+                                    <constraint firstAttribute="trailing" secondItem="zUg-zE-Ym6" secondAttribute="trailing" constant="10" id="p3a-Zu-4bh"/>
+                                    <constraint firstItem="zUg-zE-Ym6" firstAttribute="top" relation="greaterThanOrEqual" secondItem="ojE-UT-osR" secondAttribute="top" constant="10" id="tEL-YJ-VR0"/>
+                                    <constraint firstItem="zUg-zE-Ym6" firstAttribute="centerY" secondItem="ojE-UT-osR" secondAttribute="centerY" id="x4h-4H-uMH"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="13"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                    </stackView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="Cda-x2-FyU" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="2oS-Fh-aZ2"/>
+                <constraint firstItem="Cda-x2-FyU" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="MXH-f6-YHe"/>
+                <constraint firstAttribute="bottom" secondItem="Cda-x2-FyU" secondAttribute="bottom" id="gUx-sD-Z5f"/>
+                <constraint firstAttribute="trailing" secondItem="Cda-x2-FyU" secondAttribute="trailing" id="zS8-yj-Och"/>
+            </constraints>
+            <size key="customSize" width="267" height="282"/>
+            <connections>
+                <outlet property="serviceName" destination="OwA-qp-7pA" id="wY3-Nn-pDO"/>
+                <outlet property="servicePrice" destination="my3-Px-Ms9" id="9jK-n4-3t4"/>
+            </connections>
+            <point key="canvasLocation" x="286.25954198473283" y="70.422535211267615"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="D5D5D5">
+            <color red="0.83529411764705885" green="0.83529411764705885" blue="0.83529411764705885" alpha="0.30000001192092896" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
