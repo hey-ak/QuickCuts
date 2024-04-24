@@ -45,6 +45,11 @@
                                     <constraint firstItem="kr1-Dn-aDb" firstAttribute="centerX" secondItem="LbJ-o8-svA" secondAttribute="centerX" id="bsI-FT-xV1"/>
                                     <constraint firstItem="kr1-Dn-aDb" firstAttribute="centerY" secondItem="LbJ-o8-svA" secondAttribute="centerY" id="drC-CH-LJA"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="13"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                     </stackView>
