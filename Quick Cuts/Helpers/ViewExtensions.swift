@@ -8,7 +8,7 @@ extension UICollectionView {
     }
 }
 
-<<<<<<< HEAD
+
 //extension UITextField{
 //   @IBInspectable var placeHolderColor: UIColor? {
 //        get {
@@ -85,7 +85,7 @@ extension UICollectionView {
 //        }
 //    }
 //}
-=======
+
 extension UITextField{
    @IBInspectable var placeHolderColor: UIColor? {
         get {
@@ -169,4 +169,4 @@ extension UITableView {
         self.register(UINib(nibName: cellID, bundle: nil), forCellReuseIdentifier: cellID)
     }
 }
->>>>>>> dev
+
