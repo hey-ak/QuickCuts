@@ -84,3 +84,10 @@ extension UIView {
         }
     }
 }
+
+extension UITableView {
+    
+    func registerCellFromNib(cellID: String) {
+        self.register(UINib(nibName: cellID, bundle: nil), forCellReuseIdentifier: cellID)
+    }
+}
