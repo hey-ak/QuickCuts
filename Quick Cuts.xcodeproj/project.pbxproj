@@ -31,6 +31,8 @@
 		7EB8209E2BD8BED3007DA6FD /* DateSelectCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB8209C2BD8BED3007DA6FD /* DateSelectCollectionViewCell.swift */; };
 		7EB8209F2BD8BED3007DA6FD /* DateSelectCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EB8209D2BD8BED3007DA6FD /* DateSelectCollectionViewCell.xib */; };
 		7EB820A12BD8E6DA007DA6FD /* DateAndTimeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB820A02BD8E6DA007DA6FD /* DateAndTimeVC.swift */; };
+		7EB820A42BD90716007DA6FD /* TimeSlotCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB820A22BD90716007DA6FD /* TimeSlotCollectionCell.swift */; };
+		7EB820A52BD90716007DA6FD /* TimeSlotCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EB820A32BD90716007DA6FD /* TimeSlotCollectionCell.xib */; };
 		7EDC08B32BD82C4500870986 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDC08B22BD82C4500870986 /* ProfileVC.swift */; };
 		7EDC08B62BD82CA000870986 /* ProfileTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDC08B42BD82CA000870986 /* ProfileTableCell.swift */; };
 		7EDC08B72BD82CA000870986 /* ProfileTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EDC08B52BD82CA000870986 /* ProfileTableCell.xib */; };
@@ -67,6 +69,8 @@
 		7EB8209C2BD8BED3007DA6FD /* DateSelectCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSelectCollectionViewCell.swift; sourceTree = "<group>"; };
 		7EB8209D2BD8BED3007DA6FD /* DateSelectCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DateSelectCollectionViewCell.xib; sourceTree = "<group>"; };
 		7EB820A02BD8E6DA007DA6FD /* DateAndTimeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateAndTimeVC.swift; sourceTree = "<group>"; };
+		7EB820A22BD90716007DA6FD /* TimeSlotCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSlotCollectionCell.swift; sourceTree = "<group>"; };
+		7EB820A32BD90716007DA6FD /* TimeSlotCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeSlotCollectionCell.xib; sourceTree = "<group>"; };
 		7EDC08B22BD82C4500870986 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		7EDC08B42BD82CA000870986 /* ProfileTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableCell.swift; sourceTree = "<group>"; };
 		7EDC08B52BD82CA000870986 /* ProfileTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileTableCell.xib; sourceTree = "<group>"; };
@@ -161,6 +165,8 @@
 				7EDC08B52BD82CA000870986 /* ProfileTableCell.xib */,
 				7EB8209C2BD8BED3007DA6FD /* DateSelectCollectionViewCell.swift */,
 				7EB8209D2BD8BED3007DA6FD /* DateSelectCollectionViewCell.xib */,
+				7EB820A22BD90716007DA6FD /* TimeSlotCollectionCell.swift */,
+				7EB820A32BD90716007DA6FD /* TimeSlotCollectionCell.xib */,
 			);
 			path = Xibs;
 			sourceTree = "<group>";
@@ -254,6 +260,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EB820A52BD90716007DA6FD /* TimeSlotCollectionCell.xib in Resources */,
 				7E6762F62BD77EE0005F914B /* CancelServiceCollectionCell.xib in Resources */,
 				C068DE6A2BCFCA6500147AAF /* Assets.xcassets in Resources */,
 				7EDC08B72BD82CA000870986 /* ProfileTableCell.xib in Resources */,
@@ -292,6 +299,7 @@
 				7E5ABD972BD420250079F5F6 /* HomeCatagoryCollectionCell.swift in Sources */,
 				7E5ABDAD2BD50C1A0079F5F6 /* BookingCancelledCollectionCell.swift in Sources */,
 				7E5ABDAF2BD57DBC0079F5F6 /* ExploreVC.swift in Sources */,
+				7EB820A42BD90716007DA6FD /* TimeSlotCollectionCell.swift in Sources */,
 				C068DE612BCFCA6400147AAF /* AppDelegate.swift in Sources */,
 				7EDC08B32BD82C4500870986 /* ProfileVC.swift in Sources */,
 				7E5ABDA92BD50AD80079F5F6 /* BookingCompletedCollectionCell.swift in Sources */,
