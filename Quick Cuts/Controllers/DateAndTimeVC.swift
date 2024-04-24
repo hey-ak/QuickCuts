@@ -15,6 +15,12 @@ class DateAndTimeVC: UIViewController {
         }
     }
     
+    @IBOutlet weak var TimeSlotCollectionView: UICollectionView! {
+        didSet {
+            TimeSlotCollectionView.registerCellFromNib(cellID: "TimeSlotCollectionCell")
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -24,25 +30,39 @@ class DateAndTimeVC: UIViewController {
 
 }
 
-// mera name akshay
-
-
 
 extension DateAndTimeVC : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        8
+        if collectionView == DayAndDateCollectionView {
+            return 7
+        }
+        else {
+            return 100
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DateSelectCollectionViewCell", for: indexPath) as! DateSelectCollectionViewCell
-        
-        return cell
+        if collectionView == DayAndDateCollectionView {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DateSelectCollectionViewCell", for: indexPath) as! DateSelectCollectionViewCell
+            return cell
+        }
+        else {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TimeSlotCollectionCell", for: indexPath) as! TimeSlotCollectionCell
+            return cell
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = ( collectionView.frame.width - 30 ) / 4
-        let height = ( collectionView.frame.height ) / 1
-        return CGSize(width: width, height: height)
+        if collectionView == DayAndDateCollectionView {
+            let width = ( collectionView.frame.width - 30 ) / 4
+            let height = ( collectionView.frame.height ) / 1
+            return CGSize(width: width, height: height)
+        }
+        else {
+            let width = ( collectionView.frame.width ) / 3
+//            let height = ( collectionView.frame.height ) / 4
+            return CGSize(width: width, height: width)
+        }
     }
     
 }
