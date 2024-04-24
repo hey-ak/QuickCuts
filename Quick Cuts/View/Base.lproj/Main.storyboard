@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cN9-T4-X1C">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SvN-n5-aSO">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
@@ -1547,16 +1547,41 @@ Our runway expects have curated some of the most popular services at Salon
             </objects>
             <point key="canvasLocation" x="4201" y="1108"/>
         </scene>
-        <!--View Controller-->
+        <!--NotificationVC-->
         <scene sceneID="GCe-6K-bVj">
             <objects>
-                <viewController id="SvN-n5-aSO" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NotificationVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="SvN-n5-aSO" customClass="NotificationVC" customModule="Quick_Cuts" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Kwh-lB-zoU">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="B44-Kx-AZX">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" indicatorStyle="white" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="2RE-IE-YTF">
+                                        <rect key="frame" x="20" y="0.0" width="353" height="759"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="SvN-n5-aSO" id="1Sr-VM-cfJ"/>
+                                            <outlet property="delegate" destination="SvN-n5-aSO" id="QJw-Fb-lcI"/>
+                                        </connections>
+                                    </tableView>
+                                </subviews>
+                                <edgeInsets key="layoutMargins" top="0.0" left="20" bottom="0.0" right="20"/>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="OCT-7o-TUR"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="B44-Kx-AZX" firstAttribute="leading" secondItem="OCT-7o-TUR" secondAttribute="leading" id="2be-CP-QEp"/>
+                            <constraint firstItem="B44-Kx-AZX" firstAttribute="top" secondItem="OCT-7o-TUR" secondAttribute="top" id="7dh-Zl-uKb"/>
+                            <constraint firstItem="B44-Kx-AZX" firstAttribute="trailing" secondItem="OCT-7o-TUR" secondAttribute="trailing" id="DhP-IT-p78"/>
+                            <constraint firstItem="B44-Kx-AZX" firstAttribute="bottom" secondItem="OCT-7o-TUR" secondAttribute="bottom" id="Gil-eX-osE"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="notificationTableView" destination="2RE-IE-YTF" id="gva-QV-YCC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Msb-jb-Oyj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
