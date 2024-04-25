@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		7E26FD862BD3C17B0028D31B /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E26FD852BD3C17B0028D31B /* ViewExtensions.swift */; };
+		7E362AFD2BDAE11600E66A61 /* dummyTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E362AFB2BDAE11600E66A61 /* dummyTableCell.swift */; };
+		7E362AFE2BDAE11600E66A61 /* dummyTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E362AFC2BDAE11600E66A61 /* dummyTableCell.xib */; };
+		7E362B012BDAE2A600E66A61 /* profileHeadTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E362AFF2BDAE2A600E66A61 /* profileHeadTableCell.swift */; };
+		7E362B022BDAE2A600E66A61 /* profileHeadTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E362B002BDAE2A600E66A61 /* profileHeadTableCell.xib */; };
 		7E4B90D12BD3B7D40083D50A /* SFHello-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7E4B90D02BD3B7D40083D50A /* SFHello-Regular.ttf */; };
 		7E5ABD922BD419230079F5F6 /* HomeCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E5ABD912BD419230079F5F6 /* HomeCollectionCell.xib */; };
 		7E5ABD932BD419230079F5F6 /* HomeCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5ABD902BD419230079F5F6 /* HomeCollectionCell.swift */; };
@@ -57,6 +61,10 @@
 
 /* Begin PBXFileReference section */
 		7E26FD852BD3C17B0028D31B /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
+		7E362AFB2BDAE11600E66A61 /* dummyTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dummyTableCell.swift; sourceTree = "<group>"; };
+		7E362AFC2BDAE11600E66A61 /* dummyTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = dummyTableCell.xib; sourceTree = "<group>"; };
+		7E362AFF2BDAE2A600E66A61 /* profileHeadTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileHeadTableCell.swift; sourceTree = "<group>"; };
+		7E362B002BDAE2A600E66A61 /* profileHeadTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = profileHeadTableCell.xib; sourceTree = "<group>"; };
 		7E4B90D02BD3B7D40083D50A /* SFHello-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFHello-Regular.ttf"; sourceTree = "<group>"; };
 		7E5ABD902BD419230079F5F6 /* HomeCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionCell.swift; sourceTree = "<group>"; };
 		7E5ABD912BD419230079F5F6 /* HomeCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCollectionCell.xib; sourceTree = "<group>"; };
@@ -200,6 +208,10 @@
 				C02F855E2BD985D4009C6375 /* NotificationHeaderCell.xib */,
 				FFFD336C2BDA5D920031B7C6 /* AlbumCollectionViewCell.swift */,
 				FFFD336D2BDA5D920031B7C6 /* AlbumCollectionViewCell.xib */,
+				7E362AFB2BDAE11600E66A61 /* dummyTableCell.swift */,
+				7E362AFC2BDAE11600E66A61 /* dummyTableCell.xib */,
+				7E362AFF2BDAE2A600E66A61 /* profileHeadTableCell.swift */,
+				7E362B002BDAE2A600E66A61 /* profileHeadTableCell.xib */,
 			);
 			path = Xibs;
 			sourceTree = "<group>";
@@ -299,6 +311,7 @@
 				7EDC08B72BD82CA000870986 /* ProfileTableCell.xib in Resources */,
 				7E5ABDAC2BD50C1A0079F5F6 /* BookingCancelledCollectionCell.xib in Resources */,
 				C02F85592BD97334009C6375 /* NotificationTableViewCell.xib in Resources */,
+				7E362B022BDAE2A600E66A61 /* profileHeadTableCell.xib in Resources */,
 				7E5ABD9E2BD4E7A50079F5F6 /* ServiceCollectionCell.xib in Resources */,
 				7EB8209F2BD8BED3007DA6FD /* DateSelectCollectionViewCell.xib in Resources */,
 				7E5ABD922BD419230079F5F6 /* HomeCollectionCell.xib in Resources */,
@@ -306,6 +319,7 @@
 				7E5ABD962BD420250079F5F6 /* HomeCatagoryCollectionCell.xib in Resources */,
 				7E5ABDA82BD50AD80079F5F6 /* BookingCompletedCollectionCell.xib in Resources */,
 				C02F855F2BD985D4009C6375 /* NotificationHeaderCell.xib in Resources */,
+				7E362AFE2BDAE11600E66A61 /* dummyTableCell.xib in Resources */,
 				C068DE6D2BCFCA6500147AAF /* Base in Resources */,
 				C068DE682BCFCA6400147AAF /* Base in Resources */,
 				7E4B90D12BD3B7D40083D50A /* SFHello-Regular.ttf in Resources */,
@@ -321,6 +335,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E6762F82BD77FEB005F914B /* CancelServiceVC.swift in Sources */,
+				7E362B012BDAE2A600E66A61 /* profileHeadTableCell.swift in Sources */,
+				7E362AFD2BDAE11600E66A61 /* dummyTableCell.swift in Sources */,
 				7E5ABDA52BD506860079F5F6 /* BookingVC.swift in Sources */,
 				7E6762F52BD77EE0005F914B /* CancelServiceCollectionCell.swift in Sources */,
 				7EB820A12BD8E6DA007DA6FD /* DateAndTimeVC.swift in Sources */,
