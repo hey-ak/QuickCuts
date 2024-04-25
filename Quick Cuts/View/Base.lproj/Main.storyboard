@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SvN-n5-aSO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QzY-z3-UAK">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
@@ -14,7 +14,7 @@
         <!--Item-->
         <scene sceneID="lwZ-2p-5L5">
             <objects>
-                <viewController id="807-Ug-M3x" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignUpVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="807-Ug-M3x" customClass="SignUpVC" customModule="Quick_Cuts" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Nos-bv-muy">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -279,6 +279,9 @@
                                                                                 <real key="value" value="13"/>
                                                                             </userDefinedRuntimeAttribute>
                                                                         </userDefinedRuntimeAttributes>
+                                                                        <connections>
+                                                                            <action selector="signUpDidTapped:" destination="807-Ug-M3x" eventType="touchUpInside" id="BPo-wj-uwI"/>
+                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                             </stackView>
@@ -383,6 +386,9 @@
                                                                         </fragment>
                                                                     </attributedString>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="alradyMemeberDidTapped:" destination="807-Ug-M3x" eventType="touchUpInside" id="Uku-0T-tmK"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
@@ -420,7 +426,7 @@
         <!--Item-->
         <scene sceneID="v1Q-um-324">
             <objects>
-                <viewController id="QzY-z3-UAK" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignInVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="QzY-z3-UAK" customClass="SignInVC" customModule="Quick_Cuts" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="J2s-D7-dMM">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -665,6 +671,9 @@
                                                                         <real key="value" value="13"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="signInButtonDidTapped:" destination="QzY-z3-UAK" eventType="touchUpInside" id="TdO-Up-hCl"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
@@ -756,7 +765,7 @@
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal">
                                                             <attributedString key="attributedTitle">
-                                                                <fragment content="Already a member ?">
+                                                                <fragment content="Don’t have an Account ?">
                                                                     <attributes>
                                                                         <color key="NSColor" red="1" green="0.39068000000000003" blue="0.30556" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <font key="NSFont" size="15" name="HelveticaNeue-Bold"/>
@@ -769,6 +778,9 @@
                                                                 </fragment>
                                                             </attributedString>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="dontHaveAccButtonDidTapped:" destination="QzY-z3-UAK" eventType="touchUpInside" id="ueJ-gU-Fuv"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -1380,7 +1392,7 @@ Our runway expects have curated some of the most popular services at Salon
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="709"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="cJe-7y-42L">
-                                                <rect key="frame" x="0.0" y="0.0" width="393" height="772.66666666666663"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="393" height="809"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xN0-74-sVC">
                                                         <rect key="frame" x="15" y="0.0" width="363" height="53.666666666666664"/>
@@ -1392,16 +1404,16 @@ Our runway expects have curated some of the most popular services at Salon
                                                                     <constraint firstAttribute="height" constant="20" id="b1E-Bt-ocg"/>
                                                                 </constraints>
                                                             </view>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Your Date and Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N4i-Nr-GF0">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Your Date and Time" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N4i-Nr-GF0">
                                                                 <rect key="frame" x="0.0" y="19.999999999999996" width="363" height="33.666666666666657"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
-                                                                <nil key="textColor"/>
+                                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="FUy-VB-pO9">
-                                                        <rect key="frame" x="15" y="53.666666666666664" width="363" height="102.66666666666669"/>
+                                                        <rect key="frame" x="15" y="53.666666666666657" width="363" height="146.33333333333334"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y6b-Cu-xes">
                                                                 <rect key="frame" x="0.0" y="0.0" width="363" height="10"/>
@@ -1410,28 +1422,28 @@ Our runway expects have curated some of the most popular services at Salon
                                                                     <constraint firstAttribute="height" constant="10" id="7yp-zJ-CE5"/>
                                                                 </constraints>
                                                             </view>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Service Will approximately takes 30 min" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kP9-0S-o42">
-                                                                <rect key="frame" x="0.0" y="9.9999999999999964" width="363" height="52.666666666666657"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                                                <color key="textColor" name="5E5E5E"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Service Will approximately takes 30 min" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kP9-0S-o42">
+                                                                <rect key="frame" x="0.0" y="10.000000000000004" width="363" height="51.333333333333343"/>
+                                                                <fontDescription key="fontDescription" name="SFPro-Regular" family="SF Pro" pointSize="22"/>
+                                                                <color key="textColor" red="0.23529" green="0.23529" blue="0.26274999999999998" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KVI-jQ-40A">
-                                                                <rect key="frame" x="0.0" y="62.666666666666686" width="363" height="40"/>
+                                                                <rect key="frame" x="0.0" y="61.333333333333343" width="363" height="85"/>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="height" constant="40" id="mZn-CD-EJg"/>
+                                                                    <constraint firstAttribute="width" secondItem="KVI-jQ-40A" secondAttribute="height" multiplier="342:80" id="Ay1-Z1-qfG"/>
                                                                 </constraints>
                                                             </view>
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vNQ-PV-MGq">
-                                                        <rect key="frame" x="15" y="156.33333333333331" width="363" height="140"/>
+                                                        <rect key="frame" x="15" y="200" width="363" height="87"/>
                                                         <subviews>
                                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="AQ5-ds-3q1">
-                                                                <rect key="frame" x="0.0" y="0.0" width="363" height="140"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="363" height="87"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="679-eY-Xkj">
+                                                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="25" minimumInteritemSpacing="0.0" id="679-eY-Xkj">
                                                                     <size key="itemSize" width="128" height="128"/>
                                                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -1445,28 +1457,42 @@ Our runway expects have curated some of the most popular services at Salon
                                                             </collectionView>
                                                         </subviews>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="140" id="yR3-hB-kYM"/>
+                                                            <constraint firstAttribute="width" secondItem="vNQ-PV-MGq" secondAttribute="height" multiplier="342:82" id="kti-Mn-UDs"/>
                                                         </constraints>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Oln-7V-wwm">
-                                                        <rect key="frame" x="15" y="296.33333333333331" width="363" height="50"/>
+                                                        <rect key="frame" x="15" y="287" width="363" height="65.666666666666686"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6xJ-kw-txY">
-                                                                <rect key="frame" x="0.0" y="0.0" width="363" height="50"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="363" height="31.666666666666668"/>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" secondItem="6xJ-kw-txY" secondAttribute="height" multiplier="342:30" id="grS-v8-oe3"/>
+                                                                </constraints>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KML-gl-5tt">
+                                                                <rect key="frame" x="0.0" y="31.666666666666686" width="363" height="2"/>
+                                                                <color key="backgroundColor" red="0.5725490196078431" green="0.5725490196078431" blue="0.5725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="2" id="YDC-OZ-f1Q"/>
+                                                                </constraints>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ztn-Hm-l2C">
+                                                                <rect key="frame" x="0.0" y="33.666666666666686" width="363" height="32"/>
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" secondItem="Ztn-Hm-l2C" secondAttribute="height" multiplier="342:30" id="L3X-J1-cH4"/>
+                                                                </constraints>
                                                             </view>
                                                         </subviews>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="50" id="T6b-GP-tJF"/>
-                                                        </constraints>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="atb-Bj-uxm">
-                                                        <rect key="frame" x="15" y="346.33333333333326" width="363" height="350"/>
+                                                        <rect key="frame" x="15" y="352.66666666666674" width="363" height="350"/>
                                                         <subviews>
                                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="wFU-L9-ebv">
                                                                 <rect key="frame" x="0.0" y="0.0" width="363" height="350"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Hlc-Ar-JCZ">
+                                                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="15" minimumInteritemSpacing="0.0" id="Hlc-Ar-JCZ">
                                                                     <size key="itemSize" width="128" height="128"/>
                                                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -1484,25 +1510,31 @@ Our runway expects have curated some of the most popular services at Salon
                                                         </constraints>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="yWv-JG-j21">
-                                                        <rect key="frame" x="15" y="696.33333333333337" width="363" height="76.333333333333371"/>
+                                                        <rect key="frame" x="15" y="702.66666666666663" width="363" height="106.33333333333337"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SmN-fz-UOM">
-                                                                <rect key="frame" x="0.0" y="0.0" width="363" height="20"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="363" height="50"/>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="height" constant="20" id="mwJ-XZ-37R"/>
+                                                                    <constraint firstAttribute="height" constant="50" id="mwJ-XZ-37R"/>
                                                                 </constraints>
                                                             </view>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CBm-XN-UdI">
-                                                                <rect key="frame" x="0.0" y="20.000000000000004" width="363" height="56.333333333333343"/>
+                                                                <rect key="frame" x="0.0" y="50" width="363" height="56.333333333333343"/>
                                                                 <color key="backgroundColor" name="EC6E57"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="56.359999999999999" id="myH-ey-eEh"/>
                                                                 </constraints>
-                                                                <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="plain" title="Button">
-                                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                </buttonConfiguration>
+                                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="19"/>
+                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                <state key="normal" title="Select Payment Method">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                        <real key="value" value="13"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
@@ -1541,6 +1573,7 @@ Our runway expects have curated some of the most popular services at Salon
                     <connections>
                         <outlet property="DayAndDateCollectionView" destination="AQ5-ds-3q1" id="WHW-do-k9c"/>
                         <outlet property="TimeSlotCollectionView" destination="wFU-L9-ebv" id="o1K-zG-JZm"/>
+                        <outlet property="timeSlotHeightObserver" destination="15A-RS-aca" id="p1g-v8-6Jy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lro-W4-y7T" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1590,7 +1623,7 @@ Our runway expects have curated some of the most popular services at Salon
         <!--Explore-->
         <scene sceneID="Pzi-nV-AA6">
             <objects>
-                <viewController storyboardIdentifier="ExploreVC" id="g4H-bR-Kge" customClass="ExploreVC" customModule="Quick_Cuts" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NewExploreVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="g4H-bR-Kge" customClass="NewExploreVC" customModule="Quick_Cuts" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kfR-su-19o">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1611,7 +1644,7 @@ Our runway expects have curated some of the most popular services at Salon
                     </view>
                     <tabBarItem key="tabBarItem" title="Explore" image="location.fill" catalog="system" id="4aR-Tc-0pa"/>
                     <connections>
-                        <outlet property="mapView" destination="pcb-3k-kWm" id="8yc-ob-nKk"/>
+                        <outlet property="mapView" destination="pcb-3k-kWm" id="xUk-oX-iuo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zYa-dc-ndQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -2051,20 +2084,20 @@ Our runway expects have curated some of the most popular services at Salon
             </objects>
             <point key="canvasLocation" x="2178" y="382"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Custom TabbarVC-->
         <scene sceneID="uuw-eV-k6h">
             <objects>
-                <tabBarController id="3eB-Zr-hvm" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="CustomTabbarVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3eB-Zr-hvm" customClass="CustomTabbarVC" customModule="Quick_Cuts" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="X2g-qE-bc8">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="xFh-lv-rE8" kind="relationship" relationship="viewControllers" id="WhT-xR-f68"/>
-                        <segue destination="g4H-bR-Kge" kind="relationship" relationship="viewControllers" id="e48-SL-fIl"/>
-                        <segue destination="Yuz-Is-amq" kind="relationship" relationship="viewControllers" id="VBq-7z-kFQ"/>
-                        <segue destination="AXO-C4-au6" kind="relationship" relationship="viewControllers" id="rHu-YI-CG0"/>
+                        <segue destination="xFh-lv-rE8" kind="relationship" relationship="viewControllers" id="EbV-Of-wIX"/>
+                        <segue destination="g4H-bR-Kge" kind="relationship" relationship="viewControllers" id="AkT-FI-HI5"/>
+                        <segue destination="Yuz-Is-amq" kind="relationship" relationship="viewControllers" id="NUC-SE-vMX"/>
+                        <segue destination="AXO-C4-au6" kind="relationship" relationship="viewControllers" id="87V-BT-eDg"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UZi-Xu-xKV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -2074,11 +2107,11 @@ Our runway expects have curated some of the most popular services at Salon
     </scenes>
     <resources>
         <image name="bell.badge.fill" catalog="system" width="117" height="128"/>
-        <image name="calendar.badge.plus" catalog="system" width="128" height="109"/>
+        <image name="calendar.badge.plus" catalog="system" width="32" height="32"/>
         <image name="chevron.backward" catalog="system" width="97" height="128"/>
         <image name="chevron.down" catalog="system" width="128" height="70"/>
         <image name="eye" width="512" height="512"/>
-        <image name="house.fill" catalog="system" width="128" height="104"/>
+        <image name="house.fill" catalog="system" width="32" height="32"/>
         <image name="image 2" width="400" height="400"/>
         <image name="location.fill" catalog="system" width="128" height="119"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>

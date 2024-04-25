@@ -8,6 +8,8 @@
 import UIKit
 
 class DateAndTimeVC: UIViewController {
+    
+    private var contentSizeObservation:NSKeyValueObservation?
 
     @IBOutlet weak var DayAndDateCollectionView: UICollectionView! {
         didSet {
@@ -18,8 +20,15 @@ class DateAndTimeVC: UIViewController {
     @IBOutlet weak var TimeSlotCollectionView: UICollectionView! {
         didSet {
             TimeSlotCollectionView.registerCellFromNib(cellID: "TimeSlotCollectionCell")
+            contentSizeObservation = TimeSlotCollectionView.observe(\.contentSize, options: [.new]) { [weak self] TimeSlotCollectionView, change in
+                self?.TimeSlotCollectionView.invalidateIntrinsicContentSize()
+                self?.timeSlotHeightObserver.constant = TimeSlotCollectionView.contentSize.height
+                self?.view.layoutIfNeeded()
+            }
         }
     }
+    
+    @IBOutlet weak var timeSlotHeightObserver: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,7 +46,7 @@ extension DateAndTimeVC : UICollectionViewDelegate, UICollectionViewDataSource, 
             return 7
         }
         else {
-            return 100
+            return 15
         }
     }
     
@@ -54,14 +63,13 @@ extension DateAndTimeVC : UICollectionViewDelegate, UICollectionViewDataSource, 
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if collectionView == DayAndDateCollectionView {
-            let width = ( collectionView.frame.width - 30 ) / 4
-            let height = ( collectionView.frame.height ) / 1
-            return CGSize(width: width, height: height)
+            let width = ( collectionView.frame.width - 75 ) / 4
+            return CGSize(width: width, height: collectionView.frame.height)
         }
         else {
-            let width = ( collectionView.frame.width ) / 3
-//            let height = ( collectionView.frame.height ) / 4
-            return CGSize(width: width, height: width)
+            let width = ( collectionView.frame.width - 30 ) / 3
+            let height = (43 * width) / 107
+            return CGSize(width: width, height: height)
         }
     }
     

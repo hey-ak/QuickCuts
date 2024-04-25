@@ -23,18 +23,18 @@
                                 <rect key="frame" x="0.0" y="0.0" width="287" height="202"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="kr1-Dn-aDb">
-                                        <rect key="frame" x="118.33333333333333" y="74.666666666666671" width="50.333333333333329" height="52.666666666666671"/>
+                                        <rect key="frame" x="126.33333333333333" y="75.333333333333329" width="34.666666666666671" height="51.333333333333329"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MON" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TNN-84-kHe">
-                                                <rect key="frame" x="0.0" y="0.0" width="50.333333333333336" height="26.333333333333332"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                                <nil key="textColor"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tue" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="TNN-84-kHe">
+                                                <rect key="frame" x="0.0" y="0.0" width="34.666666666666664" height="25.666666666666668"/>
+                                                <fontDescription key="fontDescription" name="SFPro-Regular" family="SF Pro" pointSize="22"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="01" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d5t-ml-vr1">
-                                                <rect key="frame" x="0.0" y="26.333333333333329" width="50.333333333333336" height="26.333333333333329"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                                <nil key="textColor"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="02" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="d5t-ml-vr1">
+                                                <rect key="frame" x="0.0" y="25.666666666666671" width="34.666666666666664" height="25.666666666666671"/>
+                                                <fontDescription key="fontDescription" name="SFPro-Regular" family="SF Pro" pointSize="22"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -44,6 +44,7 @@
                                 <constraints>
                                     <constraint firstItem="kr1-Dn-aDb" firstAttribute="centerX" secondItem="LbJ-o8-svA" secondAttribute="centerX" id="bsI-FT-xV1"/>
                                     <constraint firstItem="kr1-Dn-aDb" firstAttribute="centerY" secondItem="LbJ-o8-svA" secondAttribute="centerY" id="drC-CH-LJA"/>
+                                    <constraint firstItem="kr1-Dn-aDb" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="LbJ-o8-svA" secondAttribute="leading" constant="5" id="tN2-3S-zs7"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">

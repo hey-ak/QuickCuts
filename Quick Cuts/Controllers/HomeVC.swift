@@ -128,4 +128,9 @@ extension HomeVC: UICollectionViewDelegate,UICollectionViewDataSource,UICollecti
         }
        return CGSize(width: 60, height: collectionView.frame.size.height)
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let nextVC = storyboard?.instantiateViewController(withIdentifier: "SelectserviceVC") as! SelectserviceVC
+        navigationController?.pushViewController(nextVC, animated: true)
+    }
 }
