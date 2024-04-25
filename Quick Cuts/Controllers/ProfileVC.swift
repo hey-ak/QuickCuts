@@ -8,6 +8,11 @@
 import UIKit
 
 class ProfileVC: UIViewController {
+    
+    let profileData = [
+        ["Your Profile", "Payment Method", "Favourities", "Transactions"],
+        ["Settings", "Help Centre", "Privacy Policy", "Log-out"],
+        ]
 
     @IBOutlet weak var profileTableView: UITableView! {
         didSet {
@@ -26,15 +31,17 @@ class ProfileVC: UIViewController {
 
 extension ProfileVC : UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        10
+        profileData[section].count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileTableCell") as! ProfileTableCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileTableCell", for: indexPath) as! ProfileTableCell
+        cell.profileLabel?.text = profileData[indexPath.section][indexPath.row]
+        //cell.backgroundColor = .red
         return cell
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 52
+    func numberOfSections(in tableView: UITableView) -> Int {
+        2
     }
 }

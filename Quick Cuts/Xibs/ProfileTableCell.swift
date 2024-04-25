@@ -9,6 +9,9 @@ import UIKit
 
 class ProfileTableCell: UITableViewCell {
 
+    @IBOutlet weak var profileLabel: UILabel!
+    @IBOutlet weak var profileIcon: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
