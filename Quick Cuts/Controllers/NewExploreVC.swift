@@ -12,7 +12,6 @@ class NewExploreVC: UIViewController, MKMapViewDelegate, UISearchBarDelegate, CL
 
         setupSearchBar()
         setupLocationManager()
-        setupCurrentLocationButton()
 
         mapView.delegate = self
     }
@@ -21,12 +20,23 @@ class NewExploreVC: UIViewController, MKMapViewDelegate, UISearchBarDelegate, CL
         searchBar.delegate = self
         searchBar.placeholder = "Search for places"
         searchBar.translatesAutoresizingMaskIntoConstraints = false
+        searchBar.backgroundImage = UIImage()
+        searchBar.backgroundColor = UIColor(white: 1, alpha: 0.85)
+        searchBar.layer.cornerRadius = 25
+        searchBar.clipsToBounds = true
         view.addSubview(searchBar)
 
+        if let textFieldInsideSearchBar = searchBar.value(forKey: "searchField") as? UITextField,
+           let glassIconView = textFieldInsideSearchBar.leftView as? UIImageView {
+
+            glassIconView.image = UIImage(systemName: "mic.fill")
+            glassIconView.tintColor = .gray
+        }
+
         NSLayoutConstraint.activate([
-            searchBar.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            searchBar.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            searchBar.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            searchBar.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10),
+            searchBar.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
+            searchBar.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
             searchBar.heightAnchor.constraint(equalToConstant: 50)
         ])
     }
@@ -35,29 +45,6 @@ class NewExploreVC: UIViewController, MKMapViewDelegate, UISearchBarDelegate, CL
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
-    }
-
-    private func setupCurrentLocationButton() {
-        let button = UIButton(type: .system)
-        button.setTitle("Current Location", for: .normal)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(button)
-
-        NSLayoutConstraint.activate([
-            button.topAnchor.constraint(equalTo: searchBar.bottomAnchor, constant: 10),
-            button.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
-            button.widthAnchor.constraint(equalToConstant: 150),
-            button.heightAnchor.constraint(equalToConstant: 30)
-        ])
-
-        button.addTarget(self, action: #selector(centerMapOnUserButtonClicked), for: .touchUpInside)
-    }
-
-    @objc private func centerMapOnUserButtonClicked() {
-        if let location = locationManager.location?.coordinate {
-            let region = MKCoordinateRegion(center: location, latitudinalMeters: 10000, longitudinalMeters: 10000)
-            mapView.setRegion(region, animated: true)
-        }
     }
 
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
@@ -137,7 +124,7 @@ class CardViewController: UIViewController {
         view.addSubview(textView)
 
         let closeButton = UIButton(type: .system)
-        closeButton.setTitle("⬇︎", for: .normal)
+        closeButton.setTitle("􀄩", for: .normal)
         closeButton.translatesAutoresizingMaskIntoConstraints = false
         closeButton.addTarget(self, action: #selector(closeCardView), for: .touchUpInside)
         view.addSubview(closeButton)
