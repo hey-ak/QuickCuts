@@ -1,72 +1,160 @@
-//
-//  NewExploreVC.swift
-//  Quick Cuts
-//
-//  Created by Amit Kumar Dhal on 25/04/24.
-//
-
 import UIKit
 import MapKit
 
-class NewExploreVC: UIViewController, MKMapViewDelegate  {
-    
+class NewExploreVC: UIViewController, MKMapViewDelegate, UISearchBarDelegate, CLLocationManagerDelegate {
+
     @IBOutlet weak var mapView: MKMapView!
+    let locationManager = CLLocationManager()
+    let searchBar = UISearchBar()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-        
-        
-        let center = CLLocationCoordinate2D(latitude: 30.483997, longitude: 76.593948)
-        let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 1, longitudeDelta: 1))
-        self.mapView.setRegion(region, animated: true)
-        
-        let annotation = MKPointAnnotation()  // <-- new instance here
-        annotation.coordinate = center
-        annotation.title = "Point \(center)"
-        mapView.addAnnotation(annotation)
-        
+        setupSearchBar()
+        setupLocationManager()
+        setupCurrentLocationButton()
+
         mapView.delegate = self
-        
-        showRouteOnMap(pickupCoordinate: center, destinationCoordinate: .init(latitude: 19.0330, longitude: 73.0297))
     }
-    
-    
-    
-    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
 
-        if let routePolyline = overlay as? MKPolyline {
-            let renderer = MKPolylineRenderer(polyline: routePolyline)
-            renderer.strokeColor = UIColor.blue.withAlphaComponent(0.9)
-            renderer.lineWidth = 7
-            return renderer
+    private func setupSearchBar() {
+        searchBar.delegate = self
+        searchBar.placeholder = "Search for places"
+        searchBar.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(searchBar)
+
+        NSLayoutConstraint.activate([
+            searchBar.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            searchBar.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            searchBar.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            searchBar.heightAnchor.constraint(equalToConstant: 50)
+        ])
+    }
+
+    private func setupLocationManager() {
+        locationManager.delegate = self
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
+    }
+
+    private func setupCurrentLocationButton() {
+        let button = UIButton(type: .system)
+        button.setTitle("Current Location", for: .normal)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(button)
+
+        NSLayoutConstraint.activate([
+            button.topAnchor.constraint(equalTo: searchBar.bottomAnchor, constant: 10),
+            button.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            button.widthAnchor.constraint(equalToConstant: 150),
+            button.heightAnchor.constraint(equalToConstant: 30)
+        ])
+
+        button.addTarget(self, action: #selector(centerMapOnUserButtonClicked), for: .touchUpInside)
+    }
+
+    @objc private func centerMapOnUserButtonClicked() {
+        if let location = locationManager.location?.coordinate {
+            let region = MKCoordinateRegion(center: location, latitudinalMeters: 10000, longitudinalMeters: 10000)
+            mapView.setRegion(region, animated: true)
         }
-
-        return MKOverlayRenderer()
     }
-    
-    func showRouteOnMap(pickupCoordinate: CLLocationCoordinate2D, destinationCoordinate: CLLocationCoordinate2D) {
 
-            let request = MKDirections.Request()
-            request.source = MKMapItem(placemark: MKPlacemark(coordinate: pickupCoordinate, addressDictionary: nil))
-            request.destination = MKMapItem(placemark: MKPlacemark(coordinate: destinationCoordinate, addressDictionary: nil))
-            request.requestsAlternateRoutes = true
-            request.transportType = .automobile
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
 
-            let directions = MKDirections(request: request)
+        let localSearchRequest = MKLocalSearch.Request()
+        localSearchRequest.naturalLanguageQuery = searchBar.text
 
-            directions.calculate { [unowned self] response, error in
-                guard let unwrappedResponse = response else { return }
-                
-                //for getting just one route
-                if let route = unwrappedResponse.routes.first {
-                    //show on map
-                    self.mapView.addOverlay(route.polyline)
-                    //set the map area to show the route
-                    self.mapView.setVisibleMapRect(route.polyline.boundingMapRect, edgePadding: UIEdgeInsets.init(top: 80.0, left: 20.0, bottom: 100.0, right: 20.0), animated: true)
-                }
+        let localSearch = MKLocalSearch(request: localSearchRequest)
+        localSearch.start { [weak self] (response, error) in
+            guard let self = self else { return }
+            guard let response = response else { return }
 
+            self.mapView.removeAnnotations(self.mapView.annotations)
+
+            for item in response.mapItems {
+                let annotation = MKPointAnnotation()
+                annotation.coordinate = item.placemark.coordinate
+                annotation.title = item.name
+                self.mapView.addAnnotation(annotation)
             }
         }
+    }
+
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let location = locations.last {
+            let region = MKCoordinateRegion(center: location.coordinate, latitudinalMeters: 10000, longitudinalMeters: 10000)
+            mapView.setRegion(region, animated: true)
+        }
+    }
+
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        if annotation is MKUserLocation {
+            return nil
+        }
+
+        let annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "pin")
+        annotationView.canShowCallout = true
+        let btn = UIButton(type: .detailDisclosure)
+        annotationView.rightCalloutAccessoryView = btn
+        return annotationView
+    }
+
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        if let annotation = view.annotation {
+            fetchPlaceDetails(for: annotation)
+        }
+    }
+
+    private func fetchPlaceDetails(for annotation: MKAnnotation) {
+        let placeDetails = "Details about \(annotation.title ?? "") fetched from the internet."
+        showCardView(with: placeDetails)
+    }
+
+    private func showCardView(with details: String) {
+        let cardViewController = CardViewController()
+        cardViewController.placeDetails = details
+        cardViewController.modalPresentationStyle = .overFullScreen
+        present(cardViewController, animated: true, completion: nil)
+    }
+}
+
+class CardViewController: UIViewController {
+
+    var placeDetails: String?
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        view.backgroundColor = UIColor(white: 0.9, alpha: 1)
+
+        let textView = UITextView()
+        textView.translatesAutoresizingMaskIntoConstraints = false
+        textView.text = placeDetails
+        textView.isEditable = false
+        textView.backgroundColor = .clear
+        view.addSubview(textView)
+
+        let closeButton = UIButton(type: .system)
+        closeButton.setTitle("⬇︎", for: .normal)
+        closeButton.translatesAutoresizingMaskIntoConstraints = false
+        closeButton.addTarget(self, action: #selector(closeCardView), for: .touchUpInside)
+        view.addSubview(closeButton)
+
+        let height = UIScreen.main.bounds.height * 0.5
+        NSLayoutConstraint.activate([
+            textView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            textView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            textView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -50),
+            textView.heightAnchor.constraint(equalToConstant: height),
+            
+            closeButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            closeButton.topAnchor.constraint(equalTo: textView.bottomAnchor, constant: 10)
+        ])
+    }
+
+    @objc private func closeCardView() {
+        dismiss(animated: true, completion: nil)
+    }
 }
