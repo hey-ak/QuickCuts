@@ -50,6 +50,9 @@
 		C068DE682BCFCA6400147AAF /* Base in Resources */ = {isa = PBXBuildFile; fileRef = C068DE672BCFCA6400147AAF /* Base */; };
 		C068DE6A2BCFCA6500147AAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C068DE692BCFCA6500147AAF /* Assets.xcassets */; };
 		C068DE6D2BCFCA6500147AAF /* Base in Resources */ = {isa = PBXBuildFile; fileRef = C068DE6C2BCFCA6500147AAF /* Base */; };
+		FFFD336E2BDA5D920031B7C6 /* AlbumCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFFD336D2BDA5D920031B7C6 /* AlbumCollectionViewCell.xib */; };
+		FFFD336F2BDA5D920031B7C6 /* AlbumCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFD336C2BDA5D920031B7C6 /* AlbumCollectionViewCell.swift */; };
+		FFFD33752BDA61340031B7C6 /* AlbumVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFD33742BDA61340031B7C6 /* AlbumVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -98,6 +101,9 @@
 		C068DE692BCFCA6500147AAF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C068DE6C2BCFCA6500147AAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C068DE6E2BCFCA6500147AAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FFFD336C2BDA5D920031B7C6 /* AlbumCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCollectionViewCell.swift; sourceTree = "<group>"; };
+		FFFD336D2BDA5D920031B7C6 /* AlbumCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlbumCollectionViewCell.xib; sourceTree = "<group>"; };
+		FFFD33742BDA61340031B7C6 /* AlbumVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +158,7 @@
 				7E6CDC5C2BD999D600A81D46 /* SignInVC.swift */,
 				7E6CDC5E2BD99A8B00A81D46 /* SignUpVC.swift */,
 				7E6CDC602BD99EAE00A81D46 /* NewExploreVC.swift */,
+				FFFD33742BDA61340031B7C6 /* AlbumVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -191,6 +198,8 @@
 				C02F85582BD97334009C6375 /* NotificationTableViewCell.xib */,
 				C02F855D2BD985D4009C6375 /* NotificationHeaderCell.swift */,
 				C02F855E2BD985D4009C6375 /* NotificationHeaderCell.xib */,
+				FFFD336C2BDA5D920031B7C6 /* AlbumCollectionViewCell.swift */,
+				FFFD336D2BDA5D920031B7C6 /* AlbumCollectionViewCell.xib */,
 			);
 			path = Xibs;
 			sourceTree = "<group>";
@@ -293,6 +302,7 @@
 				7E5ABD9E2BD4E7A50079F5F6 /* ServiceCollectionCell.xib in Resources */,
 				7EB8209F2BD8BED3007DA6FD /* DateSelectCollectionViewCell.xib in Resources */,
 				7E5ABD922BD419230079F5F6 /* HomeCollectionCell.xib in Resources */,
+				FFFD336E2BDA5D920031B7C6 /* AlbumCollectionViewCell.xib in Resources */,
 				7E5ABD962BD420250079F5F6 /* HomeCatagoryCollectionCell.xib in Resources */,
 				7E5ABDA82BD50AD80079F5F6 /* BookingCompletedCollectionCell.xib in Resources */,
 				C02F855F2BD985D4009C6375 /* NotificationHeaderCell.xib in Resources */,
@@ -330,9 +340,11 @@
 				7E5ABDAD2BD50C1A0079F5F6 /* BookingCancelledCollectionCell.swift in Sources */,
 				7EB820A42BD90716007DA6FD /* TimeSlotCollectionCell.swift in Sources */,
 				7E6CDC5D2BD999D600A81D46 /* SignInVC.swift in Sources */,
+				FFFD336F2BDA5D920031B7C6 /* AlbumCollectionViewCell.swift in Sources */,
 				C068DE612BCFCA6400147AAF /* AppDelegate.swift in Sources */,
 				7EDC08B32BD82C4500870986 /* ProfileVC.swift in Sources */,
 				C02F855C2BD98242009C6375 /* NotificationVC.swift in Sources */,
+				FFFD33752BDA61340031B7C6 /* AlbumVC.swift in Sources */,
 				7E5ABDA92BD50AD80079F5F6 /* BookingCompletedCollectionCell.swift in Sources */,
 				7E26FD862BD3C17B0028D31B /* ViewExtensions.swift in Sources */,
 				C068DE632BCFCA6400147AAF /* SceneDelegate.swift in Sources */,
