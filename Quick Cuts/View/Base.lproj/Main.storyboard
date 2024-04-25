@@ -1205,13 +1205,14 @@ Our runway expects have curated some of the most popular services at Salon
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="sZf-rr-VKy">
-                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <rect key="frame" x="0.0" y="59.000000000000007" width="393" height="20.333333333333336"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="C9a-Or-cjl">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="759"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="C9a-Or-cjl">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="20.333333333333332"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dII-YD-BtX">
-                                                <rect key="frame" x="0.0" y="0.0" width="393" height="759"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.backward" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="dII-YD-BtX">
+                                                <rect key="frame" x="0.0" y="2" width="12.666666666666666" height="16.666666666666664"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                         <real key="value" value="0.0"/>
@@ -1219,6 +1220,9 @@ Our runway expects have curated some of the most popular services at Salon
                                                 </userDefinedRuntimeAttributes>
                                             </imageView>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="wA2-Ny-tmS"/>
+                                        </constraints>
                                     </stackView>
                                 </subviews>
                             </stackView>
