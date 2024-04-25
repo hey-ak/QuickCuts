@@ -30,6 +30,8 @@ class SelectserviceVC: UIViewController {
     
     
     @IBAction func selectDateAndTimeDidTapped(_ sender: Any) {
+        let nextVC = storyboard?.instantiateViewController(withIdentifier: "DateAndTimeVC") as! DateAndTimeVC
+        navigationController?.pushViewController(nextVC, animated: true)
     }
 }
 extension SelectserviceVC : UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
