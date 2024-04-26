@@ -43,6 +43,11 @@ class DateAndTimeVC: UIViewController {
     }
     
     
+    @IBAction func backButtonDidTapped(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    
     
     
 

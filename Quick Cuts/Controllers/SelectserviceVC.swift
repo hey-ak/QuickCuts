@@ -27,6 +27,9 @@ class SelectserviceVC: UIViewController {
         super.viewDidLoad()
     }
     
+    @IBAction func backButtonDidTapped(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
     
     
     @IBAction func selectDateAndTimeDidTapped(_ sender: Any) {

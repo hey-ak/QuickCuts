@@ -27,7 +27,7 @@ class HomeVC: UIViewController {
         didSet {
             switch ratedCollectionSeeAllState {
             case .selected:
-                self.ratedCollectionViewData = 60
+                self.ratedCollectionViewData = 20
                 
             case .unselected:
                 self.ratedCollectionViewData = nil
@@ -39,7 +39,7 @@ class HomeVC: UIViewController {
         didSet {
             switch mainCollectionSeeAllState {
             case .selected:
-                self.mainCollectionViewData = 60
+                self.mainCollectionViewData = 20
                 
             case .unselected:
                 self.mainCollectionViewData = nil

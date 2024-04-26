@@ -19,4 +19,9 @@ class PaymentVC: UIViewController {
         let nextVC = storyboard?.instantiateViewController(withIdentifier: "PaymentSuccessFulVC") as! PaymentSuccessFulVC
         navigationController?.pushViewController(nextVC, animated: true)
     }
+    
+    @IBAction func backButtonDidTapped(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
+    
 }
