@@ -68,3 +68,9 @@ struct Salon {
     let isVerified: Bool
     let services: [Service]
 }
+struct Review {
+    var user: User
+    var salon: Salon
+    var rating: Double
+    var comment: String
+}
