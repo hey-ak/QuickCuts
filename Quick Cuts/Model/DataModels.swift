@@ -7,6 +7,7 @@
 
 import Foundation
 
+//By Akshat
 struct User {
     let userID: UUID
     let name: String
@@ -20,7 +21,7 @@ struct User {
 enum Gender {
     case male, female, other
 }
-
+//By Amit
 struct Payment {
     let paymentID: UUID
     let amount: Double
@@ -34,7 +35,14 @@ enum PaymentMethod {
     case cash
     case upi
 }
+struct Service {
+    let serviceID: UUID
+    let serviceName: String
+    let price: Int
+}
 
+
+//By Akshay
 struct BookingSlot {
     let bookingSlotID: UUID
     let customer: User
@@ -47,7 +55,7 @@ struct BookingSlot {
     var canVisit: Bool = true
     var payment: Payment?
 }
-
+//By Neeraj
 struct Salon {
     let salonID: UUID
     let email: String
@@ -59,10 +67,4 @@ struct Salon {
     let location: [String]
     let isVerified: Bool
     let services: [Service]
-}
-
-struct Service {
-    let serviceID: UUID
-    let serviceName: String
-    let price: Int
 }
