@@ -15,7 +15,7 @@ struct User {
     let gender: Gender
     let photos: [String]
     let favoriteSalons: [Salon]
-    let visitedSalons: [VisitedSalon]
+    let visitedSalons: [String]
 }
 enum Gender {
     case male, female, other
@@ -56,7 +56,7 @@ struct Salon {
     let rating: Double
     let photoURLs: [String]
     let address: String
-    let location: Location Coordinate
+    let location: [String]
     let isVerified: Bool
     let services: [Service]
 }
