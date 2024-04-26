@@ -35,6 +35,8 @@
 		7E6CDC5D2BD999D600A81D46 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6CDC5C2BD999D600A81D46 /* SignInVC.swift */; };
 		7E6CDC5F2BD99A8B00A81D46 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6CDC5E2BD99A8B00A81D46 /* SignUpVC.swift */; };
 		7E6CDC612BD99EAE00A81D46 /* NewExploreVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6CDC602BD99EAE00A81D46 /* NewExploreVC.swift */; };
+		7EABEA822BDB5B3700307D7C /* PaymentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EABEA812BDB5B3700307D7C /* PaymentVC.swift */; };
+		7EABEA842BDB616100307D7C /* PaymentSuccessFulVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EABEA832BDB616100307D7C /* PaymentSuccessFulVC.swift */; };
 		7EB8209E2BD8BED3007DA6FD /* DateSelectCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB8209C2BD8BED3007DA6FD /* DateSelectCollectionViewCell.swift */; };
 		7EB8209F2BD8BED3007DA6FD /* DateSelectCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EB8209D2BD8BED3007DA6FD /* DateSelectCollectionViewCell.xib */; };
 		7EB820A12BD8E6DA007DA6FD /* DateAndTimeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB820A02BD8E6DA007DA6FD /* DateAndTimeVC.swift */; };
@@ -88,6 +90,8 @@
 		7E6CDC5C2BD999D600A81D46 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		7E6CDC5E2BD99A8B00A81D46 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		7E6CDC602BD99EAE00A81D46 /* NewExploreVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewExploreVC.swift; sourceTree = "<group>"; };
+		7EABEA812BDB5B3700307D7C /* PaymentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentVC.swift; sourceTree = "<group>"; };
+		7EABEA832BDB616100307D7C /* PaymentSuccessFulVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentSuccessFulVC.swift; sourceTree = "<group>"; };
 		7EB8209C2BD8BED3007DA6FD /* DateSelectCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSelectCollectionViewCell.swift; sourceTree = "<group>"; };
 		7EB8209D2BD8BED3007DA6FD /* DateSelectCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DateSelectCollectionViewCell.xib; sourceTree = "<group>"; };
 		7EB820A02BD8E6DA007DA6FD /* DateAndTimeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateAndTimeVC.swift; sourceTree = "<group>"; };
@@ -167,6 +171,8 @@
 				7E6CDC5E2BD99A8B00A81D46 /* SignUpVC.swift */,
 				7E6CDC602BD99EAE00A81D46 /* NewExploreVC.swift */,
 				FFFD33742BDA61340031B7C6 /* AlbumVC.swift */,
+				7EABEA812BDB5B3700307D7C /* PaymentVC.swift */,
+				7EABEA832BDB616100307D7C /* PaymentSuccessFulVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -216,6 +222,13 @@
 			path = Xibs;
 			sourceTree = "<group>";
 		};
+		7EABEA852BDB627100307D7C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		C068DE542BCFCA6400147AAF = {
 			isa = PBXGroup;
 			children = (
@@ -235,6 +248,7 @@
 		C068DE5F2BCFCA6400147AAF /* Quick Cuts */ = {
 			isa = PBXGroup;
 			children = (
+				7EABEA852BDB627100307D7C /* Model */,
 				7E5ABD8F2BD419050079F5F6 /* Xibs */,
 				7E26FD842BD3C1650028D31B /* Helpers */,
 				7E4B90CF2BD3B13B0083D50A /* Resources */,
@@ -335,6 +349,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E6762F82BD77FEB005F914B /* CancelServiceVC.swift in Sources */,
+				7EABEA822BDB5B3700307D7C /* PaymentVC.swift in Sources */,
 				7E362B012BDAE2A600E66A61 /* profileHeadTableCell.swift in Sources */,
 				7E362AFD2BDAE11600E66A61 /* dummyTableCell.swift in Sources */,
 				7E5ABDA52BD506860079F5F6 /* BookingVC.swift in Sources */,
@@ -364,6 +379,7 @@
 				7E5ABDA92BD50AD80079F5F6 /* BookingCompletedCollectionCell.swift in Sources */,
 				7E26FD862BD3C17B0028D31B /* ViewExtensions.swift in Sources */,
 				C068DE632BCFCA6400147AAF /* SceneDelegate.swift in Sources */,
+				7EABEA842BDB616100307D7C /* PaymentSuccessFulVC.swift in Sources */,
 				C02F85602BD985D4009C6375 /* NotificationHeaderCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

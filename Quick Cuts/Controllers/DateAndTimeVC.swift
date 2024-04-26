@@ -35,7 +35,16 @@ class DateAndTimeVC: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-
+    
+    
+    @IBAction func paymentMethodButtonDidTapped(_ sender: Any) {
+        let nextVC = storyboard?.instantiateViewController(withIdentifier: "PaymentVC") as! PaymentVC
+        navigationController?.pushViewController(nextVC, animated: true)
+    }
+    
+    
+    
+    
 
 }
 

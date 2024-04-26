@@ -91,7 +91,13 @@ class HomeVC: UIViewController {
     @IBAction func mainCollectionSeeAllDidTapped(_ sender: Any) {
         mainCollectionSeeAllState = (mainCollectionSeeAllState == .selected) ? .unselected : .selected
     }
-
+    
+    
+    @IBAction func notificationButtonDidTapped(_ sender: Any) {
+        let nextVC = storyboard?.instantiateViewController(withIdentifier: "NotificationVC") as! NotificationVC
+        navigationController?.pushViewController(nextVC, animated: true)
+    }
+    
 
 
 }

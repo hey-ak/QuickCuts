@@ -1144,10 +1144,10 @@ Our runway expects have curated some of the most popular services at Salon
             </objects>
             <point key="canvasLocation" x="2178" y="1108"/>
         </scene>
-        <!--View Controller-->
+        <!--Payment Success FulVC-->
         <scene sceneID="9T0-eA-7Nj">
             <objects>
-                <viewController id="7cJ-Oc-fTY" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PaymentSuccessFulVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="7cJ-Oc-fTY" customClass="PaymentSuccessFulVC" customModule="Quick_Cuts" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pfi-9U-hxW">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1199,7 +1199,7 @@ Our runway expects have curated some of the most popular services at Salon
         <!--Item-->
         <scene sceneID="rON-Oe-S9g">
             <objects>
-                <viewController id="sot-c6-Dpm" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PaymentVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="sot-c6-Dpm" customClass="PaymentVC" customModule="Quick_Cuts" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="47L-G1-P3V">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1632,6 +1632,9 @@ Our runway expects have curated some of the most popular services at Salon
                                                         <real key="value" value="13"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="proceedToCheckOutButtonDidTapped:" destination="sot-c6-Dpm" eventType="touchUpInside" id="Top-nS-Cvj"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -2045,6 +2048,9 @@ Our runway expects have curated some of the most popular services at Salon
                                                                         <real key="value" value="13"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="paymentMethodButtonDidTapped:" destination="cN9-T4-X1C" eventType="touchUpInside" id="03p-Ri-g7X"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
@@ -2304,6 +2310,9 @@ Our runway expects have curated some of the most popular services at Salon
                                                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="-10" maxY="0.0"/>
                                                                         <state key="normal" image="bell.badge.fill" catalog="system"/>
+                                                                        <connections>
+                                                                            <action selector="notificationButtonDidTapped:" destination="xFh-lv-rE8" eventType="touchUpInside" id="MZg-jx-8kB"/>
+                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                             </stackView>

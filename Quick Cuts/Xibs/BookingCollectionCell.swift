@@ -13,5 +13,4 @@ class BookingCollectionCell: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-
 }
