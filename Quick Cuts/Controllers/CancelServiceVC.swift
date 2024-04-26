@@ -28,12 +28,17 @@ class CancelServiceVC: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    
+    @IBAction func backButtonDidTapped(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
+    
 
 }
 
 extension CancelServiceVC : UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        50
+        10
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

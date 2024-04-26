@@ -22,6 +22,8 @@ class BookingVC: UIViewController {
     @IBAction func segmentControlDidChange(_ sender: UISegmentedControl) {
         bookingCollectionView.reloadData()
     }
+    
+    
 }
 extension BookingVC: UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
     
