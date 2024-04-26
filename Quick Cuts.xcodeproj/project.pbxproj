@@ -37,6 +37,7 @@
 		7E6CDC612BD99EAE00A81D46 /* NewExploreVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6CDC602BD99EAE00A81D46 /* NewExploreVC.swift */; };
 		7EABEA822BDB5B3700307D7C /* PaymentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EABEA812BDB5B3700307D7C /* PaymentVC.swift */; };
 		7EABEA842BDB616100307D7C /* PaymentSuccessFulVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EABEA832BDB616100307D7C /* PaymentSuccessFulVC.swift */; };
+		7EABEA872BDB67F000307D7C /* DataModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EABEA862BDB67F000307D7C /* DataModels.swift */; };
 		7EB8209E2BD8BED3007DA6FD /* DateSelectCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB8209C2BD8BED3007DA6FD /* DateSelectCollectionViewCell.swift */; };
 		7EB8209F2BD8BED3007DA6FD /* DateSelectCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EB8209D2BD8BED3007DA6FD /* DateSelectCollectionViewCell.xib */; };
 		7EB820A12BD8E6DA007DA6FD /* DateAndTimeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB820A02BD8E6DA007DA6FD /* DateAndTimeVC.swift */; };
@@ -92,6 +93,7 @@
 		7E6CDC602BD99EAE00A81D46 /* NewExploreVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewExploreVC.swift; sourceTree = "<group>"; };
 		7EABEA812BDB5B3700307D7C /* PaymentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentVC.swift; sourceTree = "<group>"; };
 		7EABEA832BDB616100307D7C /* PaymentSuccessFulVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentSuccessFulVC.swift; sourceTree = "<group>"; };
+		7EABEA862BDB67F000307D7C /* DataModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModels.swift; sourceTree = "<group>"; };
 		7EB8209C2BD8BED3007DA6FD /* DateSelectCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSelectCollectionViewCell.swift; sourceTree = "<group>"; };
 		7EB8209D2BD8BED3007DA6FD /* DateSelectCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DateSelectCollectionViewCell.xib; sourceTree = "<group>"; };
 		7EB820A02BD8E6DA007DA6FD /* DateAndTimeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateAndTimeVC.swift; sourceTree = "<group>"; };
@@ -225,6 +227,7 @@
 		7EABEA852BDB627100307D7C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				7EABEA862BDB67F000307D7C /* DataModels.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -349,6 +352,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E6762F82BD77FEB005F914B /* CancelServiceVC.swift in Sources */,
+				7EABEA872BDB67F000307D7C /* DataModels.swift in Sources */,
 				7EABEA822BDB5B3700307D7C /* PaymentVC.swift in Sources */,
 				7E362B012BDAE2A600E66A61 /* profileHeadTableCell.swift in Sources */,
 				7E362AFD2BDAE11600E66A61 /* dummyTableCell.swift in Sources */,
