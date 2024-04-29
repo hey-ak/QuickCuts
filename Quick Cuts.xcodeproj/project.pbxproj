@@ -47,6 +47,9 @@
 		7EDC08B32BD82C4500870986 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDC08B22BD82C4500870986 /* ProfileVC.swift */; };
 		7EDC08B62BD82CA000870986 /* ProfileTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDC08B42BD82CA000870986 /* ProfileTableCell.swift */; };
 		7EDC08B72BD82CA000870986 /* ProfileTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EDC08B52BD82CA000870986 /* ProfileTableCell.xib */; };
+		A9660B0D2BDF632300DBFAA6 /* CentreCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9660B0B2BDF632300DBFAA6 /* CentreCollectionViewCell.swift */; };
+		A9660B0E2BDF632300DBFAA6 /* CentreCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9660B0C2BDF632300DBFAA6 /* CentreCollectionViewCell.xib */; };
+		A9660B102BDF64A000DBFAA6 /* CentreVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9660B0F2BDF64A000DBFAA6 /* CentreVC.swift */; };
 		C02F85592BD97334009C6375 /* NotificationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C02F85582BD97334009C6375 /* NotificationTableViewCell.xib */; };
 		C02F855A2BD97334009C6375 /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02F85572BD97334009C6375 /* NotificationTableViewCell.swift */; };
 		C02F855C2BD98242009C6375 /* NotificationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02F855B2BD98242009C6375 /* NotificationVC.swift */; };
@@ -104,6 +107,9 @@
 		7EDC08B22BD82C4500870986 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		7EDC08B42BD82CA000870986 /* ProfileTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableCell.swift; sourceTree = "<group>"; };
 		7EDC08B52BD82CA000870986 /* ProfileTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileTableCell.xib; sourceTree = "<group>"; };
+		A9660B0B2BDF632300DBFAA6 /* CentreCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CentreCollectionViewCell.swift; sourceTree = "<group>"; };
+		A9660B0C2BDF632300DBFAA6 /* CentreCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CentreCollectionViewCell.xib; sourceTree = "<group>"; };
+		A9660B0F2BDF64A000DBFAA6 /* CentreVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CentreVC.swift; sourceTree = "<group>"; };
 		C02F85572BD97334009C6375 /* NotificationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTableViewCell.swift; sourceTree = "<group>"; };
 		C02F85582BD97334009C6375 /* NotificationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationTableViewCell.xib; sourceTree = "<group>"; };
 		C02F855B2BD98242009C6375 /* NotificationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationVC.swift; sourceTree = "<group>"; };
@@ -185,6 +191,7 @@
 				FFFD33742BDA61340031B7C6 /* AlbumVC.swift */,
 				7EABEA812BDB5B3700307D7C /* PaymentVC.swift */,
 				7EABEA832BDB616100307D7C /* PaymentSuccessFulVC.swift */,
+				A9660B0F2BDF64A000DBFAA6 /* CentreVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -230,6 +237,8 @@
 				7E362AFC2BDAE11600E66A61 /* dummyTableCell.xib */,
 				7E362AFF2BDAE2A600E66A61 /* profileHeadTableCell.swift */,
 				7E362B002BDAE2A600E66A61 /* profileHeadTableCell.xib */,
+				A9660B0B2BDF632300DBFAA6 /* CentreCollectionViewCell.swift */,
+				A9660B0C2BDF632300DBFAA6 /* CentreCollectionViewCell.xib */,
 			);
 			path = Xibs;
 			sourceTree = "<group>";
@@ -350,6 +359,7 @@
 				7E362AFE2BDAE11600E66A61 /* dummyTableCell.xib in Resources */,
 				C068DE6D2BCFCA6500147AAF /* Base in Resources */,
 				C068DE682BCFCA6400147AAF /* Base in Resources */,
+				A9660B0E2BDF632300DBFAA6 /* CentreCollectionViewCell.xib in Resources */,
 				7E4B90D12BD3B7D40083D50A /* SFHello-Regular.ttf in Resources */,
 				7E5ABDA22BD4FD810079F5F6 /* BookingCollectionCell.xib in Resources */,
 			);
@@ -362,11 +372,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9660B102BDF64A000DBFAA6 /* CentreVC.swift in Sources */,
 				7E6762F82BD77FEB005F914B /* CancelServiceVC.swift in Sources */,
 				7EABEA872BDB67F000307D7C /* DataModels.swift in Sources */,
 				7EABEA822BDB5B3700307D7C /* PaymentVC.swift in Sources */,
 				7E362B012BDAE2A600E66A61 /* profileHeadTableCell.swift in Sources */,
 				7E362AFD2BDAE11600E66A61 /* dummyTableCell.swift in Sources */,
+				A9660B0D2BDF632300DBFAA6 /* CentreCollectionViewCell.swift in Sources */,
 				7E5ABDA52BD506860079F5F6 /* BookingVC.swift in Sources */,
 				7E6762F52BD77EE0005F914B /* CancelServiceCollectionCell.swift in Sources */,
 				7EB820A12BD8E6DA007DA6FD /* DateAndTimeVC.swift in Sources */,
