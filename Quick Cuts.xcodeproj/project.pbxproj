@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E0659892BDEC00400A9A42E /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0659882BDEC00400A9A42E /* LocationManager.swift */; };
 		7E26FD862BD3C17B0028D31B /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E26FD852BD3C17B0028D31B /* ViewExtensions.swift */; };
 		7E362AFD2BDAE11600E66A61 /* dummyTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E362AFB2BDAE11600E66A61 /* dummyTableCell.swift */; };
 		7E362AFE2BDAE11600E66A61 /* dummyTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E362AFC2BDAE11600E66A61 /* dummyTableCell.xib */; };
@@ -63,6 +64,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7E0659882BDEC00400A9A42E /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		7E26FD852BD3C17B0028D31B /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
 		7E362AFB2BDAE11600E66A61 /* dummyTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dummyTableCell.swift; sourceTree = "<group>"; };
 		7E362AFC2BDAE11600E66A61 /* dummyTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = dummyTableCell.xib; sourceTree = "<group>"; };
@@ -131,6 +133,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7E0659872BDEBFF800A9A42E /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				7E0659882BDEC00400A9A42E /* LocationManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		7E26FD842BD3C1650028D31B /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -251,6 +261,7 @@
 		C068DE5F2BCFCA6400147AAF /* Quick Cuts */ = {
 			isa = PBXGroup;
 			children = (
+				7E0659872BDEBFF800A9A42E /* Managers */,
 				7EABEA852BDB627100307D7C /* Model */,
 				7E5ABD8F2BD419050079F5F6 /* Xibs */,
 				7E26FD842BD3C1650028D31B /* Helpers */,
@@ -368,6 +379,7 @@
 				7E6CDC5F2BD99A8B00A81D46 /* SignUpVC.swift in Sources */,
 				7E6CDC5B2BD998C500A81D46 /* CustomTabbarVC.swift in Sources */,
 				C02F855A2BD97334009C6375 /* NotificationTableViewCell.swift in Sources */,
+				7E0659892BDEC00400A9A42E /* LocationManager.swift in Sources */,
 				7E5ABD9B2BD4E6A20079F5F6 /* SelectserviceVC.swift in Sources */,
 				C068DE652BCFCA6400147AAF /* ViewController.swift in Sources */,
 				7E6CDC612BD99EAE00A81D46 /* NewExploreVC.swift in Sources */,

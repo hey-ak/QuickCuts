@@ -2202,6 +2202,14 @@ Our runway expects have curated some of the most popular services at Salon
                                 <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                                 <standardMapConfiguration key="preferredConfiguration"/>
                             </mapView>
+                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Fa-8t-nt1">
+                                <rect key="frame" x="0.0" y="444" width="430" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="g4H-bR-Kge" id="WnV-AE-6jG"/>
+                                </connections>
+                            </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ILp-bv-5hF"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>

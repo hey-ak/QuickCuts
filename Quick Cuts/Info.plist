@@ -22,6 +22,15 @@
 		</dict>
 	</dict>
     
+    <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+    <string>Application requires user’s location for better user experience.</string>
+
+    <key>NSLocationAlwaysUsageDescription</key>
+    <string>Application requires user’s location for better user experience.</string>
+
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>Application requires user’s location for better user experience.</string>
+    
     <key>UIAppFonts</key>
     <array>
         <string>SFHello-Regular.ttf</string>

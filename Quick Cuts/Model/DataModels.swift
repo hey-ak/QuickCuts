@@ -18,9 +18,12 @@ struct User {
     let favoriteSalons: [Salon]
     let visitedSalons: [String]
 }
+
+
 enum Gender {
     case male, female, other
 }
+
 //By Amit
 struct Payment {
     let paymentID: UUID
@@ -35,6 +38,7 @@ enum PaymentMethod {
     case cash
     case upi
 }
+
 struct Service {
     let serviceID: UUID
     let serviceName: String
@@ -55,6 +59,7 @@ struct BookingSlot {
     var canVisit: Bool = true
     var payment: Payment?
 }
+
 //By Neeraj
 struct Salon {
     let salonID: UUID
@@ -68,6 +73,7 @@ struct Salon {
     let isVerified: Bool
     let services: [Service]
 }
+
 struct Review {
     var user: User
     var salon: Salon
