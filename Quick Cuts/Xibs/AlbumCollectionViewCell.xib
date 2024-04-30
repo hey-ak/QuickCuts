@@ -3,46 +3,65 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="AlbumCollectionViewCell" customModule="Quick_Cuts" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="153" height="106"/>
+            <rect key="frame" x="0.0" y="0.0" width="180" height="234"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="153" height="106"/>
+                <rect key="frame" x="0.0" y="0.0" width="180" height="234"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="UNO-CE-S0g">
-                        <rect key="frame" x="0.0" y="0.0" width="153" height="106"/>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="AfL-GB-3Ct">
+                        <rect key="frame" x="0.0" y="0.0" width="180" height="172.66666666666666"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="0vL-bS-QgY">
-                                <rect key="frame" x="0.0" y="0.0" width="153" height="65.333333333333329"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b5b-NU-Y0D">
+                                <rect key="frame" x="0.0" y="0.0" width="180" height="131.66666666666666"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="test" translatesAutoresizingMaskIntoConstraints="NO" id="qaY-ZH-c0O">
-                                        <rect key="frame" x="0.0" y="0.0" width="153" height="65.333333333333329"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HaircutAlbum" translatesAutoresizingMaskIntoConstraints="NO" id="XRT-Tg-tg4">
+                                        <rect key="frame" x="0.0" y="0.0" width="180" height="131.66666666666666"/>
                                     </imageView>
                                 </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="65.333333333333329" id="o9Q-2K-ckg"/>
+                                    <constraint firstItem="XRT-Tg-tg4" firstAttribute="leading" secondItem="b5b-NU-Y0D" secondAttribute="leading" id="5hm-5O-Ld0"/>
+                                    <constraint firstItem="XRT-Tg-tg4" firstAttribute="top" secondItem="b5b-NU-Y0D" secondAttribute="top" id="O1z-3g-RtE"/>
+                                    <constraint firstAttribute="width" secondItem="b5b-NU-Y0D" secondAttribute="height" multiplier="179:131" id="Xku-1x-dea"/>
+                                    <constraint firstAttribute="trailing" secondItem="XRT-Tg-tg4" secondAttribute="trailing" id="pfJ-jI-iSN"/>
+                                    <constraint firstAttribute="bottom" secondItem="XRT-Tg-tg4" secondAttribute="bottom" id="qX1-IS-vpw"/>
                                 </constraints>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="ggX-u5-B4J">
-                                <rect key="frame" x="0.0" y="65.333333333333329" width="153" height="40.666666666666671"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oF5-Kv-kF3">
+                                <rect key="frame" x="0.0" y="131.66666666666666" width="180" height="5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="5" id="FT6-pg-L9Z"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="7ks-2E-R8y">
+                                <rect key="frame" x="0.0" y="136.66666666666666" width="180" height="36"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Staff Photos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dAg-eX-TVj">
-                                        <rect key="frame" x="0.0" y="0.0" width="94.333333333333329" height="20.333333333333332"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Haircut Styles" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mXh-aG-Pjd">
+                                        <rect key="frame" x="0.0" y="0.0" width="180" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100 Photos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ysW-b9-hTp">
-                                        <rect key="frame" x="0.0" y="20.333333333333343" width="85.666666666666671" height="20.333333333333329"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="140" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IyO-De-Dcn">
+                                        <rect key="frame" x="0.0" y="18" width="180" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" name="5E5E5E"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -53,21 +72,22 @@
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
-                <constraint firstItem="UNO-CE-S0g" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="1br-XW-eHr"/>
-                <constraint firstAttribute="bottom" secondItem="UNO-CE-S0g" secondAttribute="bottom" id="LeL-av-WCY"/>
-                <constraint firstAttribute="trailing" secondItem="UNO-CE-S0g" secondAttribute="trailing" id="z5e-lG-BYs"/>
-                <constraint firstItem="UNO-CE-S0g" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="z6c-Jw-UCI"/>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="AfL-GB-3Ct" secondAttribute="bottom" id="2VI-ci-aH3"/>
+                <constraint firstItem="AfL-GB-3Ct" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="ENX-33-Xjc"/>
+                <constraint firstItem="AfL-GB-3Ct" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="wjs-pQ-PkZ"/>
+                <constraint firstAttribute="trailing" secondItem="AfL-GB-3Ct" secondAttribute="trailing" id="yzd-FT-126"/>
             </constraints>
-            <size key="customSize" width="153" height="106"/>
-            <connections>
-                <outlet property="Album" destination="qaY-ZH-c0O" id="iL5-Ac-nJf"/>
-                <outlet property="albumName" destination="dAg-eX-TVj" id="ldx-Cq-Qo9"/>
-                <outlet property="albumPhotosNumber" destination="ysW-b9-hTp" id="Ot5-HU-1Mb"/>
-            </connections>
-            <point key="canvasLocation" x="205" y="37"/>
+            <size key="customSize" width="180" height="234"/>
+            <point key="canvasLocation" x="222.90076335877862" y="83.098591549295776"/>
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="test" width="2500" height="1210"/>
+        <image name="HaircutAlbum" width="783" height="589"/>
+        <namedColor name="5E5E5E">
+            <color red="0.36862745098039218" green="0.36862745098039218" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

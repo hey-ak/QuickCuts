@@ -1699,13 +1699,13 @@ Our runway expects have curated some of the most popular services at Salon
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t4e-9p-Eor">
-                                <rect key="frame" x="15" y="59" width="400" height="56"/>
+                                <rect key="frame" x="15" y="59" width="400" height="59.666666666666657"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SHb-gy-CIa">
-                                        <rect key="frame" x="0.0" y="0.0" width="12.666666666666666" height="56"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="12.666666666666666" height="59.666666666666664"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4VE-3y-L3z">
-                                                <rect key="frame" x="0.0" y="0.0" width="12.666666666666666" height="56"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="12.666666666666666" height="59.666666666666664"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="chevron.backward" catalog="system">
                                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1717,10 +1717,10 @@ Our runway expects have curated some of the most popular services at Salon
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Gv4-1g-4eo">
-                                        <rect key="frame" x="12.666666666666657" y="0.0" width="387.33333333333337" height="56"/>
+                                        <rect key="frame" x="12.666666666666657" y="0.0" width="387.33333333333337" height="59.666666666666664"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Centre" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="utm-EX-Jg9">
-                                                <rect key="frame" x="0.0" y="18" width="387.33333333333331" height="20.333333333333329"/>
+                                                <rect key="frame" x="0.0" y="19.666666666666671" width="387.33333333333331" height="20.333333333333329"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -1730,10 +1730,10 @@ Our runway expects have curated some of the most popular services at Salon
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NRn-bZ-gbH">
-                                <rect key="frame" x="0.0" y="115" width="430" height="734"/>
+                                <rect key="frame" x="0.0" y="118.66666666666669" width="430" height="779.33333333333326"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="YnK-PT-4AA">
-                                        <rect key="frame" x="15" y="0.0" width="400" height="734"/>
+                                        <rect key="frame" x="15" y="0.0" width="400" height="779.33333333333337"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="E3C-hv-mZB">
                                             <size key="itemSize" width="128" height="128"/>
@@ -1855,7 +1855,7 @@ Our runway expects have curated some of the most popular services at Salon
                                                         </constraints>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="oK7-km-eTz">
-                                                        <rect key="frame" x="0.0" y="40.333333333333371" width="400" height="599.99999999999989"/>
+                                                        <rect key="frame" x="0.0" y="40.333333333333371" width="400" height="600"/>
                                                         <subviews>
                                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Ojh-VQ-913">
                                                                 <rect key="frame" x="0.0" y="0.0" width="400" height="600"/>
@@ -2285,9 +2285,8 @@ Our runway expects have curated some of the most popular services at Salon
                                 <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                                 <standardMapConfiguration key="preferredConfiguration"/>
                             </mapView>
-                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Fa-8t-nt1">
-                                <rect key="frame" x="0.0" y="444" width="430" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search Salon Near You " translatesAutoresizingMaskIntoConstraints="NO" id="4Fa-8t-nt1">
+                                <rect key="frame" x="0.0" y="79" width="430" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="g4H-bR-Kge" id="WnV-AE-6jG"/>
@@ -2297,10 +2296,13 @@ Our runway expects have curated some of the most popular services at Salon
                         <viewLayoutGuide key="safeArea" id="ILp-bv-5hF"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="4Fa-8t-nt1" firstAttribute="top" secondItem="ILp-bv-5hF" secondAttribute="top" constant="20" id="9TN-cp-1lm"/>
                             <constraint firstItem="pcb-3k-kWm" firstAttribute="leading" secondItem="kfR-su-19o" secondAttribute="leading" id="Cry-x5-RMm"/>
+                            <constraint firstItem="4Fa-8t-nt1" firstAttribute="trailing" secondItem="ILp-bv-5hF" secondAttribute="trailing" id="E2E-J4-V4n"/>
                             <constraint firstAttribute="bottom" secondItem="pcb-3k-kWm" secondAttribute="bottom" id="ZBv-QY-1hR"/>
                             <constraint firstItem="pcb-3k-kWm" firstAttribute="top" secondItem="kfR-su-19o" secondAttribute="top" id="jvK-Ba-OX3"/>
                             <constraint firstAttribute="trailing" secondItem="pcb-3k-kWm" secondAttribute="trailing" id="kcI-yf-58z"/>
+                            <constraint firstItem="4Fa-8t-nt1" firstAttribute="leading" secondItem="ILp-bv-5hF" secondAttribute="leading" id="sfF-uV-tVZ"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Explore" image="location.fill" catalog="system" id="4aR-Tc-0pa"/>
@@ -2756,7 +2758,6 @@ Our runway expects have curated some of the most popular services at Salon
                         <segue destination="g4H-bR-Kge" kind="relationship" relationship="viewControllers" id="AkT-FI-HI5"/>
                         <segue destination="Yuz-Is-amq" kind="relationship" relationship="viewControllers" id="NUC-SE-vMX"/>
                         <segue destination="AXO-C4-au6" kind="relationship" relationship="viewControllers" id="87V-BT-eDg"/>
-                        <segue destination="Tfw-ox-BKn" kind="relationship" relationship="viewControllers" id="nlZ-NG-dpn"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UZi-Xu-xKV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -3003,51 +3004,55 @@ Our runway expects have curated some of the most popular services at Salon
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="KY1-Ja-H0i">
-                                <rect key="frame" x="0.0" y="59" width="430" height="839"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pMK-zs-rf6">
+                                <rect key="frame" x="0.0" y="59.000000000000007" width="430" height="80.666666666666686"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Albums" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sbb-p8-4A7">
-                                        <rect key="frame" x="15" y="0.0" width="400" height="40.666666666666664"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Albums" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z7N-z6-gUO">
+                                        <rect key="frame" x="15" y="40" width="400" height="40.666666666666657"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="gcN-7Z-cCk">
-                                        <rect key="frame" x="15" y="40.666666666666686" width="400" height="798.33333333333326"/>
+                                </subviews>
+                                <edgeInsets key="layoutMargins" top="40" left="15" bottom="0.0" right="15"/>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="YZO-yM-ZpD">
+                                <rect key="frame" x="0.0" y="139.66666666666669" width="430" height="758.33333333333326"/>
+                                <subviews>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="WNK-ND-bZ4">
+                                        <rect key="frame" x="15" y="15" width="400" height="743.33333333333337"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="haz-dq-28s">
+                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="nux-yd-Dl6">
                                             <size key="itemSize" width="128" height="128"/>
                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         </collectionViewFlowLayout>
                                         <cells/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="0.0"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <outlet property="dataSource" destination="Yge-RI-jHp" id="Mnr-1r-sIo"/>
-                                            <outlet property="delegate" destination="Yge-RI-jHp" id="4Lk-7K-leo"/>
+                                            <outlet property="dataSource" destination="Yge-RI-jHp" id="WI3-3G-b8f"/>
+                                            <outlet property="delegate" destination="Yge-RI-jHp" id="ldf-i5-cvw"/>
                                         </connections>
                                     </collectionView>
                                 </subviews>
-                                <edgeInsets key="layoutMargins" top="0.0" left="15" bottom="0.0" right="15"/>
+                                <edgeInsets key="layoutMargins" top="15" left="15" bottom="0.0" right="15"/>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="s7M-pT-3B9"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="KY1-Ja-H0i" firstAttribute="bottom" secondItem="s7M-pT-3B9" secondAttribute="bottom" id="2WR-6I-iHY"/>
-                            <constraint firstItem="KY1-Ja-H0i" firstAttribute="leading" secondItem="s7M-pT-3B9" secondAttribute="leading" id="QiM-67-fwd"/>
-                            <constraint firstItem="KY1-Ja-H0i" firstAttribute="top" secondItem="s7M-pT-3B9" secondAttribute="top" id="mwy-mK-P1j"/>
-                            <constraint firstItem="KY1-Ja-H0i" firstAttribute="trailing" secondItem="s7M-pT-3B9" secondAttribute="trailing" id="pow-Oj-nJd"/>
+                            <constraint firstItem="pMK-zs-rf6" firstAttribute="leading" secondItem="s7M-pT-3B9" secondAttribute="leading" id="0Mg-nl-li3"/>
+                            <constraint firstItem="s7M-pT-3B9" firstAttribute="trailing" secondItem="YZO-yM-ZpD" secondAttribute="trailing" id="46h-02-b1m"/>
+                            <constraint firstItem="pMK-zs-rf6" firstAttribute="trailing" secondItem="s7M-pT-3B9" secondAttribute="trailing" id="Nfc-Ea-Ufy"/>
+                            <constraint firstItem="YZO-yM-ZpD" firstAttribute="top" secondItem="pMK-zs-rf6" secondAttribute="bottom" id="QSJ-em-UZg"/>
+                            <constraint firstItem="pMK-zs-rf6" firstAttribute="top" secondItem="s7M-pT-3B9" secondAttribute="top" id="Qeu-aU-1i3"/>
+                            <constraint firstItem="s7M-pT-3B9" firstAttribute="bottom" secondItem="YZO-yM-ZpD" secondAttribute="bottom" id="bTz-ZA-vrd"/>
+                            <constraint firstItem="YZO-yM-ZpD" firstAttribute="leading" secondItem="s7M-pT-3B9" secondAttribute="leading" id="yZE-jR-IxN"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="Ws7-6T-LOt"/>
                     <connections>
-                        <outlet property="AlbumCollection" destination="gcN-7Z-cCk" id="9nv-bM-VNW"/>
+                        <outlet property="AlbumCollection" destination="WNK-ND-bZ4" id="xPJ-dB-0Km"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8o6-wZ-qWo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

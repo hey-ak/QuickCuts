@@ -36,8 +36,9 @@ extension AlbumVC : UICollectionViewDelegate,UICollectionViewDataSource,UICollec
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let side = (collectionView.frame.size.width - 40) / 3
-        return CGSize(width:  side, height: side)
+        let side = (collectionView.frame.size.width - 15) / 2
+        let height = ( side * 177 ) / 179
+        return CGSize(width:  side, height: height)
     }
 }
 
