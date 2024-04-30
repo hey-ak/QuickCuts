@@ -2302,7 +2302,7 @@ Our runway expects have curated some of the most popular services at Salon
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="5dS-1w-G2f">
                                         <rect key="frame" x="20" y="0.0" width="365" height="40"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Checkout" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uZr-fu-gjs">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="checkout" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uZr-fu-gjs">
                                                 <rect key="frame" x="0.0" y="0.0" width="365" height="40"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                 <nil key="textColor"/>
@@ -2319,10 +2319,10 @@ Our runway expects have curated some of the most popular services at Salon
                                 <rect key="frame" x="0.0" y="99" width="430" height="750"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GMC-xd-Wmv">
-                                        <rect key="frame" x="15" y="0.0" width="400" height="700"/>
+                                        <rect key="frame" x="15" y="0.0" width="400" height="694"/>
                                         <subviews>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Bvw-od-oS5">
-                                                <rect key="frame" x="0.0" y="0.0" width="400" height="700"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="400" height="694"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <connections>
                                                     <outlet property="dataSource" destination="DW5-AO-T3C" id="XBt-Ka-qG4"/>
@@ -2330,15 +2330,12 @@ Our runway expects have curated some of the most popular services at Salon
                                                 </connections>
                                             </tableView>
                                         </subviews>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="705.66666666666663" id="a3m-Zy-SHA"/>
-                                        </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l5F-KT-gMm">
-                                        <rect key="frame" x="15" y="700" width="400" height="50"/>
+                                        <rect key="frame" x="15" y="694" width="400" height="56"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zKl-mX-2RW">
-                                                <rect key="frame" x="0.0" y="0.0" width="400" height="50"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="400" height="56"/>
                                                 <color key="backgroundColor" name="EC6E57"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
@@ -2348,7 +2345,7 @@ Our runway expects have curated some of the most popular services at Salon
                                             </button>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="9E9-eY-gCz"/>
+                                            <constraint firstAttribute="height" constant="56" id="M1v-ef-fPL"/>
                                         </constraints>
                                     </stackView>
                                 </subviews>
@@ -2370,12 +2367,11 @@ Our runway expects have curated some of the most popular services at Salon
                     <tabBarItem key="tabBarItem" title="Item" id="oNY-NI-cd4"/>
                     <connections>
                         <outlet property="checkout" destination="Bvw-od-oS5" id="yRU-U7-3Wg"/>
-                        <outlet property="heightobserver" destination="a3m-Zy-SHA" id="BQa-jM-xjh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9BE-op-Kl8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6031" y="1078"/>
+            <point key="canvasLocation" x="6137" y="1108"/>
         </scene>
         <!--Explore-->
         <scene sceneID="Pzi-nV-AA6">

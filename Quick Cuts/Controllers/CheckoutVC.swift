@@ -13,21 +13,22 @@ class CheckoutVC: UIViewController {
         
         didSet{
             checkout.registerCellFromNib(cellID: "CheckoutTableViewCell")
-            contentSizeObservation = checkout.observe(\.contentSize, options: [.new]) { [weak self] checkout, change in
-                self?.checkout.invalidateIntrinsicContentSize()
-                self?.heightobserver.constant = checkout.contentSize.height
-                self?.view.layoutIfNeeded()
-            }
+//            contentSizeObservation = checkout.observe(\.contentSize, options: [.new]) { [weak self] checkout, change in
+//                self?.checkout.invalidateIntrinsicContentSize()
+//                self?.heightobserver.constant = checkout.contentSize.height
+//                self?.view.layoutIfNeeded()
+//            }
             
         }
     }
     
-    @IBOutlet weak var heightobserver: NSLayoutConstraint!
+//    @IBOutlet weak var heightobserver: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        checkout.sectionHeaderTopPadding = 0
     }
     
 
