@@ -50,6 +50,9 @@
 		A9660B0D2BDF632300DBFAA6 /* CentreCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9660B0B2BDF632300DBFAA6 /* CentreCollectionViewCell.swift */; };
 		A9660B0E2BDF632300DBFAA6 /* CentreCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9660B0C2BDF632300DBFAA6 /* CentreCollectionViewCell.xib */; };
 		A9660B102BDF64A000DBFAA6 /* CentreVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9660B0F2BDF64A000DBFAA6 /* CentreVC.swift */; };
+		C007F2612BE1059400705C16 /* CheckoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C007F25F2BE1059400705C16 /* CheckoutTableViewCell.swift */; };
+		C007F2622BE1059400705C16 /* CheckoutTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C007F2602BE1059400705C16 /* CheckoutTableViewCell.xib */; };
+		C007F2642BE105C900705C16 /* CheckoutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C007F2632BE105C900705C16 /* CheckoutVC.swift */; };
 		C02F85592BD97334009C6375 /* NotificationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C02F85582BD97334009C6375 /* NotificationTableViewCell.xib */; };
 		C02F855A2BD97334009C6375 /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02F85572BD97334009C6375 /* NotificationTableViewCell.swift */; };
 		C02F855C2BD98242009C6375 /* NotificationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02F855B2BD98242009C6375 /* NotificationVC.swift */; };
@@ -110,6 +113,9 @@
 		A9660B0B2BDF632300DBFAA6 /* CentreCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CentreCollectionViewCell.swift; sourceTree = "<group>"; };
 		A9660B0C2BDF632300DBFAA6 /* CentreCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CentreCollectionViewCell.xib; sourceTree = "<group>"; };
 		A9660B0F2BDF64A000DBFAA6 /* CentreVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CentreVC.swift; sourceTree = "<group>"; };
+		C007F25F2BE1059400705C16 /* CheckoutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutTableViewCell.swift; sourceTree = "<group>"; };
+		C007F2602BE1059400705C16 /* CheckoutTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckoutTableViewCell.xib; sourceTree = "<group>"; };
+		C007F2632BE105C900705C16 /* CheckoutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutVC.swift; sourceTree = "<group>"; };
 		C02F85572BD97334009C6375 /* NotificationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTableViewCell.swift; sourceTree = "<group>"; };
 		C02F85582BD97334009C6375 /* NotificationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationTableViewCell.xib; sourceTree = "<group>"; };
 		C02F855B2BD98242009C6375 /* NotificationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationVC.swift; sourceTree = "<group>"; };
@@ -192,6 +198,7 @@
 				7EABEA812BDB5B3700307D7C /* PaymentVC.swift */,
 				7EABEA832BDB616100307D7C /* PaymentSuccessFulVC.swift */,
 				A9660B0F2BDF64A000DBFAA6 /* CentreVC.swift */,
+				C007F2632BE105C900705C16 /* CheckoutVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -239,6 +246,8 @@
 				7E362B002BDAE2A600E66A61 /* profileHeadTableCell.xib */,
 				A9660B0B2BDF632300DBFAA6 /* CentreCollectionViewCell.swift */,
 				A9660B0C2BDF632300DBFAA6 /* CentreCollectionViewCell.xib */,
+				C007F25F2BE1059400705C16 /* CheckoutTableViewCell.swift */,
+				C007F2602BE1059400705C16 /* CheckoutTableViewCell.xib */,
 			);
 			path = Xibs;
 			sourceTree = "<group>";
@@ -358,6 +367,7 @@
 				C02F855F2BD985D4009C6375 /* NotificationHeaderCell.xib in Resources */,
 				7E362AFE2BDAE11600E66A61 /* dummyTableCell.xib in Resources */,
 				C068DE6D2BCFCA6500147AAF /* Base in Resources */,
+				C007F2622BE1059400705C16 /* CheckoutTableViewCell.xib in Resources */,
 				C068DE682BCFCA6400147AAF /* Base in Resources */,
 				A9660B0E2BDF632300DBFAA6 /* CentreCollectionViewCell.xib in Resources */,
 				7E4B90D12BD3B7D40083D50A /* SFHello-Regular.ttf in Resources */,
@@ -384,6 +394,7 @@
 				7EB820A12BD8E6DA007DA6FD /* DateAndTimeVC.swift in Sources */,
 				7E5ABD932BD419230079F5F6 /* HomeCollectionCell.swift in Sources */,
 				7EDC08B62BD82CA000870986 /* ProfileTableCell.swift in Sources */,
+				C007F2642BE105C900705C16 /* CheckoutVC.swift in Sources */,
 				7EB8209E2BD8BED3007DA6FD /* DateSelectCollectionViewCell.swift in Sources */,
 				7E5ABD9F2BD4E7A50079F5F6 /* ServiceCollectionCell.swift in Sources */,
 				7E5ABD992BD423290079F5F6 /* HomeVC.swift in Sources */,
@@ -399,6 +410,7 @@
 				7E5ABDAD2BD50C1A0079F5F6 /* BookingCancelledCollectionCell.swift in Sources */,
 				7EB820A42BD90716007DA6FD /* TimeSlotCollectionCell.swift in Sources */,
 				7E6CDC5D2BD999D600A81D46 /* SignInVC.swift in Sources */,
+				C007F2612BE1059400705C16 /* CheckoutTableViewCell.swift in Sources */,
 				FFFD336F2BDA5D920031B7C6 /* AlbumCollectionViewCell.swift in Sources */,
 				C068DE612BCFCA6400147AAF /* AppDelegate.swift in Sources */,
 				7EDC08B32BD82C4500870986 /* ProfileVC.swift in Sources */,

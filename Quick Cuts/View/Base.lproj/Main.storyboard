@@ -2273,6 +2273,110 @@ Our runway expects have curated some of the most popular services at Salon
             </objects>
             <point key="canvasLocation" x="5210" y="1108"/>
         </scene>
+        <!--Item-->
+        <scene sceneID="RBT-vF-UfV">
+            <objects>
+                <viewController id="DW5-AO-T3C" customClass="CheckoutVC" customModule="Quick_Cuts" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="W8g-LI-JeU">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yOa-x7-ZlI">
+                                <rect key="frame" x="15" y="59" width="385" height="40"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="OJ4-ar-eoa">
+                                        <rect key="frame" x="0.0" y="0.0" width="20" height="40"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RIt-Tl-M7j">
+                                                <rect key="frame" x="0.0" y="0.0" width="20" height="40"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="chevron.backward" catalog="system">
+                                                    <color key="baseForegroundColor" name="5E5E5E"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="20" id="PPe-Lp-Emp"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="5dS-1w-G2f">
+                                        <rect key="frame" x="20" y="0.0" width="365" height="40"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Checkout" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uZr-fu-gjs">
+                                                <rect key="frame" x="0.0" y="0.0" width="365" height="40"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="EzB-xa-Gys"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="JE0-yN-Y0a">
+                                <rect key="frame" x="0.0" y="99" width="430" height="750"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GMC-xd-Wmv">
+                                        <rect key="frame" x="15" y="0.0" width="400" height="700"/>
+                                        <subviews>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Bvw-od-oS5">
+                                                <rect key="frame" x="0.0" y="0.0" width="400" height="700"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <connections>
+                                                    <outlet property="dataSource" destination="DW5-AO-T3C" id="XBt-Ka-qG4"/>
+                                                    <outlet property="delegate" destination="DW5-AO-T3C" id="1hO-rM-7Aa"/>
+                                                </connections>
+                                            </tableView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="705.66666666666663" id="a3m-Zy-SHA"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l5F-KT-gMm">
+                                        <rect key="frame" x="15" y="700" width="400" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zKl-mX-2RW">
+                                                <rect key="frame" x="0.0" y="0.0" width="400" height="50"/>
+                                                <color key="backgroundColor" name="EC6E57"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Confirm Payment">
+                                                    <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="19"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="9E9-eY-gCz"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <edgeInsets key="layoutMargins" top="0.0" left="15" bottom="0.0" right="15"/>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="AUM-bb-abt"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="AUM-bb-abt" firstAttribute="trailing" secondItem="JE0-yN-Y0a" secondAttribute="trailing" id="BYe-Jy-8Se"/>
+                            <constraint firstItem="JE0-yN-Y0a" firstAttribute="leading" secondItem="AUM-bb-abt" secondAttribute="leading" id="CGj-OB-1tk"/>
+                            <constraint firstItem="yOa-x7-ZlI" firstAttribute="trailing" secondItem="AUM-bb-abt" secondAttribute="trailing" constant="-30" id="MTw-FI-LBe"/>
+                            <constraint firstItem="yOa-x7-ZlI" firstAttribute="top" secondItem="AUM-bb-abt" secondAttribute="top" id="Qse-xd-g9d"/>
+                            <constraint firstItem="yOa-x7-ZlI" firstAttribute="leading" secondItem="AUM-bb-abt" secondAttribute="leading" constant="15" id="TMh-Qf-6qm"/>
+                            <constraint firstItem="AUM-bb-abt" firstAttribute="bottom" secondItem="JE0-yN-Y0a" secondAttribute="bottom" id="Wss-Eg-zoj"/>
+                            <constraint firstItem="JE0-yN-Y0a" firstAttribute="top" secondItem="yOa-x7-ZlI" secondAttribute="bottom" id="qa9-Wa-pzx"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="oNY-NI-cd4"/>
+                    <connections>
+                        <outlet property="checkout" destination="Bvw-od-oS5" id="yRU-U7-3Wg"/>
+                        <outlet property="heightobserver" destination="a3m-Zy-SHA" id="BQa-jM-xjh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9BE-op-Kl8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6031" y="1078"/>
+        </scene>
         <!--Explore-->
         <scene sceneID="Pzi-nV-AA6">
             <objects>
@@ -2758,6 +2862,7 @@ Our runway expects have curated some of the most popular services at Salon
                         <segue destination="g4H-bR-Kge" kind="relationship" relationship="viewControllers" id="AkT-FI-HI5"/>
                         <segue destination="Yuz-Is-amq" kind="relationship" relationship="viewControllers" id="NUC-SE-vMX"/>
                         <segue destination="AXO-C4-au6" kind="relationship" relationship="viewControllers" id="87V-BT-eDg"/>
+                        <segue destination="DW5-AO-T3C" kind="relationship" relationship="viewControllers" id="HX1-Xx-JTh"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UZi-Xu-xKV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
