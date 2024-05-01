@@ -27,7 +27,7 @@ class HomeVC: UIViewController {
         didSet {
             switch ratedCollectionSeeAllState {
             case .selected:
-                self.ratedCollectionViewData = 20
+                self.ratedCollectionViewData = 10
                 
             case .unselected:
                 self.ratedCollectionViewData = nil
@@ -39,7 +39,7 @@ class HomeVC: UIViewController {
         didSet {
             switch mainCollectionSeeAllState {
             case .selected:
-                self.mainCollectionViewData = 20
+                self.mainCollectionViewData = 10
                 
             case .unselected:
                 self.mainCollectionViewData = nil
@@ -70,8 +70,20 @@ class HomeVC: UIViewController {
         }
     }
     
-    
-    
+    let HomeArray: [HomeCard] = [
+        HomeCard(salonName: "Ramesh Salon", salonAddress: "SCO- 285, Ground Floor Sec, Sector 35D, Chandigarh, 160022", reviewCount: 10, salonImage: "salonImage1"),
+        HomeCard(salonName: "Anita's Beauty Salon", salonAddress: "123 Main Street, Cityville, XYZ", reviewCount: 15, salonImage: "salonImage2"),
+        HomeCard(salonName: "Glamour World Salon", salonAddress: "789 Elm Street, Townsville, ABC", reviewCount: 20, salonImage: "salonImage3"),
+        HomeCard(salonName: "Style Diva Salon", salonAddress: "456 Oak Avenue, Villagetown, DEF", reviewCount: 8, salonImage: "salonImage4"),
+        HomeCard(salonName: "Elegance Salon & Spa", salonAddress: "101 Pine Road, Hamletville, GHI", reviewCount: 12, salonImage: "salonImage5"),
+        HomeCard(salonName: "Radiance Hair Studio", salonAddress: "876 Maple Lane, Boroughburg, JKL", reviewCount: 18, salonImage: "salonImage6"),
+        HomeCard(salonName: "Chic Beauty Lounge", salonAddress: "543 Cedar Court, Township, MNO", reviewCount: 6, salonImage: "salonImage7"),
+        HomeCard(salonName: "Serenity Spa & Salon", salonAddress: "222 Walnut Drive, County, PQR", reviewCount: 25, salonImage: "salonImage8"),
+        HomeCard(salonName: "Blissful Beauty Haven", salonAddress: "999 Pineapple Street, District, STU", reviewCount: 9, salonImage: "salonImage9"),
+        HomeCard(salonName: "Tranquility Wellness Center", salonAddress: "777 Waterfall Road, Precinct, VWX", reviewCount: 14, salonImage: "salonImage10")
+    ]
+
+
     
     
 
@@ -105,10 +117,10 @@ extension HomeVC: UICollectionViewDelegate,UICollectionViewDataSource,UICollecti
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == ratedCollectionView {
-            return ratedCollectionViewData ?? 2
+            return ratedCollectionViewData ?? 4
         }
         else if collectionView == catagoryCollectionView {
-            return 20
+            return HomeArray.count
         }
         return mainCollectionViewData ?? 2
     }
@@ -116,6 +128,12 @@ extension HomeVC: UICollectionViewDelegate,UICollectionViewDataSource,UICollecti
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == ratedCollectionView || collectionView == mainCollectionView {
             if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeCollectionCell", for: indexPath) as? HomeCollectionCell {
+                let data = HomeArray[indexPath.row]
+                cell.salonName.text = data.salonName
+                cell.salonImage.image = UIImage(named: "\(data.salonImage)")
+                cell.reviewCount.text = "\(data.reviewCount) Reviews"
+                //cell.serviceID.text = "\(data.serviceID)"
+                cell.salonAddress.text = data.salonAddress
                 return cell
             }
         }

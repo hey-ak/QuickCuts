@@ -153,6 +153,12 @@
                 <constraint firstItem="GFz-aN-W0J" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="MdZ-4N-1Fi"/>
             </constraints>
             <size key="customSize" width="289" height="246"/>
+            <connections>
+                <outlet property="reviewCount" destination="XQ7-y9-lS0" id="XY4-ew-ajx"/>
+                <outlet property="salonAddress" destination="87O-f0-KtT" id="Un5-L2-7vg"/>
+                <outlet property="salonImage" destination="NnG-TP-GzR" id="MSg-fZ-K6h"/>
+                <outlet property="salonName" destination="ZzZ-9z-ArC" id="o5E-T0-nWz"/>
+            </connections>
             <point key="canvasLocation" x="303.05343511450383" y="57.394366197183103"/>
         </collectionViewCell>
     </objects>

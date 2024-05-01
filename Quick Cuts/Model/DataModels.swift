@@ -80,3 +80,27 @@ struct Review {
     var rating: Double
     var comment: String
 }
+
+struct currentBookingDM {
+    let salonName: String
+    let salonAddress: String
+    let serviceID: String
+    let salonImage: String
+}
+
+
+struct HomeCard{
+    let salonName:String
+    let salonAddress:String
+    let reviewCount:Int
+    let salonImage:String
+}
+
+struct HomeServices{
+    let serviceImage:String
+    let serviceName:String
+}
+
+
+
+
