@@ -72,6 +72,10 @@
                 <constraint firstItem="fMu-v5-tV7" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Rnj-Ax-1WV"/>
             </constraints>
             <size key="customSize" width="442" height="399"/>
+            <connections>
+                <outlet property="serviceImage" destination="neB-vU-QOU" id="4Du-Os-6Ts"/>
+                <outlet property="serviceName" destination="NBk-DK-p4S" id="1sR-X2-K01"/>
+            </connections>
             <point key="canvasLocation" x="316.79389312977099" y="110.91549295774648"/>
         </collectionViewCell>
     </objects>
