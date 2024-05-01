@@ -9,6 +9,8 @@ import UIKit
 
 class BookingCollectionCell: UICollectionViewCell {
 
+    @IBOutlet weak var cancelServiceButton: UIButton!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

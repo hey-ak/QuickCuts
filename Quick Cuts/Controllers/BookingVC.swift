@@ -23,6 +23,11 @@ class BookingVC: UIViewController {
         bookingCollectionView.reloadData()
     }
     
+    @objc func buttonPressed(){
+        let nextVC = storyboard?.instantiateViewController(withIdentifier: "CancelServiceVC") as! CancelServiceVC
+        navigationController?.pushViewController(nextVC, animated: true)
+    }
+    
     
 }
 extension BookingVC: UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
@@ -36,7 +41,10 @@ extension BookingVC: UICollectionViewDelegate,UICollectionViewDataSource,UIColle
         switch currentSegment {
         case 0:
             if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BookingCollectionCell", for: indexPath) as? BookingCollectionCell {
+                
+                cell.cancelServiceButton.addTarget(self, action: #selector(buttonPressed),for: .touchUpInside)
                 return cell
+                
             }
             
         case 1:

@@ -251,6 +251,9 @@
                 <constraint firstItem="1z2-KO-0Te" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="y5K-VR-zeM"/>
             </constraints>
             <size key="customSize" width="369" height="350"/>
+            <connections>
+                <outlet property="cancelServiceButton" destination="SSc-hX-4Xa" id="vcz-Pf-KwN"/>
+            </connections>
             <point key="canvasLocation" x="156.4885496183206" y="94.366197183098592"/>
         </collectionViewCell>
     </objects>
