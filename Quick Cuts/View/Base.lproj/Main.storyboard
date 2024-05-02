@@ -1918,6 +1918,42 @@ Our runway expects have curated some of the most popular services at Salon
             </objects>
             <point key="canvasLocation" x="339" y="3272"/>
         </scene>
+        <!--Your Profile-->
+        <scene sceneID="BLO-3x-aEa">
+            <objects>
+                <viewController title="Your Profile" id="9iG-gC-AoP" customClass="YourProfileViewController" customModule="Quick_Cuts" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6Xg-UV-YYd">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="uw1-MH-NTp">
+                                <rect key="frame" x="0.0" y="59" width="430" height="839"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Ks5-Cb-0mk">
+                                        <rect key="frame" x="0.0" y="0.0" width="430" height="839"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="9iG-gC-AoP" id="vUA-EN-npw"/>
+                                            <outlet property="delegate" destination="9iG-gC-AoP" id="yoh-zX-vXb"/>
+                                        </connections>
+                                    </tableView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="eqa-vB-YbS"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="uw1-MH-NTp" firstAttribute="leading" secondItem="eqa-vB-YbS" secondAttribute="leading" id="OuC-LS-dOR"/>
+                            <constraint firstItem="uw1-MH-NTp" firstAttribute="top" secondItem="eqa-vB-YbS" secondAttribute="top" id="ki6-Gt-wEq"/>
+                            <constraint firstItem="eqa-vB-YbS" firstAttribute="trailing" secondItem="uw1-MH-NTp" secondAttribute="trailing" id="lFg-5z-gvZ"/>
+                            <constraint firstItem="eqa-vB-YbS" firstAttribute="bottom" secondItem="uw1-MH-NTp" secondAttribute="bottom" id="mN9-O5-gVs"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iew-FC-HP0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6890" y="3546"/>
+        </scene>
         <!--Album-->
         <scene sceneID="K7s-0x-guX">
             <objects>

@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSLocationAlwaysAndWhenInUsageDescription</key>
+	<string>Always and in usage permissions</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>SFHello-Regular.ttf</string>
@@ -25,11 +27,5 @@
 			</array>
 		</dict>
 	</dict>
-    <key>NSLocationWhenInUseUsageDescription</key>
-    <string>When in use permissions</string>
-    <key>NSLocationAlwaysUsageDescription</key>
-    <string>always permissions</string>
-    <key>NSLocationAlwaysAndWhenInUsageDescription</key>
-    <string>Always and in usage permissions</string>
 </dict>
 </plist>
