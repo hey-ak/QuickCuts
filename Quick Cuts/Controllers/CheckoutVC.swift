@@ -7,11 +7,7 @@ class CheckoutVC: UIViewController {
         
         didSet{
             checkout.registerCellFromNib(cellID: "CheckoutTableViewCell")
-//            contentSizeObservation = checkout.observe(\.contentSize, options: [.new]) { [weak self] checkout, change in
-//                self?.checkout.invalidateIntrinsicContentSize()
-//                self?.heightobserver.constant = checkout.contentSize.height
-//                self?.view.layoutIfNeeded()
-//            }
+
             
         }
     }

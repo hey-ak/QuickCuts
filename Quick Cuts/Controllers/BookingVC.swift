@@ -62,6 +62,11 @@ class BookingVC: UIViewController {
         navigationController?.pushViewController(nextVC, animated: true)
     }
     
+    @objc func ReceiptbuttonPressed(){
+        let nextVC = storyboard?.instantiateViewController(withIdentifier: "ReceiptVC") as! ReceiptVC
+        navigationController?.pushViewController(nextVC, animated: true)
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.navigationBar.prefersLargeTitles = true
@@ -85,6 +90,7 @@ extension BookingVC: UICollectionViewDelegate,UICollectionViewDataSource,UIColle
             if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BookingCollectionCell", for: indexPath) as? BookingCollectionCell {
                 
                 cell.cancelServiceButton.addTarget(self, action: #selector(buttonPressed),for: .touchUpInside)
+                cell.viewReceiptButton.addTarget(self, action: #selector(ReceiptbuttonPressed),for: .touchUpInside)
                 let data = currentData[indexPath.row]
                 cell.salonName.text = data.salonName
                 cell.salonImage.image = UIImage(named: "\(data.salonImage)")

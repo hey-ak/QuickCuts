@@ -1151,7 +1151,7 @@ Our runway expects have curated some of the most popular services at Salon
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sf7-Pb-g72" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-399" y="382"/>
+            <point key="canvasLocation" x="-244" y="382"/>
         </scene>
         <!--Payment Success FulVC-->
         <scene sceneID="9T0-eA-7Nj">
@@ -1636,7 +1636,7 @@ Our runway expects have curated some of the most popular services at Salon
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jer-Kl-jhk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-399" y="2560"/>
+            <point key="canvasLocation" x="5985" y="382"/>
         </scene>
         <!--Centre-->
         <scene sceneID="uxB-K4-9Ea">
@@ -1684,7 +1684,7 @@ Our runway expects have curated some of the most popular services at Salon
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HJb-53-BqO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1559" y="1108"/>
+            <point key="canvasLocation" x="2428" y="382"/>
         </scene>
         <!--Cancel Booking-->
         <scene sceneID="sbx-Dm-Kdu">
@@ -1919,7 +1919,7 @@ Our runway expects have curated some of the most popular services at Salon
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iew-FC-HP0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="728" y="3272"/>
+            <point key="canvasLocation" x="4235" y="382"/>
         </scene>
         <!--Schedule-->
         <scene sceneID="ixS-Ou-0ce">
@@ -2123,7 +2123,7 @@ Our runway expects have curated some of the most popular services at Salon
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lro-W4-y7T" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-399" y="1108"/>
+            <point key="canvasLocation" x="621" y="382"/>
         </scene>
         <!--NotificationVC-->
         <scene sceneID="GCe-6K-bVj">
@@ -2248,7 +2248,7 @@ Our runway expects have curated some of the most popular services at Salon
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9BE-op-Kl8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-399" y="1833"/>
+            <point key="canvasLocation" x="3324" y="382"/>
         </scene>
         <!--Explore-->
         <scene sceneID="Pzi-nV-AA6">
@@ -2822,7 +2822,7 @@ Our runway expects have curated some of the most popular services at Salon
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U6P-pd-4g2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-398" y="-337"/>
+            <point key="canvasLocation" x="-244" y="-337"/>
         </scene>
         <!--Custom TabbarVC-->
         <scene sceneID="uuw-eV-k6h">
@@ -2862,7 +2862,7 @@ Our runway expects have curated some of the most popular services at Salon
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M5F-6b-VDi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="428" y="-337"/>
+            <point key="canvasLocation" x="622" y="-337"/>
         </scene>
         <!--Item-->
         <scene sceneID="jje-S5-e1I">
@@ -3135,7 +3135,7 @@ Our runway expects have curated some of the most popular services at Salon
         <!--Receipt-->
         <scene sceneID="QfG-r6-tVw">
             <objects>
-                <viewController title="Receipt" id="D6T-CP-qhs" customClass="CheckoutVC" customModule="Quick_Cuts" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ReceiptVC" title="Receipt" useStoryboardIdentifierAsRestorationIdentifier="YES" id="D6T-CP-qhs" customClass="ReceiptVC" customModule="Quick_Cuts" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iHj-FR-1jh">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3187,13 +3187,14 @@ Our runway expects have curated some of the most popular services at Salon
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="wdw-tE-42X"/>
+                    <navigationItem key="navigationItem" title="Receipt" largeTitleDisplayMode="never" id="bPr-0W-Om0"/>
                     <connections>
-                        <outlet property="checkout" destination="x4c-XR-Uj1" id="jAT-On-NYE"/>
+                        <outlet property="receiptTableView" destination="x4c-XR-Uj1" id="U0c-ff-WKf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uWj-2n-bnJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-399" y="3272"/>
+            <point key="canvasLocation" x="106" y="-1967"/>
         </scene>
     </scenes>
     <resources>

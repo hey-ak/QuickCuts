@@ -8,12 +8,17 @@
 import UIKit
 
 class CancelServiceCollectionCell: UICollectionViewCell {
-
-    @IBOutlet weak var cancelReasonLabel: UILabel!
+    
+    @IBOutlet weak var cancelButton: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-
+    
+    @IBAction func cancelFeedbackButtonDidTapped(_ sender: Any) {
+        //cancelButton.backgroundColor = .blue
+    }
 }
+
+

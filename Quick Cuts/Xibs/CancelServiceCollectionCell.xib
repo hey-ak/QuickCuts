@@ -22,17 +22,17 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8nc-PG-e0w">
                                 <rect key="frame" x="0.0" y="0.0" width="115" height="101"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Poor Service" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3FU-xH-rYD">
-                                        <rect key="frame" x="9.3333333333333357" y="40.333333333333336" width="96.666666666666657" height="20.333333333333336"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="csq-lX-pnj">
+                                        <rect key="frame" x="-3" y="33" width="121" height="35"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Poor Service"/>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstItem="3FU-xH-rYD" firstAttribute="centerX" secondItem="8nc-PG-e0w" secondAttribute="centerX" id="U7o-9i-hQa"/>
-                                    <constraint firstItem="3FU-xH-rYD" firstAttribute="centerY" secondItem="8nc-PG-e0w" secondAttribute="centerY" id="Whq-yl-PCt"/>
+                                    <constraint firstItem="csq-lX-pnj" firstAttribute="centerY" secondItem="8nc-PG-e0w" secondAttribute="centerY" id="4Ya-1s-sgf"/>
+                                    <constraint firstItem="csq-lX-pnj" firstAttribute="centerX" secondItem="8nc-PG-e0w" secondAttribute="centerX" id="UJV-MI-xrK"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -41,6 +41,10 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
+                        <constraints>
+                            <constraint firstItem="8nc-PG-e0w" firstAttribute="centerX" secondItem="uMH-rk-RGz" secondAttribute="centerX" id="I69-LP-KHs"/>
+                            <constraint firstItem="8nc-PG-e0w" firstAttribute="centerY" secondItem="uMH-rk-RGz" secondAttribute="centerY" id="d8Q-wg-UGg"/>
+                        </constraints>
                     </stackView>
                 </subviews>
             </view>
@@ -52,9 +56,6 @@
                 <constraint firstAttribute="trailing" secondItem="uMH-rk-RGz" secondAttribute="trailing" id="xRu-zW-vws"/>
             </constraints>
             <size key="customSize" width="115" height="101"/>
-            <connections>
-                <outlet property="cancelReasonLabel" destination="3FU-xH-rYD" id="k0y-hD-LPT"/>
-            </connections>
             <point key="canvasLocation" x="135.1145038167939" y="37.676056338028168"/>
         </collectionViewCell>
     </objects>

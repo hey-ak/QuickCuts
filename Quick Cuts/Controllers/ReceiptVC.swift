@@ -3,15 +3,10 @@ import UIKit
 
 class ReceiptVC: UIViewController {
     private var contentSizeObservation:NSKeyValueObservation?
-    @IBOutlet weak var checkout: UITableView!{
+    @IBOutlet weak var receiptTableView: UITableView!{
         
         didSet{
-            checkout.registerCellFromNib(cellID: "CheckoutTableViewCell")
-//            contentSizeObservation = checkout.observe(\.contentSize, options: [.new]) { [weak self] checkout, change in
-//                self?.checkout.invalidateIntrinsicContentSize()
-//                self?.heightobserver.constant = checkout.contentSize.height
-//                self?.view.layoutIfNeeded()
-//            }
+            receiptTableView.registerCellFromNib(cellID: "CheckoutTableViewCell")
             
         }
     }
@@ -22,7 +17,7 @@ class ReceiptVC: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        checkout.sectionHeaderTopPadding = 0
+        receiptTableView.sectionHeaderTopPadding = 0
     }
     
 

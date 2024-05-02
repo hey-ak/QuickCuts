@@ -8,12 +8,6 @@
 import UIKit
 
 class ProfileVC: UIViewController {
-    
-    let profileData = [
-        ["Neeraj"],
-        ["Your Profile", "Payment Method", "Favourities", "Transactions"],
-        ["Settings", "Help Centre", "Privacy Policy", "Log-out"],
-        ]
 
     @IBOutlet weak var profileTableView: UITableView! {
         didSet {
@@ -34,7 +28,7 @@ class ProfileVC: UIViewController {
 
 extension ProfileVC : UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        profileData[section].count
+        profileDM[section].profileData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -43,16 +37,22 @@ extension ProfileVC : UITableViewDataSource, UITableViewDelegate {
         switch section {
         case 0:
             let cell = tableView.dequeueReusableCell(withIdentifier: "profileHeadTableCell", for: indexPath) as! profileHeadTableCell
+            let data = profileDM[indexPath.section].profileData[indexPath.row]
+            cell.userName.text = data.userProfileDetails?.userName
+            cell.userPhoneNumber.text = data.userProfileDetails?.phoneNumber
+            cell.userProfileImage.image = UIImage(named: data.userProfileDetails?.userImage ?? "profilePic")
             return cell
         case 1:
             let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileTableCell", for: indexPath) as! ProfileTableCell
-            cell.profileLabel?.text = profileData[indexPath.section][indexPath.row]
+            let data = profileDM[indexPath.section].profileData[indexPath.row]
+            cell.profileLabel.text = data.profileOption.rawValue
+            cell.profileIcon.image = UIImage(named: data.profileOption.rawValue)
             
             if indexPath.row == 0 {
                 cell.contentView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
                 cell.contentView.layer.cornerRadius = 13
             }
-            else if indexPath.row == profileData[section].count - 1 {
+            else if indexPath.row == profileDM[section].profileData.count - 1 {
                 cell.contentView.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
                 cell.contentView.layer.cornerRadius = 13
             }
@@ -64,13 +64,15 @@ extension ProfileVC : UITableViewDataSource, UITableViewDelegate {
             return cell
         case 2:
             let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileTableCell", for: indexPath) as! ProfileTableCell
-            cell.profileLabel?.text = profileData[indexPath.section][indexPath.row]
+            let data = profileDM[indexPath.section].profileData[indexPath.row]
+            cell.profileLabel.text = data.profileOption.rawValue
+            cell.profileIcon.image = UIImage(named: data.profileOption.rawValue)
             
             if indexPath.row == 0 {
                 cell.contentView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
                 cell.contentView.layer.cornerRadius = 13
             }
-            else if indexPath.row == profileData[section].count - 1 {
+            else if indexPath.row == profileDM[section].profileData.count - 1 {
                 cell.contentView.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
                 cell.contentView.layer.cornerRadius = 13
             }
@@ -92,6 +94,6 @@ extension ProfileVC : UITableViewDataSource, UITableViewDelegate {
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        3
+        profileDM.count
     }
 }
