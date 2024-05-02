@@ -25,7 +25,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="424" height="73.333333333333329"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bell.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="SxY-xa-r9m">
-                                        <rect key="frame" x="15" y="20.333333333333336" width="33.333333333333329" height="32.666666666666657"/>
+                                        <rect key="frame" x="15" y="20.333333333333336" width="33.333333333333336" height="32.666666666666657"/>
                                         <color key="tintColor" name="EC6E57"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="SxY-xa-r9m" secondAttribute="height" multiplier="1:1" id="SiF-BW-V7b"/>
@@ -132,6 +132,11 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="notificationMessage" destination="5Dz-TS-Wic" id="3bL-gb-ys5"/>
+                <outlet property="notificationName" destination="Sad-Kq-nSH" id="M92-72-zIr"/>
+                <outlet property="notificationTime" destination="jhs-Xo-k4s" id="tMg-Y5-XjU"/>
+            </connections>
             <point key="canvasLocation" x="206.10687022900763" y="2.8169014084507045"/>
         </tableViewCell>
     </objects>

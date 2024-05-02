@@ -136,3 +136,10 @@ struct FavouriteCard{
     let salonImage:String
 }
 
+
+struct Notification{
+    let name:String
+    let message:String
+    let time:String
+}
+
