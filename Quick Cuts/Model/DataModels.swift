@@ -1,13 +1,7 @@
-//
-//  DataModels.swift
-//  Quick Cuts
-//
-//  Created by Amit Kumar Dhal on 26/04/24.
-//
+
 
 import Foundation
 
-//By Akshat
 struct User {
     let userID: UUID
     let name: String
@@ -24,7 +18,7 @@ enum Gender {
     case male, female, other
 }
 
-//By Amit
+
 struct Payment {
     let paymentID: UUID
     let amount: Double
@@ -46,7 +40,7 @@ struct Service {
 }
 
 
-//By Akshay
+
 struct BookingSlot {
     let bookingSlotID: UUID
     let customer: User
@@ -60,7 +54,7 @@ struct BookingSlot {
     var payment: Payment?
 }
 
-//By Neeraj
+
 struct Salon {
     let salonID: UUID
     let email: String
