@@ -813,7 +813,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="euS-xI-lda" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2089" y="-1967"/>
+            <point key="canvasLocation" x="2188" y="-1967"/>
         </scene>
         <!--Item-->
         <scene sceneID="C4J-09-jsR">
@@ -833,7 +833,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oxH-5A-adb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3250" y="-337"/>
+            <point key="canvasLocation" x="2428" y="-337"/>
         </scene>
         <!--Bookings-->
         <scene sceneID="dPW-6n-fwa">
@@ -912,7 +912,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ptn-6D-JhA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4202" y="382"/>
+            <point key="canvasLocation" x="4236" y="-337"/>
         </scene>
         <!--Profile-->
         <scene sceneID="WsP-AN-D80">
@@ -1151,7 +1151,7 @@ Our runway expects have curated some of the most popular services at Salon
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sf7-Pb-g72" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2177" y="1108"/>
+            <point key="canvasLocation" x="-399" y="382"/>
         </scene>
         <!--Payment Success FulVC-->
         <scene sceneID="9T0-eA-7Nj">
@@ -1203,7 +1203,7 @@ Our runway expects have curated some of the most popular services at Salon
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EVh-Db-GDw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6840" y="1900"/>
+            <point key="canvasLocation" x="5065" y="-1967"/>
         </scene>
         <!--Payment Method-->
         <scene sceneID="rON-Oe-S9g">
@@ -1636,7 +1636,7 @@ Our runway expects have curated some of the most popular services at Salon
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jer-Kl-jhk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2177" y="5311"/>
+            <point key="canvasLocation" x="-399" y="2560"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Q52-cA-3oa">
@@ -1645,6 +1645,9 @@ Our runway expects have curated some of the most popular services at Salon
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="vq2-wc-fBV">
                         <rect key="frame" x="0.0" y="59" width="430" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="sot-c6-Dpm" kind="showDetail" id="oqg-gg-PLV"/>
@@ -1652,7 +1655,7 @@ Our runway expects have curated some of the most popular services at Salon
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GYN-23-jVC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2177" y="4614"/>
+            <point key="canvasLocation" x="336" y="2560"/>
         </scene>
         <!--Centre-->
         <scene sceneID="uxB-K4-9Ea">
@@ -1700,7 +1703,7 @@ Our runway expects have curated some of the most popular services at Salon
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HJb-53-BqO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3250" y="3220"/>
+            <point key="canvasLocation" x="1559" y="1108"/>
         </scene>
         <!--Cancel Appointment-->
         <scene sceneID="SKd-H3-LxZ">
@@ -1894,7 +1897,7 @@ Our runway expects have curated some of the most popular services at Salon
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Aqz-dz-aNW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4362" y="1833"/>
+            <point key="canvasLocation" x="4235" y="382"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="UDf-zc-Hqn">
@@ -1903,6 +1906,9 @@ Our runway expects have curated some of the most popular services at Salon
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="EbS-OV-98B">
                         <rect key="frame" x="0.0" y="59" width="430" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="D6T-CP-qhs" kind="showDetail" id="ueb-eT-ZiP"/>
@@ -1910,7 +1916,7 @@ Our runway expects have curated some of the most popular services at Salon
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TMk-xe-YUj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4201" y="2529"/>
+            <point key="canvasLocation" x="339" y="3272"/>
         </scene>
         <!--Album-->
         <scene sceneID="K7s-0x-guX">
@@ -1919,6 +1925,9 @@ Our runway expects have curated some of the most popular services at Salon
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="5u9-B5-5c2">
                         <rect key="frame" x="0.0" y="59" width="430" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="Yge-RI-jHp" kind="showDetail" id="qZV-MH-lhl"/>
@@ -1926,7 +1935,7 @@ Our runway expects have curated some of the most popular services at Salon
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b8G-T2-cDw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3250" y="1108"/>
+            <point key="canvasLocation" x="2428" y="382"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="WEd-nN-qNc">
@@ -1936,7 +1945,7 @@ Our runway expects have curated some of the most popular services at Salon
                         <rect key="frame" x="0.0" y="59" width="430" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                         </textAttributes>
                     </navigationBar>
                     <connections>
@@ -1945,7 +1954,7 @@ Our runway expects have curated some of the most popular services at Salon
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hzc-8a-c8K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4363" y="1108"/>
+            <point key="canvasLocation" x="3325" y="382"/>
         </scene>
         <!--Schedule-->
         <scene sceneID="ixS-Ou-0ce">
@@ -2149,7 +2158,7 @@ Our runway expects have curated some of the most popular services at Salon
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lro-W4-y7T" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2177" y="2558"/>
+            <point key="canvasLocation" x="-399" y="1108"/>
         </scene>
         <!--NotificationVC-->
         <scene sceneID="GCe-6K-bVj">
@@ -2189,7 +2198,7 @@ Our runway expects have curated some of the most popular services at Salon
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Msb-jb-Oyj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5210" y="1108"/>
+            <point key="canvasLocation" x="3324" y="-1967"/>
         </scene>
         <!--Checkout-->
         <scene sceneID="RBT-vF-UfV">
@@ -2274,7 +2283,7 @@ Our runway expects have curated some of the most popular services at Salon
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9BE-op-Kl8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2177" y="3936"/>
+            <point key="canvasLocation" x="-399" y="1833"/>
         </scene>
         <!--Explore-->
         <scene sceneID="Pzi-nV-AA6">
@@ -2347,7 +2356,7 @@ Our runway expects have curated some of the most popular services at Salon
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zYa-dc-ndQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3251" y="382"/>
+            <point key="canvasLocation" x="1559" y="-337"/>
         </scene>
         <!--Item-->
         <scene sceneID="XGm-q6-F9N">
@@ -2367,7 +2376,7 @@ Our runway expects have curated some of the most popular services at Salon
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3pX-6j-D4c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4201" y="-337"/>
+            <point key="canvasLocation" x="3324" y="-337"/>
         </scene>
         <!--Profile-->
         <scene sceneID="20n-JB-Ko6">
@@ -2409,7 +2418,7 @@ Our runway expects have curated some of the most popular services at Salon
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZBy-JW-7WP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5179.5348837209303" y="381.75965665236055"/>
+            <point key="canvasLocation" x="5986" y="-337"/>
         </scene>
         <!--Calendar-->
         <scene sceneID="s35-WF-I8x">
@@ -2418,6 +2427,9 @@ Our runway expects have curated some of the most popular services at Salon
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="T6a-fb-Oer">
                         <rect key="frame" x="0.0" y="59" width="430" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="cN9-T4-X1C" kind="showDetail" id="qSl-yI-6yO"/>
@@ -2425,7 +2437,7 @@ Our runway expects have curated some of the most popular services at Salon
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pJK-fQ-PtR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2177" y="1833"/>
+            <point key="canvasLocation" x="340" y="1108"/>
         </scene>
         <!--Item-->
         <scene sceneID="mKm-fq-1yQ">
@@ -2556,7 +2568,7 @@ Our runway expects have curated some of the most popular services at Salon
                                                                 <rect key="frame" x="0.0" y="0.0" width="390" height="40"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dbO-0h-OaR">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="330" height="40"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="111.66666666666667" height="40"/>
                                                                         <attributedString key="attributedText">
                                                                             <fragment content="Favourites">
                                                                                 <attributes>
@@ -2571,10 +2583,7 @@ Our runway expects have curated some of the most popular services at Salon
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qsc-Ou-JoA">
-                                                                        <rect key="frame" x="330" y="0.0" width="60" height="40"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="width" constant="60" id="peG-QD-cQ9"/>
-                                                                        </constraints>
+                                                                        <rect key="frame" x="111.66666666666666" y="0.0" width="278.33333333333337" height="40"/>
                                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                         <state key="normal" title="See All">
                                                                             <attributedString key="attributedTitle">
@@ -2699,7 +2708,7 @@ Our runway expects have curated some of the most popular services at Salon
                                                                 <rect key="frame" x="0.0" y="0.0" width="390" height="40"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yEw-V9-gCD">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="330" height="40"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="189.66666666666666" height="40"/>
                                                                         <attributedString key="attributedText">
                                                                             <fragment content="Top Rated Salons">
                                                                                 <attributes>
@@ -2714,10 +2723,7 @@ Our runway expects have curated some of the most popular services at Salon
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Uo4-tW-rIo">
-                                                                        <rect key="frame" x="330" y="0.0" width="60" height="40"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="width" constant="60" id="Hsm-0I-Djd"/>
-                                                                        </constraints>
+                                                                        <rect key="frame" x="189.66666666666663" y="0.0" width="200.33333333333337" height="40"/>
                                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                         <state key="normal" title="See All">
                                                                             <attributedString key="attributedTitle">
@@ -2812,7 +2818,7 @@ Our runway expects have curated some of the most popular services at Salon
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U6P-pd-4g2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2178" y="382"/>
+            <point key="canvasLocation" x="-398" y="-337"/>
         </scene>
         <!--Custom TabbarVC-->
         <scene sceneID="uuw-eV-k6h">
@@ -2832,7 +2838,7 @@ Our runway expects have curated some of the most popular services at Salon
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UZi-Xu-xKV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3675" y="-1062"/>
+            <point key="canvasLocation" x="2876" y="-1059"/>
         </scene>
         <!--Item-->
         <scene sceneID="eMB-c4-i74">
@@ -2843,16 +2849,16 @@ Our runway expects have curated some of the most popular services at Salon
                         <rect key="frame" x="0.0" y="59" width="430" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                         </textAttributes>
                     </navigationBar>
                     <connections>
-                        <segue destination="xFh-lv-rE8" kind="relationship" relationship="rootViewController" id="NEY-gr-qCv"/>
+                        <segue destination="xFh-lv-rE8" kind="relationship" relationship="rootViewController" id="jSk-Jd-k1d"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M5F-6b-VDi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2177" y="-337"/>
+            <point key="canvasLocation" x="428" y="-337"/>
         </scene>
         <!--Item-->
         <scene sceneID="jje-S5-e1I">
@@ -2980,7 +2986,7 @@ Our runway expects have curated some of the most popular services at Salon
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FGZ-Ib-gcE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6840" y="1194"/>
+            <point key="canvasLocation" x="4235" y="-1967"/>
         </scene>
         <!--Item-->
         <scene sceneID="gYr-Ye-vHq">
@@ -3072,7 +3078,7 @@ Our runway expects have curated some of the most popular services at Salon
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="unh-MT-LQa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6840" y="2582"/>
+            <point key="canvasLocation" x="6038" y="-1967"/>
         </scene>
         <!--Album-->
         <scene sceneID="fB6-BY-vdQ">
@@ -3120,7 +3126,7 @@ Our runway expects have curated some of the most popular services at Salon
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8o6-wZ-qWo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3250" y="1833"/>
+            <point key="canvasLocation" x="1559" y="382"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="1df-ih-UOT">
@@ -3129,6 +3135,9 @@ Our runway expects have curated some of the most popular services at Salon
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="3vB-br-C0T">
                         <rect key="frame" x="0.0" y="59" width="430" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="DW5-AO-T3C" kind="showDetail" id="hnx-P8-2PG"/>
@@ -3136,7 +3145,7 @@ Our runway expects have curated some of the most popular services at Salon
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="89m-MK-LZu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2177" y="3220"/>
+            <point key="canvasLocation" x="338" y="1833"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Ho3-CK-FjH">
@@ -3145,6 +3154,9 @@ Our runway expects have curated some of the most popular services at Salon
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Wmt-z6-axg">
                         <rect key="frame" x="0.0" y="59" width="430" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="Tfw-ox-BKn" kind="showDetail" id="KSz-fc-GIX"/>
@@ -3152,7 +3164,7 @@ Our runway expects have curated some of the most popular services at Salon
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dpy-Pv-Qw7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3250" y="2530"/>
+            <point key="canvasLocation" x="2428" y="1108"/>
         </scene>
         <!--Receipt-->
         <scene sceneID="QfG-r6-tVw">
@@ -3215,7 +3227,7 @@ Our runway expects have curated some of the most popular services at Salon
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uWj-2n-bnJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4201" y="3220"/>
+            <point key="canvasLocation" x="-399" y="3272"/>
         </scene>
     </scenes>
     <resources>
