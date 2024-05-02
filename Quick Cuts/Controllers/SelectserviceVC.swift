@@ -23,6 +23,17 @@ class SelectserviceVC: UIViewController {
     @IBOutlet weak var aboutTextView: UITextView!
     
     
+    let serviceData: [serviceDM] = [
+        serviceDM(serviceName: "Haircut", servicePrice: 100),
+        serviceDM(serviceName: "Manicure", servicePrice: 500),
+        serviceDM(serviceName: "Pedicure", servicePrice: 250),
+        serviceDM(serviceName: "Facial", servicePrice: 150),
+        serviceDM(serviceName: "Massage", servicePrice: 400),
+        serviceDM(serviceName: "Waxing", servicePrice: 1000),
+        serviceDM(serviceName: "Threading", servicePrice: 50)
+    ]
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -40,11 +51,14 @@ class SelectserviceVC: UIViewController {
 extension SelectserviceVC : UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        7
+        return serviceData.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ServiceCollectionCell", for: indexPath) as! ServiceCollectionCell
+        let data = serviceData[indexPath.row]
+        cell.serviceName.text = data.serviceName
+        cell.servicePrice.text = "Rs: \(data.servicePrice)"
         return cell
     }
     

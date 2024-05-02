@@ -67,6 +67,19 @@ extension UIView {
 }
 
 extension UIView {
+    @IBInspectable var topCornerRadius: CGFloat {
+        get {
+            return layer.cornerRadius
+        }
+        set {
+            layer.cornerRadius = newValue
+            layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+        }
+    }
+}
+
+
+extension UIView {
     @IBInspectable var fullyRoundedCorners: Bool {
         get {
             return layer.cornerRadius == min(bounds.width, bounds.height) / 2

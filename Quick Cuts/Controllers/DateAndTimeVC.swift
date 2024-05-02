@@ -28,6 +28,36 @@ class DateAndTimeVC: UIViewController {
         }
     }
     
+    let timeSlotData: [BookingTimeSlot] = [
+        BookingTimeSlot(timeSlot: "09:00 AM"),
+        BookingTimeSlot(timeSlot: "09:30 AM"),
+        BookingTimeSlot(timeSlot: "10:00 AM"),
+        BookingTimeSlot(timeSlot: "10:30 AM"),
+        BookingTimeSlot(timeSlot: "11:00 AM"),
+        BookingTimeSlot(timeSlot: "11:30 AM"),
+        BookingTimeSlot(timeSlot: "12:00 PM"),
+        BookingTimeSlot(timeSlot: "12:30 PM"),
+        BookingTimeSlot(timeSlot: "01:00 PM"),
+        BookingTimeSlot(timeSlot: "01:30 PM"),
+        BookingTimeSlot(timeSlot: "02:00 PM"),
+        BookingTimeSlot(timeSlot: "02:30 PM"),
+        BookingTimeSlot(timeSlot: "03:00 PM"),
+        BookingTimeSlot(timeSlot: "03:30 PM"),
+        BookingTimeSlot(timeSlot: "04:00 PM"),
+    ]
+    
+    let dayAndDateData: [DayAndDateDM] = [
+        DayAndDateDM(dayLabel: "MON", dateLabel: "05"),
+        DayAndDateDM(dayLabel: "TUE", dateLabel: "06"),
+        DayAndDateDM(dayLabel: "WED", dateLabel: "07"),
+        DayAndDateDM(dayLabel: "THU", dateLabel: "08"),
+        DayAndDateDM(dayLabel: "FRI", dateLabel: "09"),
+        DayAndDateDM(dayLabel: "SAT", dateLabel: "10"),
+        DayAndDateDM(dayLabel: "SUN", dateLabel: "11")
+    ]
+
+
+    
     @IBOutlet weak var timeSlotHeightObserver: NSLayoutConstraint!
     
     override func viewDidLoad() {
@@ -57,20 +87,25 @@ class DateAndTimeVC: UIViewController {
 extension DateAndTimeVC : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == DayAndDateCollectionView {
-            return 7
+            return dayAndDateData.count
         }
         else {
-            return 15
+            return timeSlotData.count
         }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == DayAndDateCollectionView {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DateSelectCollectionViewCell", for: indexPath) as! DateSelectCollectionViewCell
+            let data = dayAndDateData[indexPath.row]
+            cell.dateLabel.text = data.dateLabel
+            cell.dayLabel.text = data.dayLabel
             return cell
         }
         else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TimeSlotCollectionCell", for: indexPath) as! TimeSlotCollectionCell
+            let data = timeSlotData[indexPath.row]
+            cell.timeSlot.text = data.timeSlot
             return cell
         }
     }

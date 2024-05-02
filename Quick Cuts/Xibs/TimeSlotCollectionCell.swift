@@ -9,6 +9,8 @@ import UIKit
 
 class TimeSlotCollectionCell: UICollectionViewCell {
 
+    @IBOutlet weak var timeSlot: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

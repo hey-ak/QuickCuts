@@ -14,7 +14,7 @@ class BookingVC: UIViewController {
     }
     
     
-    let dummyData: [currentBookingDM] = [
+    let currentData: [currentBookingDM] = [
         currentBookingDM(salonName: "Ramesh Salon", salonAddress: "SCO- 285, Ground Floor Sec, Sector 35D, Chandigarh, 160022", serviceID: "#0001", salonImage: "salonImage1"),
         currentBookingDM(salonName: "Suresh Salon", salonAddress: "ShopNo- 20, Press Road, Rajpura, 147003", serviceID: "#0002", salonImage: "salonImage2"),
         currentBookingDM(salonName: "Aone Salon", salonAddress: "101 Lane, Urban Estate Phase, Patiala, Punjab, India", serviceID: "#0003", salonImage: "salonImage3"),
@@ -22,6 +22,26 @@ class BookingVC: UIViewController {
         currentBookingDM(salonName: "No.1 Salon", salonAddress: "777 Colony, Bhadson Road, Patiala, Punjab, India", serviceID: "#0005", salonImage: "salonImage5"),
         currentBookingDM(salonName: "Poonam Salon", salonAddress: "333 Road, Lehal Colony, Patiala, Punjab, India", serviceID: "#0006", salonImage: "salonImage6"),
         currentBookingDM(salonName: "Crazy Salon", salonAddress: "666 Lane, SST Nagar, Patiala, Punjab, India", serviceID: "#0007", salonImage: "salonImage7"),
+    ]
+    
+    let completedData: [CompletedServicesDM] = [
+        CompletedServicesDM(salonName: "Ramesh Salon", salonAddress: "SCO- 285, Ground Floor Sec, Sector 35D, Chandigarh, 160022", serviceID: "#0001", salonImage: "salonImage7"),
+        CompletedServicesDM(salonName: "Suresh Salon", salonAddress: "ShopNo- 20, Press Road, Rajpura, 147003", serviceID: "#0002", salonImage: "salonImage6"),
+        CompletedServicesDM(salonName: "Aone Salon", salonAddress: "101 Lane, Urban Estate Phase, Patiala, Punjab, India", serviceID: "#0003", salonImage: "salonImage5"),
+        CompletedServicesDM(salonName: "Fresha Salon", salonAddress: "789 Avenue, Baradari Gardens, Patiala, Punjab, India", serviceID: "#0004", salonImage: "salonImage4"),
+        CompletedServicesDM(salonName: "No.1 Salon", salonAddress: "777 Colony, Bhadson Road, Patiala, Punjab, India", serviceID: "#0005", salonImage: "salonImage3"),
+        CompletedServicesDM(salonName: "Poonam Salon", salonAddress: "333 Road, Lehal Colony, Patiala, Punjab, India", serviceID: "#0006", salonImage: "salonImage2"),
+        CompletedServicesDM(salonName: "Crazy Salon", salonAddress: "666 Lane, SST Nagar, Patiala, Punjab, India", serviceID: "#0007", salonImage: "salonImage1"),
+    ]
+    
+    let cancelledData: [CancelledServicesDM] = [
+        CancelledServicesDM(salonName: "Ramesh Salon", salonAddress: "SCO- 285, Ground Floor Sec, Sector 35D, Chandigarh, 160022", serviceID: "#0001", salonImage: "salonImage5"),
+        CancelledServicesDM(salonName: "Suresh Salon", salonAddress: "ShopNo- 20, Press Road, Rajpura, 147003", serviceID: "#0002", salonImage: "salonImage7"),
+        CancelledServicesDM(salonName: "Aone Salon", salonAddress: "101 Lane, Urban Estate Phase, Patiala, Punjab, India", serviceID: "#0003", salonImage: "salonImage1"),
+        CancelledServicesDM(salonName: "Fresha Salon", salonAddress: "789 Avenue, Baradari Gardens, Patiala, Punjab, India", serviceID: "#0004", salonImage: "salonImage4"),
+        CancelledServicesDM(salonName: "No.1 Salon", salonAddress: "777 Colony, Bhadson Road, Patiala, Punjab, India", serviceID: "#0005", salonImage: "salonImage3"),
+        CancelledServicesDM(salonName: "Poonam Salon", salonAddress: "333 Road, Lehal Colony, Patiala, Punjab, India", serviceID: "#0006", salonImage: "salonImage6"),
+        CancelledServicesDM(salonName: "Crazy Salon", salonAddress: "666 Lane, SST Nagar, Patiala, Punjab, India", serviceID: "#0007", salonImage: "salonImage2"),
     ]
 
 
@@ -49,7 +69,7 @@ class BookingVC: UIViewController {
 extension BookingVC: UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return dummyData.count
+        return currentData.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -59,7 +79,7 @@ extension BookingVC: UICollectionViewDelegate,UICollectionViewDataSource,UIColle
             if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BookingCollectionCell", for: indexPath) as? BookingCollectionCell {
                 
                 cell.cancelServiceButton.addTarget(self, action: #selector(buttonPressed),for: .touchUpInside)
-                let data = dummyData[indexPath.row]
+                let data = currentData[indexPath.row]
                 cell.salonName.text = data.salonName
                 cell.salonImage.image = UIImage(named: "\(data.salonImage)")
                 //cell.serviceID.text = "\(data.serviceID)"
@@ -70,11 +90,21 @@ extension BookingVC: UICollectionViewDelegate,UICollectionViewDataSource,UIColle
             
         case 1:
             if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BookingCompletedCollectionCell", for: indexPath) as? BookingCompletedCollectionCell {
+                let data = completedData[indexPath.row]
+                cell.salonName.text = data.salonName
+                cell.salonImage.image = UIImage(named: "\(data.salonImage)")
+                //cell.serviceID.text = "\(data.serviceID)"
+                cell.salonAddress.text = data.salonAddress
                 return cell
             }
             
         case 2:
             if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BookingCancelledCollectionCell", for: indexPath) as? BookingCancelledCollectionCell {
+                let data = cancelledData[indexPath.row]
+                cell.salonName.text = data.salonName
+                cell.salonImage.image = UIImage(named: "\(data.salonImage)")
+                //cell.serviceID.text = "\(data.serviceID)"
+                cell.salonAddress.text = data.salonAddress
                 return cell
             }
             

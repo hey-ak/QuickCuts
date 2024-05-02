@@ -39,7 +39,7 @@ class HomeVC: UIViewController {
         didSet {
             switch mainCollectionSeeAllState {
             case .selected:
-                self.mainCollectionViewData = HomeServicesArray.count
+                self.mainCollectionViewData = HomeCardArray.count
                 
             case .unselected:
                 self.mainCollectionViewData = nil
@@ -85,15 +85,11 @@ class HomeVC: UIViewController {
     
     let HomeServicesArray: [HomeServices] = [
         HomeServices(serviceImage: "serviceImage1", serviceName: "HairCut"),
-        HomeServices(serviceImage: "serviceImage4", serviceName: "Manicure"),
         HomeServices(serviceImage: "serviceImage3", serviceName: "Pedicure"),
         HomeServices(serviceImage: "serviceImage2", serviceName: "Massage"),
         HomeServices(serviceImage: "serviceImage5", serviceName: "Facial"),
-        HomeServices(serviceImage: "serviceImage6", serviceName: "Waxing"),
-        HomeServices(serviceImage: "serviceImage7", serviceName: "Spa Treatment"),
         HomeServices(serviceImage: "serviceImage3", serviceName: "Hair Coloring"),
         HomeServices(serviceImage: "serviceImage5", serviceName: "Shaving"),
-        HomeServices(serviceImage: "serviceImage10", serviceName: "Makeup")
     ]
 
 
@@ -105,6 +101,8 @@ class HomeVC: UIViewController {
         super.viewDidLoad()
         ratedCollectionSeeAllState = .unselected
         mainCollectionSeeAllState = .unselected
+        
+        catagoryCollectionView.reloadData()
     }
     
     
@@ -134,15 +132,16 @@ extension HomeVC: UICollectionViewDelegate,UICollectionViewDataSource,UICollecti
             return ratedCollectionViewData ?? 4
         }
         else if collectionView == catagoryCollectionView {
-            return HomeCardArray.count
+            return HomeServicesArray.count
         }
         return mainCollectionViewData ?? 2
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if collectionView == ratedCollectionView || collectionView == mainCollectionView {
+        
+        
+        if collectionView == ratedCollectionView {
             if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeCollectionCell", for: indexPath) as? HomeCollectionCell {
-                if indexPath.row < HomeCardArray.count { // Check if index is within bounds
                     let data = HomeCardArray[indexPath.row]
                     cell.salonName.text = data.salonName
                     cell.salonImage.image = UIImage(named: data.salonImage) // No need for "\(data.salonImage)"
@@ -152,8 +151,18 @@ extension HomeVC: UICollectionViewDelegate,UICollectionViewDataSource,UICollecti
                     return cell
                 }
             }
-        } else {
-            if indexPath.row < HomeServicesArray.count { // Check if index is within bounds
+        else if collectionView == mainCollectionView {
+            if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeCollectionCell", for: indexPath) as? HomeCollectionCell {
+                    let data = HomeCardArray[indexPath.row]
+                    cell.salonName.text = data.salonName
+                    cell.salonImage.image = UIImage(named: data.salonImage) // No need for "\(data.salonImage)"
+                    cell.reviewCount.text = "\(data.reviewCount) Reviews"
+                    //cell.serviceID.text = "\(data.serviceID)"
+                    cell.salonAddress.text = data.salonAddress
+                    return cell
+                }
+            }
+        else {
                 if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeCatagoryCollectionCell", for: indexPath) as? HomeCatagoryCollectionCell {
                     let data  = HomeServicesArray[indexPath.row]
                     cell.serviceImage.image = UIImage(named: data.serviceImage) // No need for "\(data.serviceImage)"
@@ -161,7 +170,7 @@ extension HomeVC: UICollectionViewDelegate,UICollectionViewDataSource,UICollecti
                     return cell
                 }
             }
-        }
+        
         return UICollectionViewCell()
     }
 

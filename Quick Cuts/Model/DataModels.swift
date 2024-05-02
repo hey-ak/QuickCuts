@@ -101,6 +101,37 @@ struct HomeServices{
     let serviceName:String
 }
 
+struct CompletedServicesDM {
+    let salonName: String
+    let salonAddress: String
+    let serviceID: String
+    let salonImage: String
+}
 
+struct CancelledServicesDM {
+    let salonName: String
+    let salonAddress: String
+    let serviceID: String
+    let salonImage: String
+}
+
+struct serviceDM {
+    let serviceName: String
+    let servicePrice: Int
+}
+
+struct BookingTimeSlot {
+    let timeSlot: String
+}
+
+struct DayAndDateDM {
+    let dayLabel: String
+    let dateLabel: String
+}
+
+struct ProfileDM {
+    let profileLabel: String
+    let profileIcon: String
+}
 
 
