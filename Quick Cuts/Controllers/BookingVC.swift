@@ -47,6 +47,7 @@ class BookingVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
     
     
@@ -59,6 +60,11 @@ class BookingVC: UIViewController {
     @objc func buttonPressed(){
         let nextVC = storyboard?.instantiateViewController(withIdentifier: "CancelServiceVC") as! CancelServiceVC
         navigationController?.pushViewController(nextVC, animated: true)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
     
     

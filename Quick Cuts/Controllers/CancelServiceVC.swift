@@ -25,14 +25,14 @@ class CancelServiceVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        // navigationController?.navigationBar.prefersLargeTitles = false
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func backButtonDidTapped(_ sender: Any) {
-        navigationController?.popViewController(animated: true)
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        // navigationController?.navigationBar.prefersLargeTitles = false
     }
-    
 
 }
 
