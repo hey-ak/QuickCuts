@@ -135,3 +135,10 @@ struct ProfileDM {
 }
 
 
+struct FavouriteCard{
+    let salonName:String
+    let salonAddress:String
+    let reviewCount:Int
+    let salonImage:String
+}
+

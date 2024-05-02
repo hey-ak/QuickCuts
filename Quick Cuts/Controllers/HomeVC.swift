@@ -39,7 +39,7 @@ class HomeVC: UIViewController {
         didSet {
             switch mainCollectionSeeAllState {
             case .selected:
-                self.mainCollectionViewData = HomeCardArray.count
+                self.mainCollectionViewData = FavouriteCardArray.count
                 
             case .unselected:
                 self.mainCollectionViewData = nil
@@ -91,6 +91,17 @@ class HomeVC: UIViewController {
         HomeServices(serviceImage: "serviceImage3", serviceName: "Hair Coloring"),
         HomeServices(serviceImage: "serviceImage5", serviceName: "Shaving"),
     ]
+    
+    
+
+    let FavouriteCardArray: [FavouriteCard] = [
+        FavouriteCard(salonName: "Glamour Hair & Beauty", salonAddress: "123 Park Street, Springfield, ABC", reviewCount: 30, salonImage: "favouriteImage1"),
+        FavouriteCard(salonName: "Chic Style Studio", salonAddress: "456 Elm Avenue, Rivertown, DEF", reviewCount: 22, salonImage: "favouriteImage2"),
+        FavouriteCard(salonName: "Elegant Touch Spa", salonAddress: "789 Maple Road, Lakeside, GHI", reviewCount: 35, salonImage: "favouriteImage3"),
+        FavouriteCard(salonName: "Luxe Beauty Lounge", salonAddress: "101 Cedar Lane, Hillcrest, JKL", reviewCount: 28, salonImage: "favouriteImage4"),
+        FavouriteCard(salonName: "Tranquil Retreat", salonAddress: "876 Oak Street, Meadowland, MNO", reviewCount: 40, salonImage: "favouriteImage5")
+    ]
+
 
 
 
@@ -153,7 +164,7 @@ extension HomeVC: UICollectionViewDelegate,UICollectionViewDataSource,UICollecti
             }
         else if collectionView == mainCollectionView {
             if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeCollectionCell", for: indexPath) as? HomeCollectionCell {
-                    let data = HomeCardArray[indexPath.row]
+                    let data = FavouriteCardArray[indexPath.row]
                     cell.salonName.text = data.salonName
                     cell.salonImage.image = UIImage(named: data.salonImage) // No need for "\(data.salonImage)"
                     cell.reviewCount.text = "\(data.reviewCount) Reviews"
