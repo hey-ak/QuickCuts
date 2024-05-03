@@ -73,7 +73,7 @@
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal">
                                                     <attributedString key="attributedTitle">
-                                                        <fragment content="View Receipt">
+                                                        <fragment content="Re-Book">
                                                             <attributes>
                                                                 <color key="NSColor" red="0.99992000000000003" green="1" blue="0.99987999999999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <font key="NSFont" size="19" name="HelveticaNeue"/>
