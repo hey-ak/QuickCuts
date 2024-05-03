@@ -135,15 +135,6 @@ struct FavouriteCard{
     let reviewCount:Int
     let salonImage:String
 }
-
-
-struct Notification{
-    let name:String
-    let message:String
-    let time:String
-}
-
-
 struct Notification{
     let name:String
     let message:String
