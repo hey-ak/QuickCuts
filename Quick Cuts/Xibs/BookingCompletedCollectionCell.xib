@@ -228,6 +228,12 @@
                 <constraint firstItem="1J3-eX-26g" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="qjo-u9-UGJ"/>
             </constraints>
             <size key="customSize" width="372" height="260"/>
+            <connections>
+                <outlet property="salonAddress" destination="EUz-qv-ov1" id="I5W-EB-b6U"/>
+                <outlet property="salonImage" destination="dBb-FC-mgZ" id="ve8-3F-f8C"/>
+                <outlet property="salonName" destination="mb7-2S-7Zh" id="SWb-FR-fdj"/>
+                <outlet property="servviceId" destination="7Tb-Q3-MVf" id="UWt-YE-cwi"/>
+            </connections>
             <point key="canvasLocation" x="158.77862595419847" y="62.676056338028175"/>
         </collectionViewCell>
     </objects>

@@ -5,7 +5,8 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
     
     private var locationManager = CLLocationManager()
     private var continuousUpdates: Bool = false
-    private var locationUpdateHandler: ((CLLocation) -> Void)?
+    public var locationUpdateHandler: ((CLLocation) -> Void)?
+    public var currentLocation: CLLocation?
     
     override private init() {
         super.init()
@@ -32,19 +33,28 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         if status == .authorizedWhenInUse || status == .authorizedAlways {
-            if continuousUpdates {
-                locationManager.startUpdatingLocation()
-            }
+            locationManager.startUpdatingLocation()
         }
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         // Handle updated locations
         guard let location = locations.last else { return }
-        locationUpdateHandler?(location)
+        currentLocation = location
+        if continuousUpdates == true {
+            locationUpdateHandler?(location)
+        }
+        else {
+            locationManager.stopUpdatingLocation()
+        }
+       
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print("Location Manager failed with error: \(error.localizedDescription)")
+    }
+    
+    func getCurrentLocation() {
+        locationManager.startUpdatingLocation()
     }
 }

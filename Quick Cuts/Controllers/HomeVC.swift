@@ -27,7 +27,7 @@ class HomeVC: UIViewController {
         didSet {
             switch ratedCollectionSeeAllState {
             case .selected:
-                self.ratedCollectionViewData = 20
+                self.ratedCollectionViewData = HomeCardArray.count
                 
             case .unselected:
                 self.ratedCollectionViewData = nil
@@ -39,7 +39,7 @@ class HomeVC: UIViewController {
         didSet {
             switch mainCollectionSeeAllState {
             case .selected:
-                self.mainCollectionViewData = 20
+                self.mainCollectionViewData = FavouriteCardArray.count
                 
             case .unselected:
                 self.mainCollectionViewData = nil
@@ -70,8 +70,41 @@ class HomeVC: UIViewController {
         }
     }
     
+    let HomeCardArray: [HomeCard] = [
+        HomeCard(salonName: "Ramesh Salon", salonAddress: "SCO- 285, Ground Floor Sec, Sector 35D, Chandigarh, 160022", reviewCount: 10, salonImage: "salonImage1"),
+        HomeCard(salonName: "Anita's Beauty Salon", salonAddress: "123 Main Street, Cityville, XYZ", reviewCount: 15, salonImage: "salonImage2"),
+        HomeCard(salonName: "Glamour World Salon", salonAddress: "789 Elm Street, Townsville, ABC", reviewCount: 20, salonImage: "salonImage3"),
+        HomeCard(salonName: "Style Diva Salon", salonAddress: "456 Oak Avenue, Villagetown, DEF", reviewCount: 8, salonImage: "salonImage4"),
+        HomeCard(salonName: "Elegance Salon & Spa", salonAddress: "101 Pine Road, Hamletville, GHI", reviewCount: 12, salonImage: "salonImage5"),
+        HomeCard(salonName: "Radiance Hair Studio", salonAddress: "876 Maple Lane, Boroughburg, JKL", reviewCount: 18, salonImage: "salonImage6"),
+        HomeCard(salonName: "Chic Beauty Lounge", salonAddress: "543 Cedar Court, Township, MNO", reviewCount: 6, salonImage: "salonImage7"),
+        HomeCard(salonName: "Serenity Spa & Salon", salonAddress: "222 Walnut Drive, County, PQR", reviewCount: 25, salonImage: "salonImage8"),
+        HomeCard(salonName: "Blissful Beauty Haven", salonAddress: "999 Pineapple Street, District, STU", reviewCount: 9, salonImage: "salonImage9"),
+        HomeCard(salonName: "Tranquility Wellness Center", salonAddress: "777 Waterfall Road, Precinct, VWX", reviewCount: 14, salonImage: "salonImage10")
+    ]
+    
+    let HomeServicesArray: [HomeServices] = [
+        HomeServices(serviceImage: "serviceImage1", serviceName: "HairCut"),
+        HomeServices(serviceImage: "serviceImage3", serviceName: "Pedicure"),
+        HomeServices(serviceImage: "serviceImage2", serviceName: "Massage"),
+        HomeServices(serviceImage: "serviceImage5", serviceName: "Facial"),
+        HomeServices(serviceImage: "serviceImage3", serviceName: "Hair Coloring"),
+        HomeServices(serviceImage: "serviceImage5", serviceName: "Shaving"),
+    ]
     
     
+
+    let FavouriteCardArray: [FavouriteCard] = [
+        FavouriteCard(salonName: "Glamour Hair & Beauty", salonAddress: "123 Park Street, Springfield, ABC", reviewCount: 30, salonImage: "favouriteImage1"),
+        FavouriteCard(salonName: "Chic Style Studio", salonAddress: "456 Elm Avenue, Rivertown, DEF", reviewCount: 22, salonImage: "favouriteImage2"),
+        FavouriteCard(salonName: "Elegant Touch Spa", salonAddress: "789 Maple Road, Lakeside, GHI", reviewCount: 35, salonImage: "favouriteImage3"),
+        FavouriteCard(salonName: "Luxe Beauty Lounge", salonAddress: "101 Cedar Lane, Hillcrest, JKL", reviewCount: 28, salonImage: "favouriteImage4"),
+        FavouriteCard(salonName: "Tranquil Retreat", salonAddress: "876 Oak Street, Meadowland, MNO", reviewCount: 40, salonImage: "favouriteImage5")
+    ]
+
+
+
+
     
     
 
@@ -79,6 +112,8 @@ class HomeVC: UIViewController {
         super.viewDidLoad()
         ratedCollectionSeeAllState = .unselected
         mainCollectionSeeAllState = .unselected
+        
+        catagoryCollectionView.reloadData()
     }
     
     
@@ -105,25 +140,51 @@ extension HomeVC: UICollectionViewDelegate,UICollectionViewDataSource,UICollecti
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == ratedCollectionView {
-            return ratedCollectionViewData ?? 2
+            return ratedCollectionViewData ?? 4
         }
         else if collectionView == catagoryCollectionView {
-            return 20
+            return HomeServicesArray.count
         }
         return mainCollectionViewData ?? 2
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if collectionView == ratedCollectionView || collectionView == mainCollectionView {
+        
+        
+        if collectionView == ratedCollectionView {
             if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeCollectionCell", for: indexPath) as? HomeCollectionCell {
-                return cell
+                    let data = HomeCardArray[indexPath.row]
+                    cell.salonName.text = data.salonName
+                    cell.salonImage.image = UIImage(named: data.salonImage) // No need for "\(data.salonImage)"
+                    cell.reviewCount.text = "\(data.reviewCount) Reviews"
+                    //cell.serviceID.text = "\(data.serviceID)"
+                    cell.salonAddress.text = data.salonAddress
+                    return cell
+                }
             }
-        }
-        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeCatagoryCollectionCell", for: indexPath) as? HomeCatagoryCollectionCell {
-            return cell
-        }
+        else if collectionView == mainCollectionView {
+            if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeCollectionCell", for: indexPath) as? HomeCollectionCell {
+                    let data = FavouriteCardArray[indexPath.row]
+                    cell.salonName.text = data.salonName
+                    cell.salonImage.image = UIImage(named: data.salonImage) // No need for "\(data.salonImage)"
+                    cell.reviewCount.text = "\(data.reviewCount) Reviews"
+                    //cell.serviceID.text = "\(data.serviceID)"
+                    cell.salonAddress.text = data.salonAddress
+                    return cell
+                }
+            }
+        else {
+                if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeCatagoryCollectionCell", for: indexPath) as? HomeCatagoryCollectionCell {
+                    let data  = HomeServicesArray[indexPath.row]
+                    cell.serviceImage.image = UIImage(named: data.serviceImage) // No need for "\(data.serviceImage)"
+                    cell.serviceName.text = data.serviceName // No need for "\(data.serviceName)"
+                    return cell
+                }
+            }
+        
         return UICollectionViewCell()
     }
+
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if collectionView == ratedCollectionView {

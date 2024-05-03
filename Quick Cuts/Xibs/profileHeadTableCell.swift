@@ -9,6 +9,10 @@ import UIKit
 
 class profileHeadTableCell: UITableViewCell {
 
+    @IBOutlet weak var userProfileImage: UIImageView!
+    @IBOutlet weak var userPhoneNumber: UILabel!
+    @IBOutlet weak var userName: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

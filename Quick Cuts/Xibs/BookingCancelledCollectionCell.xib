@@ -178,6 +178,7 @@
                                     <constraint firstAttribute="bottom" secondItem="RDX-lN-Mro" secondAttribute="bottom" constant="15" id="UGb-19-F9j"/>
                                     <constraint firstAttribute="trailing" secondItem="0AC-XP-f6y" secondAttribute="trailing" constant="10" id="eyC-fy-XJn"/>
                                     <constraint firstItem="xCt-n4-skt" firstAttribute="leading" secondItem="wcI-iT-tw9" secondAttribute="leading" constant="15" id="fGW-qv-z04"/>
+                                    <constraint firstAttribute="width" secondItem="wcI-iT-tw9" secondAttribute="height" multiplier="362:243" id="iaN-ZQ-Dkx"/>
                                     <constraint firstItem="xCt-n4-skt" firstAttribute="top" secondItem="0AC-XP-f6y" secondAttribute="bottom" constant="10" id="max-pF-vVw"/>
                                     <constraint firstItem="0AC-XP-f6y" firstAttribute="leading" secondItem="wcI-iT-tw9" secondAttribute="leading" constant="10" id="pLt-Th-I8S"/>
                                     <constraint firstItem="RDX-lN-Mro" firstAttribute="leading" secondItem="wcI-iT-tw9" secondAttribute="leading" constant="15" id="xRm-56-djA"/>
@@ -189,9 +190,6 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
-                        <constraints>
-                            <constraint firstItem="wcI-iT-tw9" firstAttribute="width" secondItem="wcI-iT-tw9" secondAttribute="height" multiplier="362:243" id="iaN-ZQ-Dkx"/>
-                        </constraints>
                     </stackView>
                 </subviews>
             </view>
@@ -202,6 +200,12 @@
                 <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="iDP-HD-Bae" secondAttribute="bottom" id="pAd-mf-7HP"/>
             </constraints>
             <size key="customSize" width="323" height="293"/>
+            <connections>
+                <outlet property="salonAddress" destination="f4W-Qf-fp2" id="xIh-hc-spJ"/>
+                <outlet property="salonImage" destination="xHo-r8-ZJn" id="WKP-ry-fMU"/>
+                <outlet property="salonName" destination="UiI-0l-bcz" id="yzS-jc-2x8"/>
+                <outlet property="serviceID" destination="22P-CV-zCt" id="04d-fm-NZf"/>
+            </connections>
             <point key="canvasLocation" x="121.37404580152672" y="74.295774647887328"/>
         </collectionViewCell>
     </objects>
