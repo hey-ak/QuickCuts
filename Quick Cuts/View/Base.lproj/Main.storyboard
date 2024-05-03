@@ -2248,22 +2248,7 @@ Our runway expects have curated some of the most popular services at Salon
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9BE-op-Kl8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4232" y="2686"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="rzE-kw-IUo">
-            <objects>
-                <viewController id="MDC-ke-A4X" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="TcN-Le-hSf">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="GB8-JP-S6U"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2om-9t-5SI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="5209" y="2686"/>
+            <point key="canvasLocation" x="3324" y="382"/>
         </scene>
         <!--Explore-->
         <scene sceneID="Pzi-nV-AA6">
@@ -2849,10 +2834,10 @@ Our runway expects have curated some of the most popular services at Salon
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="xFh-lv-rE8" kind="relationship" relationship="viewControllers" id="EbV-Of-wIX"/>
-                        <segue destination="g4H-bR-Kge" kind="relationship" relationship="viewControllers" id="AkT-FI-HI5"/>
-                        <segue destination="Yuz-Is-amq" kind="relationship" relationship="viewControllers" id="NUC-SE-vMX"/>
-                        <segue destination="AXO-C4-au6" kind="relationship" relationship="viewControllers" id="87V-BT-eDg"/>
+                        <segue destination="d3Y-2f-Ow3" kind="relationship" relationship="viewControllers" id="vcr-5v-Tod"/>
+                        <segue destination="lDg-BL-dAD" kind="relationship" relationship="viewControllers" id="NeV-SU-lNo"/>
+                        <segue destination="Xfv-og-ywt" kind="relationship" relationship="viewControllers" id="Po2-wc-prO"/>
+                        <segue destination="lsh-8b-xXf" kind="relationship" relationship="viewControllers" id="Wnd-zg-1DR"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UZi-Xu-xKV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -3210,206 +3195,6 @@ Our runway expects have curated some of the most popular services at Salon
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uWj-2n-bnJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="106" y="-1967"/>
-        </scene>
-        <!--Recipt-->
-        <scene sceneID="vMF-hg-tFG">
-            <objects>
-                <viewController title="Recipt" id="six-jm-MjV" customClass="ReciptVC" customModule="Quick_Cuts" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="C4a-5h-nPy">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f4l-8W-elC">
-                                <rect key="frame" x="15" y="59" width="385" height="40"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="J0Q-K5-vC9">
-                                        <rect key="frame" x="0.0" y="0.0" width="20" height="40"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dfl-hU-i8k">
-                                                <rect key="frame" x="0.0" y="0.0" width="20" height="40"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="chevron.backward" catalog="system">
-                                                    <color key="baseForegroundColor" name="5E5E5E"/>
-                                                </buttonConfiguration>
-                                            </button>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="20" id="fEG-nR-aom"/>
-                                        </constraints>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gWi-B6-Ur0">
-                                        <rect key="frame" x="20" y="0.0" width="365" height="40"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recipt" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W0T-6Q-Oc1">
-                                                <rect key="frame" x="0.0" y="0.0" width="365" height="40"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="cbQ-5b-BR0"/>
-                                </constraints>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="aQn-aJ-lDn">
-                                <rect key="frame" x="0.0" y="99" width="430" height="750"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MjB-Za-rgV">
-                                        <rect key="frame" x="15" y="0.0" width="400" height="694"/>
-                                        <subviews>
-                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="fj7-XX-oYz">
-                                                <rect key="frame" x="0.0" y="0.0" width="400" height="694"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                <connections>
-                                                    <outlet property="dataSource" destination="six-jm-MjV" id="sCg-n8-LZB"/>
-                                                    <outlet property="delegate" destination="six-jm-MjV" id="mef-pY-kxA"/>
-                                                </connections>
-                                            </tableView>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TMj-SG-py2">
-                                        <rect key="frame" x="15" y="694" width="400" height="56"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2yo-mJ-D8w">
-                                                <rect key="frame" x="0.0" y="0.0" width="400" height="56"/>
-                                                <color key="backgroundColor" name="EC6E57"/>
-                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Download Recipt">
-                                                    <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="19"/>
-                                                </buttonConfiguration>
-                                            </button>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="56" id="whY-IK-sXU"/>
-                                        </constraints>
-                                    </stackView>
-                                </subviews>
-                                <edgeInsets key="layoutMargins" top="0.0" left="15" bottom="0.0" right="15"/>
-                            </stackView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="dVo-Qi-7u0"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="f4l-8W-elC" firstAttribute="trailing" secondItem="dVo-Qi-7u0" secondAttribute="trailing" constant="-30" id="0W2-dF-yoe"/>
-                            <constraint firstItem="f4l-8W-elC" firstAttribute="top" secondItem="dVo-Qi-7u0" secondAttribute="top" id="7Lb-ia-dcM"/>
-                            <constraint firstItem="dVo-Qi-7u0" firstAttribute="trailing" secondItem="aQn-aJ-lDn" secondAttribute="trailing" id="7vG-DC-lie"/>
-                            <constraint firstItem="aQn-aJ-lDn" firstAttribute="leading" secondItem="dVo-Qi-7u0" secondAttribute="leading" id="SNY-vk-aUK"/>
-                            <constraint firstItem="aQn-aJ-lDn" firstAttribute="top" secondItem="f4l-8W-elC" secondAttribute="bottom" id="aJc-hN-CJn"/>
-                            <constraint firstItem="dVo-Qi-7u0" firstAttribute="bottom" secondItem="aQn-aJ-lDn" secondAttribute="bottom" id="eMe-W5-UWa"/>
-                            <constraint firstItem="f4l-8W-elC" firstAttribute="leading" secondItem="dVo-Qi-7u0" secondAttribute="leading" constant="15" id="t3m-Q8-L16"/>
-                        </constraints>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Recipt" id="Ynu-WZ-1KQ"/>
-                    <connections>
-                        <outlet property="recipt" destination="fj7-XX-oYz" id="Ee3-v8-AfA"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wud-ir-MQ4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="5209" y="2686"/>
-        </scene>
-        <!--Recipt-->
-        <scene sceneID="vMF-hg-tFG">
-            <objects>
-                <viewController title="Recipt" id="six-jm-MjV" customClass="ReciptVC" customModule="Quick_Cuts" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="C4a-5h-nPy">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f4l-8W-elC">
-                                <rect key="frame" x="15" y="59" width="385" height="40"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="J0Q-K5-vC9">
-                                        <rect key="frame" x="0.0" y="0.0" width="20" height="40"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dfl-hU-i8k">
-                                                <rect key="frame" x="0.0" y="0.0" width="20" height="40"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="chevron.backward" catalog="system">
-                                                    <color key="baseForegroundColor" name="5E5E5E"/>
-                                                </buttonConfiguration>
-                                            </button>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="20" id="fEG-nR-aom"/>
-                                        </constraints>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gWi-B6-Ur0">
-                                        <rect key="frame" x="20" y="0.0" width="365" height="40"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recipt" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W0T-6Q-Oc1">
-                                                <rect key="frame" x="0.0" y="0.0" width="365" height="40"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="cbQ-5b-BR0"/>
-                                </constraints>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="aQn-aJ-lDn">
-                                <rect key="frame" x="0.0" y="99" width="430" height="750"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MjB-Za-rgV">
-                                        <rect key="frame" x="15" y="0.0" width="400" height="694"/>
-                                        <subviews>
-                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="fj7-XX-oYz">
-                                                <rect key="frame" x="0.0" y="0.0" width="400" height="694"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                <connections>
-                                                    <outlet property="dataSource" destination="six-jm-MjV" id="sCg-n8-LZB"/>
-                                                    <outlet property="delegate" destination="six-jm-MjV" id="mef-pY-kxA"/>
-                                                </connections>
-                                            </tableView>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TMj-SG-py2">
-                                        <rect key="frame" x="15" y="694" width="400" height="56"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2yo-mJ-D8w">
-                                                <rect key="frame" x="0.0" y="0.0" width="400" height="56"/>
-                                                <color key="backgroundColor" name="EC6E57"/>
-                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Download Recipt">
-                                                    <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="19"/>
-                                                </buttonConfiguration>
-                                            </button>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="56" id="whY-IK-sXU"/>
-                                        </constraints>
-                                    </stackView>
-                                </subviews>
-                                <edgeInsets key="layoutMargins" top="0.0" left="15" bottom="0.0" right="15"/>
-                            </stackView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="dVo-Qi-7u0"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="f4l-8W-elC" firstAttribute="trailing" secondItem="dVo-Qi-7u0" secondAttribute="trailing" constant="-30" id="0W2-dF-yoe"/>
-                            <constraint firstItem="f4l-8W-elC" firstAttribute="top" secondItem="dVo-Qi-7u0" secondAttribute="top" id="7Lb-ia-dcM"/>
-                            <constraint firstItem="dVo-Qi-7u0" firstAttribute="trailing" secondItem="aQn-aJ-lDn" secondAttribute="trailing" id="7vG-DC-lie"/>
-                            <constraint firstItem="aQn-aJ-lDn" firstAttribute="leading" secondItem="dVo-Qi-7u0" secondAttribute="leading" id="SNY-vk-aUK"/>
-                            <constraint firstItem="aQn-aJ-lDn" firstAttribute="top" secondItem="f4l-8W-elC" secondAttribute="bottom" id="aJc-hN-CJn"/>
-                            <constraint firstItem="dVo-Qi-7u0" firstAttribute="bottom" secondItem="aQn-aJ-lDn" secondAttribute="bottom" id="eMe-W5-UWa"/>
-                            <constraint firstItem="f4l-8W-elC" firstAttribute="leading" secondItem="dVo-Qi-7u0" secondAttribute="leading" constant="15" id="t3m-Q8-L16"/>
-                        </constraints>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Recipt" id="Ynu-WZ-1KQ"/>
-                    <connections>
-                        <outlet property="recipt" destination="fj7-XX-oYz" id="Ee3-v8-AfA"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wud-ir-MQ4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="5209" y="2686"/>
         </scene>
     </scenes>
     <resources>
