@@ -44,6 +44,17 @@
 		7EB820A12BD8E6DA007DA6FD /* DateAndTimeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB820A02BD8E6DA007DA6FD /* DateAndTimeVC.swift */; };
 		7EB820A42BD90716007DA6FD /* TimeSlotCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB820A22BD90716007DA6FD /* TimeSlotCollectionCell.swift */; };
 		7EB820A52BD90716007DA6FD /* TimeSlotCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EB820A32BD90716007DA6FD /* TimeSlotCollectionCell.xib */; };
+		7EC1650F2BE62A7900D005E3 /* DKChainableAnimationKit+Effects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC165052BE62A7900D005E3 /* DKChainableAnimationKit+Effects.swift */; };
+		7EC165102BE62A7900D005E3 /* DKChainableAnimationKit+Anchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC165062BE62A7900D005E3 /* DKChainableAnimationKit+Anchor.swift */; };
+		7EC165112BE62A7900D005E3 /* DKKeyframeAnimationFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC165072BE62A7900D005E3 /* DKKeyframeAnimationFunction.swift */; };
+		7EC165122BE62A7900D005E3 /* DKChainableAnimationKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC165082BE62A7900D005E3 /* DKChainableAnimationKit.swift */; };
+		7EC165132BE62A7900D005E3 /* UIView+AnimationKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC165092BE62A7900D005E3 /* UIView+AnimationKit.swift */; };
+		7EC165142BE62A7900D005E3 /* DKChainableAnimationKit+Bezier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC1650A2BE62A7900D005E3 /* DKChainableAnimationKit+Bezier.swift */; };
+		7EC165152BE62A7900D005E3 /* DKKeyFrameAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC1650B2BE62A7900D005E3 /* DKKeyFrameAnimation.swift */; };
+		7EC165162BE62A7900D005E3 /* DKChainableAnimationKit+Extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC1650C2BE62A7900D005E3 /* DKChainableAnimationKit+Extra.swift */; };
+		7EC165172BE62A7900D005E3 /* DKChainableAnimationKit+Transform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC1650D2BE62A7900D005E3 /* DKChainableAnimationKit+Transform.swift */; };
+		7EC165182BE62A7900D005E3 /* DKChainableAnimationKit+Frame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC1650E2BE62A7900D005E3 /* DKChainableAnimationKit+Frame.swift */; };
+		7EC1651C2BE63A5200D005E3 /* StarRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC1651B2BE63A5200D005E3 /* StarRatingView.swift */; };
 		7EDC08B32BD82C4500870986 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDC08B22BD82C4500870986 /* ProfileVC.swift */; };
 		7EDC08B62BD82CA000870986 /* ProfileTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDC08B42BD82CA000870986 /* ProfileTableCell.swift */; };
 		7EDC08B72BD82CA000870986 /* ProfileTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EDC08B52BD82CA000870986 /* ProfileTableCell.xib */; };
@@ -111,6 +122,17 @@
 		7EB820A02BD8E6DA007DA6FD /* DateAndTimeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateAndTimeVC.swift; sourceTree = "<group>"; };
 		7EB820A22BD90716007DA6FD /* TimeSlotCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSlotCollectionCell.swift; sourceTree = "<group>"; };
 		7EB820A32BD90716007DA6FD /* TimeSlotCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeSlotCollectionCell.xib; sourceTree = "<group>"; };
+		7EC165052BE62A7900D005E3 /* DKChainableAnimationKit+Effects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DKChainableAnimationKit+Effects.swift"; sourceTree = "<group>"; };
+		7EC165062BE62A7900D005E3 /* DKChainableAnimationKit+Anchor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DKChainableAnimationKit+Anchor.swift"; sourceTree = "<group>"; };
+		7EC165072BE62A7900D005E3 /* DKKeyframeAnimationFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DKKeyframeAnimationFunction.swift; sourceTree = "<group>"; };
+		7EC165082BE62A7900D005E3 /* DKChainableAnimationKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DKChainableAnimationKit.swift; sourceTree = "<group>"; };
+		7EC165092BE62A7900D005E3 /* UIView+AnimationKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+AnimationKit.swift"; sourceTree = "<group>"; };
+		7EC1650A2BE62A7900D005E3 /* DKChainableAnimationKit+Bezier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DKChainableAnimationKit+Bezier.swift"; sourceTree = "<group>"; };
+		7EC1650B2BE62A7900D005E3 /* DKKeyFrameAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DKKeyFrameAnimation.swift; sourceTree = "<group>"; };
+		7EC1650C2BE62A7900D005E3 /* DKChainableAnimationKit+Extra.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DKChainableAnimationKit+Extra.swift"; sourceTree = "<group>"; };
+		7EC1650D2BE62A7900D005E3 /* DKChainableAnimationKit+Transform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DKChainableAnimationKit+Transform.swift"; sourceTree = "<group>"; };
+		7EC1650E2BE62A7900D005E3 /* DKChainableAnimationKit+Frame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DKChainableAnimationKit+Frame.swift"; sourceTree = "<group>"; };
+		7EC1651B2BE63A5200D005E3 /* StarRatingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarRatingView.swift; sourceTree = "<group>"; };
 		7EDC08B22BD82C4500870986 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		7EDC08B42BD82CA000870986 /* ProfileTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableCell.swift; sourceTree = "<group>"; };
 		7EDC08B52BD82CA000870986 /* ProfileTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileTableCell.xib; sourceTree = "<group>"; };
@@ -164,6 +186,8 @@
 		7E26FD842BD3C1650028D31B /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				7EC1651A2BE63A3800D005E3 /* RatingView */,
+				7EC165042BE62A5D00D005E3 /* AnimationHandler */,
 				7E26FD852BD3C17B0028D31B /* ViewExtensions.swift */,
 			);
 			path = Helpers;
@@ -272,6 +296,31 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		7EC165042BE62A5D00D005E3 /* AnimationHandler */ = {
+			isa = PBXGroup;
+			children = (
+				7EC165082BE62A7900D005E3 /* DKChainableAnimationKit.swift */,
+				7EC165062BE62A7900D005E3 /* DKChainableAnimationKit+Anchor.swift */,
+				7EC1650A2BE62A7900D005E3 /* DKChainableAnimationKit+Bezier.swift */,
+				7EC165052BE62A7900D005E3 /* DKChainableAnimationKit+Effects.swift */,
+				7EC1650C2BE62A7900D005E3 /* DKChainableAnimationKit+Extra.swift */,
+				7EC1650E2BE62A7900D005E3 /* DKChainableAnimationKit+Frame.swift */,
+				7EC1650D2BE62A7900D005E3 /* DKChainableAnimationKit+Transform.swift */,
+				7EC1650B2BE62A7900D005E3 /* DKKeyFrameAnimation.swift */,
+				7EC165072BE62A7900D005E3 /* DKKeyframeAnimationFunction.swift */,
+				7EC165092BE62A7900D005E3 /* UIView+AnimationKit.swift */,
+			);
+			path = AnimationHandler;
+			sourceTree = "<group>";
+		};
+		7EC1651A2BE63A3800D005E3 /* RatingView */ = {
+			isa = PBXGroup;
+			children = (
+				7EC1651B2BE63A5200D005E3 /* StarRatingView.swift */,
+			);
+			path = RatingView;
+			sourceTree = "<group>";
+		};
 		C068DE542BCFCA6400147AAF = {
 			isa = PBXGroup;
 			children = (
@@ -377,7 +426,6 @@
 				7E5ABD962BD420250079F5F6 /* HomeCatagoryCollectionCell.xib in Resources */,
 				7E5ABDA82BD50AD80079F5F6 /* BookingCompletedCollectionCell.xib in Resources */,
 				C02F855F2BD985D4009C6375 /* NotificationHeaderCell.xib in Resources */,
-				C0916EF02BE1F87100A8FF2F /* ReciptTableViewCell.xib in Resources */,
 				7E362AFE2BDAE11600E66A61 /* dummyTableCell.xib in Resources */,
 				C068DE6D2BCFCA6500147AAF /* Base in Resources */,
 				C007F2622BE1059400705C16 /* CheckoutTableViewCell.xib in Resources */,
@@ -397,14 +445,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9660B102BDF64A000DBFAA6 /* CentreVC.swift in Sources */,
+				7EC165162BE62A7900D005E3 /* DKChainableAnimationKit+Extra.swift in Sources */,
 				7E6762F82BD77FEB005F914B /* CancelServiceVC.swift in Sources */,
 				7EABEA872BDB67F000307D7C /* DataModels.swift in Sources */,
+				7EC165172BE62A7900D005E3 /* DKChainableAnimationKit+Transform.swift in Sources */,
 				7EABEA822BDB5B3700307D7C /* PaymentVC.swift in Sources */,
+				7EC165182BE62A7900D005E3 /* DKChainableAnimationKit+Frame.swift in Sources */,
 				A9A799422BE350D700CA4C8F /* ReceiptTableViewCell.swift in Sources */,
 				7E362B012BDAE2A600E66A61 /* profileHeadTableCell.swift in Sources */,
 				7E362AFD2BDAE11600E66A61 /* dummyTableCell.swift in Sources */,
 				A9660B0D2BDF632300DBFAA6 /* CentreCollectionViewCell.swift in Sources */,
 				7E5ABDA52BD506860079F5F6 /* BookingVC.swift in Sources */,
+				7EC165112BE62A7900D005E3 /* DKKeyframeAnimationFunction.swift in Sources */,
+				7EC1650F2BE62A7900D005E3 /* DKChainableAnimationKit+Effects.swift in Sources */,
 				FFE180422BE3C766005BB8F9 /* YourProfileViewController.swift in Sources */,
 				7E6762F52BD77EE0005F914B /* CancelServiceCollectionCell.swift in Sources */,
 				7EB820A12BD8E6DA007DA6FD /* DateAndTimeVC.swift in Sources */,
@@ -412,17 +465,19 @@
 				7EDC08B62BD82CA000870986 /* ProfileTableCell.swift in Sources */,
 				C007F2642BE105C900705C16 /* CheckoutVC.swift in Sources */,
 				7EB8209E2BD8BED3007DA6FD /* DateSelectCollectionViewCell.swift in Sources */,
+				7EC1651C2BE63A5200D005E3 /* StarRatingView.swift in Sources */,
 				7E5ABD9F2BD4E7A50079F5F6 /* ServiceCollectionCell.swift in Sources */,
 				A9A799462BE3514C00CA4C8F /* ReceiptVC.swift in Sources */,
 				7E5ABD992BD423290079F5F6 /* HomeVC.swift in Sources */,
 				7E5ABDA32BD4FD810079F5F6 /* BookingCollectionCell.swift in Sources */,
 				7E6CDC5F2BD99A8B00A81D46 /* SignUpVC.swift in Sources */,
 				7E6CDC5B2BD998C500A81D46 /* CustomTabbarVC.swift in Sources */,
-				C0916EF42BE1F8BB00A8FF2F /* ReciptVC.swift in Sources */,
 				C02F855A2BD97334009C6375 /* NotificationTableViewCell.swift in Sources */,
 				7E0659892BDEC00400A9A42E /* LocationManager.swift in Sources */,
+				7EC165132BE62A7900D005E3 /* UIView+AnimationKit.swift in Sources */,
 				7E5ABD9B2BD4E6A20079F5F6 /* SelectserviceVC.swift in Sources */,
 				C068DE652BCFCA6400147AAF /* ViewController.swift in Sources */,
+				7EC165152BE62A7900D005E3 /* DKKeyFrameAnimation.swift in Sources */,
 				7E6CDC612BD99EAE00A81D46 /* NewExploreVC.swift in Sources */,
 				7E5ABD972BD420250079F5F6 /* HomeCatagoryCollectionCell.swift in Sources */,
 				7E5ABDAD2BD50C1A0079F5F6 /* BookingCancelledCollectionCell.swift in Sources */,
@@ -430,10 +485,12 @@
 				7E6CDC5D2BD999D600A81D46 /* SignInVC.swift in Sources */,
 				C007F2612BE1059400705C16 /* CheckoutTableViewCell.swift in Sources */,
 				FFFD336F2BDA5D920031B7C6 /* AlbumCollectionViewCell.swift in Sources */,
-				C0916EEF2BE1F87100A8FF2F /* ReciptTableViewCell.swift in Sources */,
 				C068DE612BCFCA6400147AAF /* AppDelegate.swift in Sources */,
+				7EC165102BE62A7900D005E3 /* DKChainableAnimationKit+Anchor.swift in Sources */,
 				7EDC08B32BD82C4500870986 /* ProfileVC.swift in Sources */,
+				7EC165122BE62A7900D005E3 /* DKChainableAnimationKit.swift in Sources */,
 				C02F855C2BD98242009C6375 /* NotificationVC.swift in Sources */,
+				7EC165142BE62A7900D005E3 /* DKChainableAnimationKit+Bezier.swift in Sources */,
 				FFFD33752BDA61340031B7C6 /* AlbumVC.swift in Sources */,
 				7E5ABDA92BD50AD80079F5F6 /* BookingCompletedCollectionCell.swift in Sources */,
 				7E26FD862BD3C17B0028D31B /* ViewExtensions.swift in Sources */,

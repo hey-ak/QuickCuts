@@ -6,6 +6,11 @@ class NewExploreVC: UIViewController, MKMapViewDelegate, UISearchBarDelegate {
     private var pinImage: UIImage?
     private var isDetailedViewOpen: Bool = false
 
+    
+    
+    
+    @IBOutlet weak var starRatingView: StarRatingView!
+    @IBOutlet weak var animatingView: UIView!
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var detailViewTopConstarint: NSLayoutConstraint!
     
@@ -18,6 +23,8 @@ class NewExploreVC: UIViewController, MKMapViewDelegate, UISearchBarDelegate {
         LocationManager.shared.locationUpdateHandler = { location in
             print(location.coordinate)
         }
+       // starRatingView.hasDropShadow = true
+              starRatingView.updateView(rating: 4.0)
         
 //        let location = CLLocationCoordinate2D(latitude: 35.3398, longitude: 76.3869)
 //        let currentLocation = CLLocationCoordinate2D(latitude: 45.3398, longitude: 76.3869)
@@ -74,21 +81,42 @@ class NewExploreVC: UIViewController, MKMapViewDelegate, UISearchBarDelegate {
     
     func openSalonDetails() {
         
-        if isDetailedViewOpen == true {
-            UIView.animate(withDuration: 3, delay: 0, options: [.curveEaseOut], animations: {
-                self.detailViewTopConstarint.constant = 50
-            }, completion: { (finished) in
-                self.isDetailedViewOpen = false
-            })
-        }
-        else {
-            UIView.animate(withDuration: 3, delay: 0, options: [.curveEaseOut], animations: {
-                self.detailViewTopConstarint.constant = -300
-            }, completion: { (finished) in
-                self.isDetailedViewOpen = true
-            })
-        }
+        animatingView.translatesAutoresizingMaskIntoConstraints = false
+       
+        animatingView.animation
+            .moveY(-400).animate(2.0)
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+//        if isDetailedViewOpen == true {
+//            UIView.animate(withDuration: 3, delay: 0, options: [.curveEaseOut], animations: {
+//                self.detailViewTopConstarint.constant = 50
+//            }, completion: { (finished) in
+//                self.isDetailedViewOpen = false
+//            })
+//        }
+//        else {
+//            UIView.animate(withDuration: 3, delay: 0, options: [.curveEaseOut], animations: {
+//                self.detailViewTopConstarint.constant = -300
+//            }, completion: { (finished) in
+//                self.isDetailedViewOpen = true
+//            })
+//        }
+//        
         
     }
     
