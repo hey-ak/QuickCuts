@@ -303,7 +303,7 @@
                                                                         <rect key="frame" x="0.0" y="0.0" width="400" height="57"/>
                                                                         <subviews>
                                                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OUN-81-MVY">
-                                                                                <rect key="frame" x="97.666666666666671" y="12" width="204.66666666666663" height="33"/>
+                                                                                <rect key="frame" x="97.666666666666686" y="12" width="204.66666666666663" height="33"/>
                                                                                 <subviews>
                                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image 2" translatesAutoresizingMaskIntoConstraints="NO" id="QdD-hL-02s">
                                                                                         <rect key="frame" x="0.0" y="0.0" width="33.333333333333336" height="33"/>
@@ -704,7 +704,7 @@
                                                                                 </constraints>
                                                                             </imageView>
                                                                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign in With Apple" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xdc-jl-PYI">
-                                                                                <rect key="frame" x="33.333333333333329" y="0.0" width="171.33333333333337" height="33.333333333333336"/>
+                                                                                <rect key="frame" x="33.333333333333314" y="0.0" width="171.33333333333337" height="33.333333333333336"/>
                                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                                                 <nil key="textColor"/>
                                                                                 <nil key="highlightedColor"/>
@@ -1486,7 +1486,7 @@ Our runway expects have curated some of the most popular services at Salon
                                                                 <rect key="frame" x="0.0" y="0.0" width="400" height="66.333333333333329"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Paytm" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZCC-UY-BEs">
-                                                                        <rect key="frame" x="81.333333333333343" y="23.000000000000057" width="267.33333333333326" height="20.333333333333329"/>
+                                                                        <rect key="frame" x="81.333333333333371" y="23.000000000000057" width="267.33333333333326" height="20.333333333333314"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
@@ -2410,10 +2410,10 @@ Our runway expects have curated some of the most popular services at Salon
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="PTU-hu-BD4">
-                                <rect key="frame" x="0.0" y="103" width="430" height="829"/>
+                                <rect key="frame" x="0.0" y="155" width="430" height="777"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="VUY-xw-7IY">
-                                        <rect key="frame" x="20" y="0.0" width="390" height="746"/>
+                                        <rect key="frame" x="20" y="0.0" width="390" height="694"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <connections>
                                             <outlet property="dataSource" destination="AXO-C4-au6" id="bsR-yP-fMx"/>
