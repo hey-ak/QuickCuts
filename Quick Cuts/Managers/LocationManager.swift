@@ -1,5 +1,7 @@
 import CoreLocation
 
+
+
 class LocationManager: NSObject, CLLocationManagerDelegate {
     static let shared = LocationManager()
     

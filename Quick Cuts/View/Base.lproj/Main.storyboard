@@ -2283,7 +2283,7 @@ Our runway expects have curated some of the most popular services at Salon
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VAP-ag-oup">
-                                <rect key="frame" x="0.0" y="547" width="430" height="301"/>
+                                <rect key="frame" x="0.0" y="947" width="430" height="301"/>
                                 <subviews>
                                     <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Zzu-gd-SiE">
                                         <rect key="frame" x="8" y="8" width="414" height="285"/>
@@ -2294,7 +2294,7 @@ Our runway expects have curated some of the most popular services at Salon
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5ey-yb-sEG">
                                                         <rect key="frame" x="0.0" y="0.0" width="414" height="185.33333333333334"/>
                                                         <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="salonImage4" translatesAutoresizingMaskIntoConstraints="NO" id="JKn-qo-udc">
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="salonImage6" translatesAutoresizingMaskIntoConstraints="NO" id="JKn-qo-udc">
                                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="185.33333333333334"/>
                                                             </imageView>
                                                         </subviews>
@@ -2307,7 +2307,7 @@ Our runway expects have curated some of the most popular services at Salon
                                                         </constraints>
                                                     </view>
                                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MfV-tY-DR3">
-                                                        <rect key="frame" x="1" y="185.33333333333337" width="412" height="98.666666666666686"/>
+                                                        <rect key="frame" x="1" y="185.33333333333326" width="412" height="98.666666666666686"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="bottomCornerRadius">
@@ -2316,7 +2316,7 @@ Our runway expects have curated some of the most popular services at Salon
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="XtT-Yw-KOL">
-                                                        <rect key="frame" x="10" y="195.33333333333337" width="394" height="79.666666666666686"/>
+                                                        <rect key="frame" x="10" y="195.33333333333326" width="394" height="79.666666666666686"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S2W-x6-U7Q">
                                                                 <rect key="frame" x="0.0" y="0.0" width="394" height="44.666666666666664"/>
@@ -2326,12 +2326,12 @@ Our runway expects have curated some of the most popular services at Salon
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lakmé Salon" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MAd-qM-F3g">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="315.33333333333331" height="22.333333333333332"/>
-                                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
-                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Press Rd Rajpura" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4hc-NS-l0Z">
-                                                                                <rect key="frame" x="0.0" y="22.333333333333258" width="315.33333333333331" height="22.333333333333329"/>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="01 Lane, Urban Estate Phase, Patiala, Punjab, India" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="4hc-NS-l0Z">
+                                                                                <rect key="frame" x="0.0" y="22.333333333333485" width="315.33333333333331" height="22.333333333333329"/>
                                                                                 <fontDescription key="fontDescription" name="SFPro-Regular" family="SF Pro" pointSize="14"/>
                                                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                 <nil key="highlightedColor"/>
@@ -2350,12 +2350,23 @@ Our runway expects have curated some of the most popular services at Salon
                                                                                             <constraint firstAttribute="width" secondItem="Yxk-Uh-8t8" secondAttribute="height" id="LQr-in-N8z"/>
                                                                                         </constraints>
                                                                                     </imageView>
+                                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="01f-um-BQH">
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="78.666666666666671" height="44.666666666666664"/>
+                                                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                                        <connections>
+                                                                                            <action selector="makePolilineDidTape:" destination="g4H-bR-Kge" eventType="touchUpInside" id="c0R-Cs-NoK"/>
+                                                                                        </connections>
+                                                                                    </button>
                                                                                 </subviews>
                                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                                 <constraints>
                                                                                     <constraint firstItem="Yxk-Uh-8t8" firstAttribute="top" secondItem="Qdc-dM-5xa" secondAttribute="top" id="Dbq-T3-Rf2"/>
+                                                                                    <constraint firstAttribute="trailing" secondItem="01f-um-BQH" secondAttribute="trailing" id="Hn0-fF-6sW"/>
+                                                                                    <constraint firstAttribute="bottom" secondItem="01f-um-BQH" secondAttribute="bottom" id="NSL-24-M1G"/>
+                                                                                    <constraint firstItem="01f-um-BQH" firstAttribute="top" secondItem="Qdc-dM-5xa" secondAttribute="top" id="p6B-z9-NPg"/>
                                                                                     <constraint firstItem="Yxk-Uh-8t8" firstAttribute="centerX" secondItem="Qdc-dM-5xa" secondAttribute="centerX" id="qrx-xw-bPF"/>
                                                                                     <constraint firstItem="Yxk-Uh-8t8" firstAttribute="centerY" secondItem="Qdc-dM-5xa" secondAttribute="centerY" id="sE4-Kg-4hN"/>
+                                                                                    <constraint firstItem="01f-um-BQH" firstAttribute="leading" secondItem="Qdc-dM-5xa" secondAttribute="leading" id="u9V-0K-HzK"/>
                                                                                 </constraints>
                                                                             </view>
                                                                         </subviews>
@@ -2366,31 +2377,36 @@ Our runway expects have curated some of the most popular services at Salon
                                                                 </constraints>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WUI-In-uHL">
-                                                                <rect key="frame" x="0.0" y="49.666666666666629" width="394" height="30"/>
+                                                                <rect key="frame" x="0.0" y="49.666666666666742" width="394" height="30"/>
                                                                 <subviews>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C7W-45-3et">
                                                                         <rect key="frame" x="0.0" y="0.0" width="315.33333333333331" height="30"/>
                                                                         <subviews>
-                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5.0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="PDH-Jr-zax">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="22.333333333333332" height="30"/>
-                                                                                <fontDescription key="fontDescription" name="SFPro-Regular" family="SF Pro" pointSize="16"/>
-                                                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                                <nil key="highlightedColor"/>
-                                                                            </label>
-                                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="guH-pw-9KC" customClass="StarRatingView" customModule="Quick_Cuts" customModuleProvider="target">
-                                                                                <rect key="frame" x="30" y="0.0" width="120" height="30"/>
+                                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="guH-pw-9KC" customClass="CosmosView" customModule="Cosmos">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="120" height="30"/>
                                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="width" secondItem="guH-pw-9KC" secondAttribute="height" multiplier="4:1" id="f6A-GO-5h2"/>
                                                                                 </constraints>
+                                                                                <userDefinedRuntimeAttributes>
+                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="totalStars">
+                                                                                        <integer key="value" value="5"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="rating">
+                                                                                        <real key="value" value="3"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                    <userDefinedRuntimeAttribute type="color" keyPath="filledColor">
+                                                                                        <color key="value" systemColor="systemOrangeColor"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                    <userDefinedRuntimeAttribute type="color" keyPath="emptyColor">
+                                                                                        <color key="value" systemColor="systemGray4Color"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                </userDefinedRuntimeAttributes>
                                                                             </view>
                                                                         </subviews>
                                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                         <constraints>
-                                                                            <constraint firstItem="PDH-Jr-zax" firstAttribute="top" secondItem="C7W-45-3et" secondAttribute="top" id="3te-sX-YzW"/>
-                                                                            <constraint firstItem="PDH-Jr-zax" firstAttribute="centerY" secondItem="C7W-45-3et" secondAttribute="centerY" id="Hzk-Hb-v8Y"/>
-                                                                            <constraint firstItem="PDH-Jr-zax" firstAttribute="leading" secondItem="C7W-45-3et" secondAttribute="leading" id="Zt8-OI-6GA"/>
-                                                                            <constraint firstItem="guH-pw-9KC" firstAttribute="leading" secondItem="PDH-Jr-zax" secondAttribute="trailing" constant="7.6666666666666679" id="gdq-EH-Ul6"/>
+                                                                            <constraint firstItem="guH-pw-9KC" firstAttribute="leading" secondItem="C7W-45-3et" secondAttribute="leading" id="NfP-6s-tCa"/>
                                                                             <constraint firstItem="guH-pw-9KC" firstAttribute="top" secondItem="C7W-45-3et" secondAttribute="top" id="z2Z-ED-KtC"/>
                                                                             <constraint firstItem="guH-pw-9KC" firstAttribute="centerY" secondItem="C7W-45-3et" secondAttribute="centerY" id="zqt-wK-oft"/>
                                                                         </constraints>
@@ -2457,7 +2473,7 @@ Our runway expects have curated some of the most popular services at Salon
                             <constraint firstAttribute="bottom" secondItem="pcb-3k-kWm" secondAttribute="bottom" id="ZBv-QY-1hR"/>
                             <constraint firstAttribute="trailing" secondItem="2By-XO-il4" secondAttribute="trailing" id="ZXG-ig-kkW"/>
                             <constraint firstItem="ILp-bv-5hF" firstAttribute="bottom" secondItem="2By-XO-il4" secondAttribute="bottom" id="dyT-9K-jey"/>
-                            <constraint firstItem="2By-XO-il4" firstAttribute="top" secondItem="VAP-ag-oup" secondAttribute="bottom" id="eYi-CT-ko5"/>
+                            <constraint firstItem="2By-XO-il4" firstAttribute="top" secondItem="VAP-ag-oup" secondAttribute="bottom" constant="-400" id="eYi-CT-ko5"/>
                             <constraint firstAttribute="trailing" secondItem="pcb-3k-kWm" secondAttribute="trailing" id="kcI-yf-58z"/>
                             <constraint firstItem="2By-XO-il4" firstAttribute="leading" secondItem="kfR-su-19o" secondAttribute="leading" id="vFq-qJ-021"/>
                             <constraint firstItem="OM7-lk-y27" firstAttribute="leading" secondItem="ILp-bv-5hF" secondAttribute="leading" id="wTR-ZX-DRR"/>
@@ -2468,8 +2484,13 @@ Our runway expects have curated some of the most popular services at Salon
                     <navigationItem key="navigationItem" title="Explore" id="ZrF-OR-wC1"/>
                     <connections>
                         <outlet property="animatingView" destination="VAP-ag-oup" id="2Yx-hf-pAL"/>
+                        <outlet property="detailViewTopConstarint" destination="eYi-CT-ko5" id="l8J-PD-KMq"/>
                         <outlet property="mapView" destination="pcb-3k-kWm" id="xUk-oX-iuo"/>
-                        <outlet property="starRatingView" destination="guH-pw-9KC" id="bv7-9i-Xzu"/>
+                        <outlet property="salonDetailedInfoCardAddress" destination="4hc-NS-l0Z" id="qUz-6M-M13"/>
+                        <outlet property="salonDetailedInfoCardImage" destination="JKn-qo-udc" id="tbV-Fq-6yu"/>
+                        <outlet property="salonDetailedInfoCardName" destination="MAd-qM-F3g" id="qT7-Vx-Cye"/>
+                        <outlet property="salonDetailedInfoCardTotalReview" destination="A4L-p6-nsN" id="3JH-oq-3zd"/>
+                        <outlet property="searchBar" destination="zzN-d4-cym" id="8Hg-vI-ryi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zYa-dc-ndQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -2505,10 +2526,10 @@ Our runway expects have curated some of the most popular services at Salon
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="PTU-hu-BD4">
-                                <rect key="frame" x="0.0" y="155" width="430" height="777"/>
+                                <rect key="frame" x="0.0" y="103" width="430" height="829"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="VUY-xw-7IY">
-                                        <rect key="frame" x="20" y="0.0" width="390" height="694"/>
+                                        <rect key="frame" x="20" y="0.0" width="390" height="746"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <connections>
                                             <outlet property="dataSource" destination="AXO-C4-au6" id="bsR-yP-fMx"/>
@@ -3292,6 +3313,11 @@ Our runway expects have curated some of the most popular services at Salon
             <point key="canvasLocation" x="106" y="-1967"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="guH-pw-9KC">
+            <size key="intrinsicContentSize" width="120" height="20"/>
+        </designable>
+    </designables>
     <resources>
         <image name="CashOnPay" width="512" height="512"/>
         <image name="SalonReachedImage" width="376" height="376"/>
@@ -3310,6 +3336,7 @@ Our runway expects have curated some of the most popular services at Salon
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="plus.circle.fill" catalog="system" width="128" height="123"/>
         <image name="salonImage4" width="1566" height="1044"/>
+        <image name="salonImage6" width="1000" height="667"/>
         <image name="upi" width="256" height="256"/>
         <namedColor name="5E5E5E">
             <color red="0.36862745098039218" green="0.36862745098039218" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -3326,8 +3353,14 @@ Our runway expects have curated some of the most popular services at Salon
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

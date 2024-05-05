@@ -1,6 +1,9 @@
 import Foundation
 import UIKit
 
+
+
+
 extension UICollectionView {
     
     func registerCellFromNib(cellID: String) {
