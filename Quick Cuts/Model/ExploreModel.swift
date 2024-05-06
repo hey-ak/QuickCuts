@@ -43,7 +43,7 @@ let friday = OpenDays(id: 5, dayNumber: 5)
 
 // Dummy data for SalonModel
 let salon = SalonModel(id: 1,
-                       image: "salon_image.jpg",
+                       image: "salonImage1",
                        salonName: "Glamorous Salon",
                        subTitle: "Hum bata ke kat te hain",
                        about: "We offer a wide range of beauty services.",
@@ -80,7 +80,7 @@ let salon2 = SalonModel(id: 2,
                         openDays: [monday, tuesday, wednesday, thursday, friday, saturday],
                         openingTime: Date(),
                         closingTime: Date(),
-                        services: [service1, service4, service5])
+                        services: [service1, service4, service5,service5])
 
 // Dummy data for SalonModel
 let salon3 = SalonModel(id: 3,

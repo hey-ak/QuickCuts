@@ -1145,8 +1145,10 @@ Our runway expects have curated some of the most popular services at Salon
                         <outlet property="aboutTextView" destination="bSS-UG-9PQ" id="hY8-NX-qlz"/>
                         <outlet property="imageStackViewConstraint" destination="3Yr-Id-Cgr" id="lPk-Ln-Lau"/>
                         <outlet property="mainScrollView" destination="0TO-l3-1Wj" id="c47-Jy-Aj9"/>
+                        <outlet property="saloneImage" destination="laB-Yb-7Fu" id="UAy-0y-tsm"/>
                         <outlet property="serviceCollectionHeightConstraint" destination="ios-6C-v7Z" id="rDQ-7G-UG3"/>
                         <outlet property="serviceCollectionView" destination="WWy-Bc-F1W" id="1sM-Mt-skJ"/>
+                        <outlet property="textViewHeightConstraint" destination="bGY-WO-igD" id="3fC-N7-65I"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sf7-Pb-g72" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -2118,6 +2120,7 @@ Our runway expects have curated some of the most popular services at Salon
                     <connections>
                         <outlet property="DayAndDateCollectionView" destination="AQ5-ds-3q1" id="WHW-do-k9c"/>
                         <outlet property="TimeSlotCollectionView" destination="wFU-L9-ebv" id="o1K-zG-JZm"/>
+                        <outlet property="serviceTimingLable" destination="kP9-0S-o42" id="jsN-ZF-o2Y"/>
                         <outlet property="timeSlotHeightObserver" destination="15A-RS-aca" id="p1g-v8-6Jy"/>
                     </connections>
                 </viewController>
@@ -2594,7 +2597,7 @@ Our runway expects have curated some of the most popular services at Salon
                                         <rect key="frame" x="0.0" y="0.0" width="430" height="694"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="eJx-XJ-pZo">
-                                                <rect key="frame" x="0.0" y="0.0" width="430" height="747.66666666666663"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="430" height="755.66666666666663"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RcO-zx-TaL">
                                                         <rect key="frame" x="20" y="10" width="390" height="30"/>
@@ -2682,7 +2685,7 @@ Our runway expects have curated some of the most popular services at Salon
                                                         <edgeInsets key="layoutMargins" top="0.0" left="-8" bottom="0.0" right="-8"/>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="umE-ik-Ijb">
-                                                        <rect key="frame" x="20" y="96" width="390" height="232"/>
+                                                        <rect key="frame" x="20" y="96" width="390" height="240"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r7a-lr-PtO">
                                                                 <rect key="frame" x="0.0" y="0.0" width="390" height="40"/>
@@ -2725,13 +2728,13 @@ Our runway expects have curated some of the most popular services at Salon
                                                                 </subviews>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="5aT-he-kWz">
-                                                                <rect key="frame" x="0.0" y="45" width="390" height="187"/>
+                                                                <rect key="frame" x="0.0" y="45" width="390" height="195"/>
                                                                 <subviews>
                                                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="6Hd-rJ-2Rz">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="390" height="187"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="390" height="195"/>
                                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="height" constant="187" id="F4f-9w-MeX"/>
+                                                                            <constraint firstAttribute="height" constant="195" id="F4f-9w-MeX"/>
                                                                         </constraints>
                                                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="0.0" id="Kxg-of-BXK">
                                                                             <size key="itemSize" width="128" height="128"/>
@@ -2750,7 +2753,7 @@ Our runway expects have curated some of the most popular services at Salon
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ss4-ls-hhB">
-                                                        <rect key="frame" x="20" y="328" width="390" height="10"/>
+                                                        <rect key="frame" x="20" y="336" width="390" height="10"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fys-ph-y3f">
                                                                 <rect key="frame" x="0.0" y="0.0" width="390" height="10"/>
@@ -2762,7 +2765,7 @@ Our runway expects have curated some of the most popular services at Salon
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="iLN-Iw-guR">
-                                                        <rect key="frame" x="20" y="338" width="390" height="125"/>
+                                                        <rect key="frame" x="20" y="346" width="390" height="125"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tUt-ST-fxm">
                                                                 <rect key="frame" x="0.0" y="0.0" width="390" height="34"/>
@@ -2810,7 +2813,7 @@ Our runway expects have curated some of the most popular services at Salon
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xGx-61-MYy">
-                                                        <rect key="frame" x="20" y="463" width="390" height="10"/>
+                                                        <rect key="frame" x="20" y="471" width="390" height="10"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N1p-2f-e4L">
                                                                 <rect key="frame" x="0.0" y="0.0" width="390" height="10"/>
@@ -2822,7 +2825,7 @@ Our runway expects have curated some of the most popular services at Salon
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="n7T-H0-ftf">
-                                                        <rect key="frame" x="20" y="473" width="390" height="245"/>
+                                                        <rect key="frame" x="20" y="481" width="390" height="245"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wcR-f3-L6m">
                                                                 <rect key="frame" x="0.0" y="0.0" width="390" height="40"/>
@@ -2890,7 +2893,7 @@ Our runway expects have curated some of the most popular services at Salon
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="av6-NT-Ehq">
-                                                        <rect key="frame" x="20" y="718" width="390" height="29.666666666666629"/>
+                                                        <rect key="frame" x="20" y="726" width="390" height="29.666666666666629"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a14-UB-UOr">
                                                                 <rect key="frame" x="0.0" y="0.0" width="390" height="29.666666666666668"/>

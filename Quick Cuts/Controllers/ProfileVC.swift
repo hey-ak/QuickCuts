@@ -27,6 +27,8 @@ class ProfileVC: UIViewController {
 
 
 extension ProfileVC : UITableViewDataSource, UITableViewDelegate {
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         profileDM[section].profileData.count
     }

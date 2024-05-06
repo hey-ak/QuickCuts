@@ -67,6 +67,7 @@
             <connections>
                 <outlet property="dateLabel" destination="d5t-ml-vr1" id="w2H-4T-Y9i"/>
                 <outlet property="dayLabel" destination="TNN-84-kHe" id="6QZ-NN-St8"/>
+                <outlet property="mainView" destination="LbJ-o8-svA" id="Gax-Fr-pBo"/>
             </connections>
             <point key="canvasLocation" x="245.03816793893128" y="100.70422535211269"/>
         </collectionViewCell>

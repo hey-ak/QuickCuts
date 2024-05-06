@@ -27,7 +27,7 @@ class HomeVC: UIViewController {
         didSet {
             switch ratedCollectionSeeAllState {
             case .selected:
-                self.ratedCollectionViewData = HomeCardArray.count
+                self.ratedCollectionViewData = allSalonData.count
                 
             case .unselected:
                 self.ratedCollectionViewData = nil
@@ -102,22 +102,12 @@ class HomeVC: UIViewController {
         FavouriteCard(salonName: "Tranquil Retreat", salonAddress: "876 Oak Street, Meadowland, MNO", reviewCount: 40, salonImage: "favouriteImage5")
     ]
 
-
-
-
-    
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
         ratedCollectionSeeAllState = .unselected
         mainCollectionSeeAllState = .unselected
-        
         catagoryCollectionView.reloadData()
     }
-    
-    
-    
     
     @IBAction func ratedCollectionSeeAllDidTapped(_ sender: Any) {
         ratedCollectionSeeAllState = (ratedCollectionSeeAllState == .selected) ? .unselected : .selected
@@ -127,14 +117,10 @@ class HomeVC: UIViewController {
         mainCollectionSeeAllState = (mainCollectionSeeAllState == .selected) ? .unselected : .selected
     }
     
-    
     @IBAction func notificationButtonDidTapped(_ sender: Any) {
         let nextVC = storyboard?.instantiateViewController(withIdentifier: "NotificationVC") as! NotificationVC
         navigationController?.pushViewController(nextVC, animated: true)
     }
-    
-
-
 }
 extension HomeVC: UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
     
@@ -153,12 +139,12 @@ extension HomeVC: UICollectionViewDelegate,UICollectionViewDataSource,UICollecti
         
         if collectionView == ratedCollectionView {
             if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeCollectionCell", for: indexPath) as? HomeCollectionCell {
-                    let data = HomeCardArray[indexPath.row]
+                    let data = allSalonData[indexPath.row]
                     cell.salonName.text = data.salonName
-                    cell.salonImage.image = UIImage(named: data.salonImage) // No need for "\(data.salonImage)"
-                    cell.reviewCount.text = "\(data.reviewCount) Reviews"
+                    cell.salonImage.image = UIImage(named: data.image ?? "") // No need for "\(data.salonImage)"
+                    cell.reviewCount.text = "\(data.reviews ?? 0) Reviews"
                     //cell.serviceID.text = "\(data.serviceID)"
-                    cell.salonAddress.text = data.salonAddress
+                    cell.salonAddress.text = data.address
                     return cell
                 }
             }
@@ -197,7 +183,12 @@ extension HomeVC: UICollectionViewDelegate,UICollectionViewDataSource,UICollecti
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let nextVC = storyboard?.instantiateViewController(withIdentifier: "SelectserviceVC") as! SelectserviceVC
-        navigationController?.pushViewController(nextVC, animated: true)
+        if collectionView == ratedCollectionView {
+            let saloneData = allSalonData[indexPath.row]
+            let nextVC = storyboard?.instantiateViewController(withIdentifier: "SelectserviceVC") as! SelectserviceVC
+            nextVC.salonData = saloneData
+            nextVC.hidesBottomBarWhenPushed = true
+            navigationController?.pushViewController(nextVC, animated: true)
+        }
     }
 }

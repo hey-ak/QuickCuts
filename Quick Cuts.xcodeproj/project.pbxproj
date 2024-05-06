@@ -15,6 +15,23 @@
 		7E362B012BDAE2A600E66A61 /* profileHeadTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E362AFF2BDAE2A600E66A61 /* profileHeadTableCell.swift */; };
 		7E362B022BDAE2A600E66A61 /* profileHeadTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E362B002BDAE2A600E66A61 /* profileHeadTableCell.xib */; };
 		7E4B90D12BD3B7D40083D50A /* SFHello-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7E4B90D02BD3B7D40083D50A /* SFHello-Regular.ttf */; };
+		7E58163B2BE7C65A0078D9BB /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E58162D2BE7C6590078D9BB /* Toast.swift */; };
+		7E58163C2BE7C65A0078D9BB /* ToastConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E58162E2BE7C65A0078D9BB /* ToastConfiguration.swift */; };
+		7E58163D2BE7C65A0078D9BB /* IconAppleToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E58162F2BE7C65A0078D9BB /* IconAppleToastView.swift */; };
+		7E58163E2BE7C65A0078D9BB /* ToastDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5816302BE7C65A0078D9BB /* ToastDelegate.swift */; };
+		7E58163F2BE7C65A0078D9BB /* TextAppleToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5816312BE7C65A0078D9BB /* TextAppleToastView.swift */; };
+		7E5816402BE7C65A0078D9BB /* AnimationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5816322BE7C65A0078D9BB /* AnimationType.swift */; };
+		7E5816412BE7C65A0078D9BB /* MulticastDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5816332BE7C65A0078D9BB /* MulticastDelegate.swift */; };
+		7E5816422BE7C65A0078D9BB /* ToastHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5816342BE7C65A0078D9BB /* ToastHelper.swift */; };
+		7E5816432BE7C65A0078D9BB /* ToastViewConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5816352BE7C65A0078D9BB /* ToastViewConfiguration.swift */; };
+		7E5816442BE7C65A0078D9BB /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5816362BE7C65A0078D9BB /* Direction.swift */; };
+		7E5816452BE7C65A0078D9BB /* AppleToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5816372BE7C65A0078D9BB /* AppleToastView.swift */; };
+		7E5816462BE7C65A0078D9BB /* ToastQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5816382BE7C65A0078D9BB /* ToastQueue.swift */; };
+		7E5816472BE7C65A0078D9BB /* ToastQueueDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5816392BE7C65A0078D9BB /* ToastQueueDelegate.swift */; };
+		7E5816482BE7C65A0078D9BB /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E58163A2BE7C65A0078D9BB /* ToastView.swift */; };
+		7E58164A2BE7E5E90078D9BB /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5816492BE7E5E90078D9BB /* DateExtension.swift */; };
+		7E58164C2BE7E5F40078D9BB /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E58164B2BE7E5F40078D9BB /* StringExtension.swift */; };
+		7E58164E2BE7E60D0078D9BB /* UICollectionViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E58164D2BE7E60D0078D9BB /* UICollectionViewExtension.swift */; };
 		7E5ABD922BD419230079F5F6 /* HomeCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E5ABD912BD419230079F5F6 /* HomeCollectionCell.xib */; };
 		7E5ABD932BD419230079F5F6 /* HomeCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5ABD902BD419230079F5F6 /* HomeCollectionCell.swift */; };
 		7E5ABD962BD420250079F5F6 /* HomeCatagoryCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E5ABD952BD420250079F5F6 /* HomeCatagoryCollectionCell.xib */; };
@@ -94,6 +111,23 @@
 		7E362AFF2BDAE2A600E66A61 /* profileHeadTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileHeadTableCell.swift; sourceTree = "<group>"; };
 		7E362B002BDAE2A600E66A61 /* profileHeadTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = profileHeadTableCell.xib; sourceTree = "<group>"; };
 		7E4B90D02BD3B7D40083D50A /* SFHello-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFHello-Regular.ttf"; sourceTree = "<group>"; };
+		7E58162D2BE7C6590078D9BB /* Toast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
+		7E58162E2BE7C65A0078D9BB /* ToastConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastConfiguration.swift; sourceTree = "<group>"; };
+		7E58162F2BE7C65A0078D9BB /* IconAppleToastView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconAppleToastView.swift; sourceTree = "<group>"; };
+		7E5816302BE7C65A0078D9BB /* ToastDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastDelegate.swift; sourceTree = "<group>"; };
+		7E5816312BE7C65A0078D9BB /* TextAppleToastView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextAppleToastView.swift; sourceTree = "<group>"; };
+		7E5816322BE7C65A0078D9BB /* AnimationType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationType.swift; sourceTree = "<group>"; };
+		7E5816332BE7C65A0078D9BB /* MulticastDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MulticastDelegate.swift; sourceTree = "<group>"; };
+		7E5816342BE7C65A0078D9BB /* ToastHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastHelper.swift; sourceTree = "<group>"; };
+		7E5816352BE7C65A0078D9BB /* ToastViewConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastViewConfiguration.swift; sourceTree = "<group>"; };
+		7E5816362BE7C65A0078D9BB /* Direction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Direction.swift; sourceTree = "<group>"; };
+		7E5816372BE7C65A0078D9BB /* AppleToastView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppleToastView.swift; sourceTree = "<group>"; };
+		7E5816382BE7C65A0078D9BB /* ToastQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastQueue.swift; sourceTree = "<group>"; };
+		7E5816392BE7C65A0078D9BB /* ToastQueueDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastQueueDelegate.swift; sourceTree = "<group>"; };
+		7E58163A2BE7C65A0078D9BB /* ToastView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
+		7E5816492BE7E5E90078D9BB /* DateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		7E58164B2BE7E5F40078D9BB /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		7E58164D2BE7E60D0078D9BB /* UICollectionViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICollectionViewExtension.swift; sourceTree = "<group>"; };
 		7E5ABD902BD419230079F5F6 /* HomeCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionCell.swift; sourceTree = "<group>"; };
 		7E5ABD912BD419230079F5F6 /* HomeCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCollectionCell.xib; sourceTree = "<group>"; };
 		7E5ABD942BD420250079F5F6 /* HomeCatagoryCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCatagoryCollectionCell.swift; sourceTree = "<group>"; };
@@ -192,7 +226,11 @@
 		7E26FD842BD3C1650028D31B /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				7E58162C2BE7C6190078D9BB /* ToastMessage */,
 				7EC165042BE62A5D00D005E3 /* AnimationHandler */,
+				7E5816492BE7E5E90078D9BB /* DateExtension.swift */,
+				7E58164D2BE7E60D0078D9BB /* UICollectionViewExtension.swift */,
+				7E58164B2BE7E5F40078D9BB /* StringExtension.swift */,
 				7E26FD852BD3C17B0028D31B /* ViewExtensions.swift */,
 			);
 			path = Helpers;
@@ -248,6 +286,27 @@
 				7E4B90D02BD3B7D40083D50A /* SFHello-Regular.ttf */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		7E58162C2BE7C6190078D9BB /* ToastMessage */ = {
+			isa = PBXGroup;
+			children = (
+				7E5816322BE7C65A0078D9BB /* AnimationType.swift */,
+				7E5816372BE7C65A0078D9BB /* AppleToastView.swift */,
+				7E5816362BE7C65A0078D9BB /* Direction.swift */,
+				7E58162F2BE7C65A0078D9BB /* IconAppleToastView.swift */,
+				7E5816332BE7C65A0078D9BB /* MulticastDelegate.swift */,
+				7E5816312BE7C65A0078D9BB /* TextAppleToastView.swift */,
+				7E58162D2BE7C6590078D9BB /* Toast.swift */,
+				7E58162E2BE7C65A0078D9BB /* ToastConfiguration.swift */,
+				7E5816302BE7C65A0078D9BB /* ToastDelegate.swift */,
+				7E5816342BE7C65A0078D9BB /* ToastHelper.swift */,
+				7E5816382BE7C65A0078D9BB /* ToastQueue.swift */,
+				7E5816392BE7C65A0078D9BB /* ToastQueueDelegate.swift */,
+				7E58163A2BE7C65A0078D9BB /* ToastView.swift */,
+				7E5816352BE7C65A0078D9BB /* ToastViewConfiguration.swift */,
+			);
+			path = ToastMessage;
 			sourceTree = "<group>";
 		};
 		7E5ABD8F2BD419050079F5F6 /* Xibs */ = {
@@ -507,11 +566,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9660B102BDF64A000DBFAA6 /* CentreVC.swift in Sources */,
+				7E58164A2BE7E5E90078D9BB /* DateExtension.swift in Sources */,
 				7EC165162BE62A7900D005E3 /* DKChainableAnimationKit+Extra.swift in Sources */,
+				7E5816402BE7C65A0078D9BB /* AnimationType.swift in Sources */,
 				7E6762F82BD77FEB005F914B /* CancelServiceVC.swift in Sources */,
 				7EABEA872BDB67F000307D7C /* DataModels.swift in Sources */,
 				7EC165172BE62A7900D005E3 /* DKChainableAnimationKit+Transform.swift in Sources */,
 				7EABEA822BDB5B3700307D7C /* PaymentVC.swift in Sources */,
+				7E5816452BE7C65A0078D9BB /* AppleToastView.swift in Sources */,
+				7E5816472BE7C65A0078D9BB /* ToastQueueDelegate.swift in Sources */,
+				7E5816482BE7C65A0078D9BB /* ToastView.swift in Sources */,
 				7EC165182BE62A7900D005E3 /* DKChainableAnimationKit+Frame.swift in Sources */,
 				A9A799422BE350D700CA4C8F /* ReceiptTableViewCell.swift in Sources */,
 				7E362B012BDAE2A600E66A61 /* profileHeadTableCell.swift in Sources */,
@@ -525,22 +589,28 @@
 				7E6762F52BD77EE0005F914B /* CancelServiceCollectionCell.swift in Sources */,
 				7EB820A12BD8E6DA007DA6FD /* DateAndTimeVC.swift in Sources */,
 				7E5ABD932BD419230079F5F6 /* HomeCollectionCell.swift in Sources */,
+				7E5816422BE7C65A0078D9BB /* ToastHelper.swift in Sources */,
 				7EDC08B62BD82CA000870986 /* ProfileTableCell.swift in Sources */,
+				7E58163D2BE7C65A0078D9BB /* IconAppleToastView.swift in Sources */,
 				C007F2642BE105C900705C16 /* CheckoutVC.swift in Sources */,
 				7EB8209E2BD8BED3007DA6FD /* DateSelectCollectionViewCell.swift in Sources */,
 				7E5ABD9F2BD4E7A50079F5F6 /* ServiceCollectionCell.swift in Sources */,
 				A9A799462BE3514C00CA4C8F /* ReceiptVC.swift in Sources */,
 				7E5ABD992BD423290079F5F6 /* HomeVC.swift in Sources */,
+				7E58163C2BE7C65A0078D9BB /* ToastConfiguration.swift in Sources */,
 				7E5ABDA32BD4FD810079F5F6 /* BookingCollectionCell.swift in Sources */,
 				7E6CDC5F2BD99A8B00A81D46 /* SignUpVC.swift in Sources */,
 				7E6CDC5B2BD998C500A81D46 /* CustomTabbarVC.swift in Sources */,
 				C02F855A2BD97334009C6375 /* NotificationTableViewCell.swift in Sources */,
 				7E0659892BDEC00400A9A42E /* LocationManager.swift in Sources */,
 				7EC165132BE62A7900D005E3 /* UIView+AnimationKit.swift in Sources */,
+				7E5816442BE7C65A0078D9BB /* Direction.swift in Sources */,
 				7E5ABD9B2BD4E6A20079F5F6 /* SelectserviceVC.swift in Sources */,
 				C068DE652BCFCA6400147AAF /* ViewController.swift in Sources */,
 				7EC165152BE62A7900D005E3 /* DKKeyFrameAnimation.swift in Sources */,
 				7E6CDC612BD99EAE00A81D46 /* NewExploreVC.swift in Sources */,
+				7E58164E2BE7E60D0078D9BB /* UICollectionViewExtension.swift in Sources */,
+				7E58164C2BE7E5F40078D9BB /* StringExtension.swift in Sources */,
 				7E5ABD972BD420250079F5F6 /* HomeCatagoryCollectionCell.swift in Sources */,
 				7E5ABDAD2BD50C1A0079F5F6 /* BookingCancelledCollectionCell.swift in Sources */,
 				7EB820A42BD90716007DA6FD /* TimeSlotCollectionCell.swift in Sources */,
@@ -548,16 +618,22 @@
 				C007F2612BE1059400705C16 /* CheckoutTableViewCell.swift in Sources */,
 				FFFD336F2BDA5D920031B7C6 /* AlbumCollectionViewCell.swift in Sources */,
 				C068DE612BCFCA6400147AAF /* AppDelegate.swift in Sources */,
+				7E5816462BE7C65A0078D9BB /* ToastQueue.swift in Sources */,
 				7EC165102BE62A7900D005E3 /* DKChainableAnimationKit+Anchor.swift in Sources */,
+				7E58163B2BE7C65A0078D9BB /* Toast.swift in Sources */,
+				7E5816412BE7C65A0078D9BB /* MulticastDelegate.swift in Sources */,
 				7EDC08B32BD82C4500870986 /* ProfileVC.swift in Sources */,
 				7EC165122BE62A7900D005E3 /* DKChainableAnimationKit.swift in Sources */,
 				C02F855C2BD98242009C6375 /* NotificationVC.swift in Sources */,
 				7EC165142BE62A7900D005E3 /* DKChainableAnimationKit+Bezier.swift in Sources */,
+				7E5816432BE7C65A0078D9BB /* ToastViewConfiguration.swift in Sources */,
 				FFFD33752BDA61340031B7C6 /* AlbumVC.swift in Sources */,
+				7E58163E2BE7C65A0078D9BB /* ToastDelegate.swift in Sources */,
 				7E5ABDA92BD50AD80079F5F6 /* BookingCompletedCollectionCell.swift in Sources */,
 				7E26FD862BD3C17B0028D31B /* ViewExtensions.swift in Sources */,
 				C068DE632BCFCA6400147AAF /* SceneDelegate.swift in Sources */,
 				7EABEA842BDB616100307D7C /* PaymentSuccessFulVC.swift in Sources */,
+				7E58163F2BE7C65A0078D9BB /* TextAppleToastView.swift in Sources */,
 				C02F85602BD985D4009C6375 /* NotificationHeaderCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

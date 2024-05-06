@@ -115,6 +115,7 @@ struct serviceDM {
 }
 
 struct BookingTimeSlot {
+    let id:Int
     let timeSlot: String
 }
 

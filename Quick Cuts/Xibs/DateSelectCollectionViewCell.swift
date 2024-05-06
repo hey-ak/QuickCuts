@@ -1,21 +1,19 @@
-//
-//  DateSelectCollectionViewCell.swift
-//  Quick Cuts
-//
-//  Created by Amit Kumar Dhal on 24/04/24.
-//
-
 import UIKit
 
 class DateSelectCollectionViewCell: UICollectionViewCell {
-
+    
     @IBOutlet weak var dayLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
-    
+    @IBOutlet weak var mainView: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
+    var date: Date = Date() {
+        didSet {
+            dayLabel.text = date.getDayFromDate()
+            dateLabel.text = date.getMonthFromDate()
+        }
+    }
 }

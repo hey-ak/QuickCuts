@@ -65,6 +65,7 @@
             </constraints>
             <size key="customSize" width="267" height="282"/>
             <connections>
+                <outlet property="mainView" destination="ojE-UT-osR" id="wjN-75-YtB"/>
                 <outlet property="serviceName" destination="OwA-qp-7pA" id="wY3-Nn-pDO"/>
                 <outlet property="servicePrice" destination="my3-Px-Ms9" id="9jK-n4-3t4"/>
             </connections>
