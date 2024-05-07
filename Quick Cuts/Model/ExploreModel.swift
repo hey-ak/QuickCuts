@@ -80,7 +80,7 @@ let salon2 = SalonModel(id: 2,
                         openDays: [monday, tuesday, wednesday, thursday, friday, saturday],
                         openingTime: Date(),
                         closingTime: Date(),
-                        services: [service1, service4, service5,service5])
+                        services: [service1, service2, service3])
 
 // Dummy data for SalonModel
 let salon3 = SalonModel(id: 3,
@@ -96,7 +96,7 @@ let salon3 = SalonModel(id: 3,
                         openDays: [monday, wednesday, friday, saturday, sunday],
                         openingTime: Date(),
                         closingTime: Date(),
-                        services: [service2, service3, service6])
+                        services: [service1, service2, service3])
 
 // Dummy data for SalonModel
 let salon4 = SalonModel(id: 4,
@@ -112,7 +112,7 @@ let salon4 = SalonModel(id: 4,
                         openDays: [tuesday, thursday, friday, saturday, sunday],
                         openingTime: Date(),
                         closingTime: Date(),
-                        services: [service2, service4, service5])
+                        services: [service1, service2, service3])
 
 // Dummy data for SalonModel
 let salon5 = SalonModel(id: 5,
@@ -128,7 +128,7 @@ let salon5 = SalonModel(id: 5,
                         openDays: [monday, wednesday, thursday, friday],
                         openingTime: Date(),
                         closingTime: Date(),
-                        services: [service1, service4, service6])
+                        services: [service1, service2, service3])
 
 // Dummy data for SalonModel
 let salon6 = SalonModel(id: 6,
@@ -144,6 +144,6 @@ let salon6 = SalonModel(id: 6,
                         openDays: [monday, wednesday, thursday, friday],
                         openingTime: Date(),
                         closingTime: Date(),
-                        services: [service1, service4, service6])
+                        services: [service1, service2, service3])
 
 var allSalonData:[SalonModel] = [salon,salon2,salon3,salon4,salon5,salon6]
