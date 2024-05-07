@@ -46,7 +46,7 @@ class NewExploreVC: UIViewController, MKMapViewDelegate, UISearchBarDelegate {
                 let distanceInMeters = salonCoordinate.distance(from: coordinate) / 1000
                 print("dfdfsdfds",distanceInMeters,item.salonName)
                 
-                if distanceInMeters < 5 {
+                if distanceInMeters < 1000 {
                     filteredSalons.append(item)
                 }
             }

@@ -1640,6 +1640,127 @@ Our runway expects have curated some of the most popular services at Salon
             </objects>
             <point key="canvasLocation" x="5985" y="382"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="nfS-xu-dgK">
+            <objects>
+                <viewController id="FOd-eM-f8n" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pdj-UO-2Rb">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="2Ha-ed-WhY">
+                                <rect key="frame" x="0.0" y="0.0" width="430" height="898"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Doj-kd-fdx">
+                                        <rect key="frame" x="0.0" y="0.0" width="430" height="270"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zaU-lC-OXf">
+                                                <rect key="frame" x="0.0" y="0.0" width="430" height="270"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="salonImage1" translatesAutoresizingMaskIntoConstraints="NO" id="hfM-xl-ESO">
+                                                        <rect key="frame" x="0.0" y="0.0" width="430" height="270"/>
+                                                    </imageView>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="hfM-xl-ESO" firstAttribute="leading" secondItem="zaU-lC-OXf" secondAttribute="leading" id="6yc-oD-Jdn"/>
+                                                    <constraint firstAttribute="bottom" secondItem="hfM-xl-ESO" secondAttribute="bottom" id="N3q-8z-wRU"/>
+                                                    <constraint firstAttribute="trailing" secondItem="hfM-xl-ESO" secondAttribute="trailing" id="RFH-Xy-fhH"/>
+                                                    <constraint firstItem="hfM-xl-ESO" firstAttribute="top" secondItem="zaU-lC-OXf" secondAttribute="top" id="dt8-SE-guU"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="lYa-1U-931">
+                                        <rect key="frame" x="0.0" y="270" width="430" height="86.333333333333314"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9nJ-x5-yKO">
+                                                <rect key="frame" x="0.0" y="0.0" width="430" height="20"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="20" id="BIj-ST-qow"/>
+                                                </constraints>
+                                            </view>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="4f6-CJ-Xqi">
+                                                <rect key="frame" x="0.0" y="20" width="430" height="66.333333333333329"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lakmé Salon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VLV-Ch-486">
+                                                        <rect key="frame" x="20" y="0.0" width="390" height="43"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Haircuts, Makeup, Shaving, Massage" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="Aec-VN-qNk">
+                                                        <rect key="frame" x="20" y="43" width="390" height="23.333333333333329"/>
+                                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="12"/>
+                                                        <color key="textColor" red="0.57230999999999999" green="0.57230999999999999" blue="0.57230999999999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <edgeInsets key="layoutMargins" top="0.0" left="20" bottom="0.0" right="20"/>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Rks-CU-iTl">
+                                        <rect key="frame" x="0.0" y="356.33333333333326" width="430" height="328"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8tW-6I-QwA">
+                                                <rect key="frame" x="20" y="20" width="390" height="308"/>
+                                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Rks-CU-iTl" secondAttribute="height" multiplier="354:270" id="H7U-Cp-Xoi"/>
+                                        </constraints>
+                                        <edgeInsets key="layoutMargins" top="20" left="20" bottom="0.0" right="20"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="7oH-Ae-hzh">
+                                        <rect key="frame" x="0.0" y="684.33333333333337" width="430" height="146"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xMl-Nv-Mwn">
+                                                <rect key="frame" x="20" y="20" width="390" height="126"/>
+                                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="7oH-Ae-hzh" secondAttribute="height" multiplier="356:121" id="qxH-oB-1wx"/>
+                                        </constraints>
+                                        <edgeInsets key="layoutMargins" top="20" left="20" bottom="0.0" right="20"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Xfp-77-14T">
+                                        <rect key="frame" x="0.0" y="830.33333333333337" width="430" height="67.666666666666629"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="URZ-TL-7Wo">
+                                                <rect key="frame" x="20" y="19.999999999999996" width="390" height="47.666666666666657"/>
+                                                <color key="backgroundColor" name="EC6E57"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Xfp-77-14T" secondAttribute="height" multiplier="356:56" id="vDC-qm-DEC"/>
+                                        </constraints>
+                                        <edgeInsets key="layoutMargins" top="20" left="20" bottom="0.0" right="20"/>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="FAo-eG-WXN"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2Ha-ed-WhY" firstAttribute="bottom" secondItem="FAo-eG-WXN" secondAttribute="bottom" id="6QW-Q3-poB"/>
+                            <constraint firstItem="2Ha-ed-WhY" firstAttribute="leading" secondItem="FAo-eG-WXN" secondAttribute="leading" id="aRy-mX-eH8"/>
+                            <constraint firstItem="Doj-kd-fdx" firstAttribute="height" secondItem="pdj-UO-2Rb" secondAttribute="height" multiplier="0.289871" id="l5o-ri-Ld7"/>
+                            <constraint firstItem="2Ha-ed-WhY" firstAttribute="trailing" secondItem="FAo-eG-WXN" secondAttribute="trailing" id="mkJ-SM-hCE"/>
+                            <constraint firstItem="2Ha-ed-WhY" firstAttribute="top" secondItem="pdj-UO-2Rb" secondAttribute="top" id="pI6-CU-tsk"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oLG-NB-zDg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6904" y="382"/>
+        </scene>
         <!--Centre-->
         <scene sceneID="uxB-K4-9Ea">
             <objects>
@@ -2222,6 +2343,11 @@ Our runway expects have curated some of the most popular services at Salon
                                                 <buttonConfiguration key="configuration" style="plain" title="Confirm Payment">
                                                     <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="19"/>
                                                 </buttonConfiguration>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="13"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -2531,7 +2657,7 @@ Our runway expects have curated some of the most popular services at Salon
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="PTU-hu-BD4">
                                 <rect key="frame" x="0.0" y="103" width="430" height="829"/>
                                 <subviews>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="VUY-xw-7IY">
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="VUY-xw-7IY">
                                         <rect key="frame" x="20" y="0.0" width="390" height="746"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <connections>
@@ -3286,6 +3412,11 @@ Our runway expects have curated some of the most popular services at Salon
                                                 <buttonConfiguration key="configuration" style="plain" title="Download Receipt">
                                                     <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="19"/>
                                                 </buttonConfiguration>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="13"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -3338,6 +3469,7 @@ Our runway expects have curated some of the most popular services at Salon
         <image name="paytm" width="2316" height="724"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="plus.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="salonImage1" width="1024" height="683"/>
         <image name="salonImage4" width="1566" height="1044"/>
         <image name="salonImage6" width="1000" height="667"/>
         <image name="upi" width="256" height="256"/>
