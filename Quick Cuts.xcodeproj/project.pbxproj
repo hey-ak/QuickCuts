@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		76EAA6D4A510F0111B7318EB /* Pods_Quick_Cuts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97B1AE14B0511E83F3BCF01A /* Pods_Quick_Cuts.framework */; };
 		7E0659892BDEC00400A9A42E /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0659882BDEC00400A9A42E /* LocationManager.swift */; };
 		7E26FD862BD3C17B0028D31B /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E26FD852BD3C17B0028D31B /* ViewExtensions.swift */; };
 		7E362AFD2BDAE11600E66A61 /* dummyTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E362AFB2BDAE11600E66A61 /* dummyTableCell.swift */; };
@@ -14,6 +15,23 @@
 		7E362B012BDAE2A600E66A61 /* profileHeadTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E362AFF2BDAE2A600E66A61 /* profileHeadTableCell.swift */; };
 		7E362B022BDAE2A600E66A61 /* profileHeadTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E362B002BDAE2A600E66A61 /* profileHeadTableCell.xib */; };
 		7E4B90D12BD3B7D40083D50A /* SFHello-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7E4B90D02BD3B7D40083D50A /* SFHello-Regular.ttf */; };
+		7E58163B2BE7C65A0078D9BB /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E58162D2BE7C6590078D9BB /* Toast.swift */; };
+		7E58163C2BE7C65A0078D9BB /* ToastConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E58162E2BE7C65A0078D9BB /* ToastConfiguration.swift */; };
+		7E58163D2BE7C65A0078D9BB /* IconAppleToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E58162F2BE7C65A0078D9BB /* IconAppleToastView.swift */; };
+		7E58163E2BE7C65A0078D9BB /* ToastDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5816302BE7C65A0078D9BB /* ToastDelegate.swift */; };
+		7E58163F2BE7C65A0078D9BB /* TextAppleToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5816312BE7C65A0078D9BB /* TextAppleToastView.swift */; };
+		7E5816402BE7C65A0078D9BB /* AnimationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5816322BE7C65A0078D9BB /* AnimationType.swift */; };
+		7E5816412BE7C65A0078D9BB /* MulticastDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5816332BE7C65A0078D9BB /* MulticastDelegate.swift */; };
+		7E5816422BE7C65A0078D9BB /* ToastHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5816342BE7C65A0078D9BB /* ToastHelper.swift */; };
+		7E5816432BE7C65A0078D9BB /* ToastViewConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5816352BE7C65A0078D9BB /* ToastViewConfiguration.swift */; };
+		7E5816442BE7C65A0078D9BB /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5816362BE7C65A0078D9BB /* Direction.swift */; };
+		7E5816452BE7C65A0078D9BB /* AppleToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5816372BE7C65A0078D9BB /* AppleToastView.swift */; };
+		7E5816462BE7C65A0078D9BB /* ToastQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5816382BE7C65A0078D9BB /* ToastQueue.swift */; };
+		7E5816472BE7C65A0078D9BB /* ToastQueueDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5816392BE7C65A0078D9BB /* ToastQueueDelegate.swift */; };
+		7E5816482BE7C65A0078D9BB /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E58163A2BE7C65A0078D9BB /* ToastView.swift */; };
+		7E58164A2BE7E5E90078D9BB /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5816492BE7E5E90078D9BB /* DateExtension.swift */; };
+		7E58164C2BE7E5F40078D9BB /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E58164B2BE7E5F40078D9BB /* StringExtension.swift */; };
+		7E58164E2BE7E60D0078D9BB /* UICollectionViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E58164D2BE7E60D0078D9BB /* UICollectionViewExtension.swift */; };
 		7E5ABD922BD419230079F5F6 /* HomeCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E5ABD912BD419230079F5F6 /* HomeCollectionCell.xib */; };
 		7E5ABD932BD419230079F5F6 /* HomeCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5ABD902BD419230079F5F6 /* HomeCollectionCell.swift */; };
 		7E5ABD962BD420250079F5F6 /* HomeCatagoryCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E5ABD952BD420250079F5F6 /* HomeCatagoryCollectionCell.xib */; };
@@ -44,6 +62,17 @@
 		7EB820A12BD8E6DA007DA6FD /* DateAndTimeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB820A02BD8E6DA007DA6FD /* DateAndTimeVC.swift */; };
 		7EB820A42BD90716007DA6FD /* TimeSlotCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB820A22BD90716007DA6FD /* TimeSlotCollectionCell.swift */; };
 		7EB820A52BD90716007DA6FD /* TimeSlotCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EB820A32BD90716007DA6FD /* TimeSlotCollectionCell.xib */; };
+		7EC1650F2BE62A7900D005E3 /* DKChainableAnimationKit+Effects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC165052BE62A7900D005E3 /* DKChainableAnimationKit+Effects.swift */; };
+		7EC165102BE62A7900D005E3 /* DKChainableAnimationKit+Anchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC165062BE62A7900D005E3 /* DKChainableAnimationKit+Anchor.swift */; };
+		7EC165112BE62A7900D005E3 /* DKKeyframeAnimationFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC165072BE62A7900D005E3 /* DKKeyframeAnimationFunction.swift */; };
+		7EC165122BE62A7900D005E3 /* DKChainableAnimationKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC165082BE62A7900D005E3 /* DKChainableAnimationKit.swift */; };
+		7EC165132BE62A7900D005E3 /* UIView+AnimationKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC165092BE62A7900D005E3 /* UIView+AnimationKit.swift */; };
+		7EC165142BE62A7900D005E3 /* DKChainableAnimationKit+Bezier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC1650A2BE62A7900D005E3 /* DKChainableAnimationKit+Bezier.swift */; };
+		7EC165152BE62A7900D005E3 /* DKKeyFrameAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC1650B2BE62A7900D005E3 /* DKKeyFrameAnimation.swift */; };
+		7EC165162BE62A7900D005E3 /* DKChainableAnimationKit+Extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC1650C2BE62A7900D005E3 /* DKChainableAnimationKit+Extra.swift */; };
+		7EC165172BE62A7900D005E3 /* DKChainableAnimationKit+Transform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC1650D2BE62A7900D005E3 /* DKChainableAnimationKit+Transform.swift */; };
+		7EC165182BE62A7900D005E3 /* DKChainableAnimationKit+Frame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC1650E2BE62A7900D005E3 /* DKChainableAnimationKit+Frame.swift */; };
+		7EC1651F2BE6591300D005E3 /* ExploreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC1651E2BE6591300D005E3 /* ExploreModel.swift */; };
 		7EDC08B32BD82C4500870986 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDC08B22BD82C4500870986 /* ProfileVC.swift */; };
 		7EDC08B62BD82CA000870986 /* ProfileTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDC08B42BD82CA000870986 /* ProfileTableCell.swift */; };
 		7EDC08B72BD82CA000870986 /* ProfileTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EDC08B52BD82CA000870986 /* ProfileTableCell.xib */; };
@@ -74,6 +103,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0C5D271293B1FE7BF8AB3D98 /* Pods-Quick Cuts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quick Cuts.release.xcconfig"; path = "Target Support Files/Pods-Quick Cuts/Pods-Quick Cuts.release.xcconfig"; sourceTree = "<group>"; };
 		7E0659882BDEC00400A9A42E /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		7E26FD852BD3C17B0028D31B /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
 		7E362AFB2BDAE11600E66A61 /* dummyTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dummyTableCell.swift; sourceTree = "<group>"; };
@@ -81,6 +111,23 @@
 		7E362AFF2BDAE2A600E66A61 /* profileHeadTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileHeadTableCell.swift; sourceTree = "<group>"; };
 		7E362B002BDAE2A600E66A61 /* profileHeadTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = profileHeadTableCell.xib; sourceTree = "<group>"; };
 		7E4B90D02BD3B7D40083D50A /* SFHello-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFHello-Regular.ttf"; sourceTree = "<group>"; };
+		7E58162D2BE7C6590078D9BB /* Toast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
+		7E58162E2BE7C65A0078D9BB /* ToastConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastConfiguration.swift; sourceTree = "<group>"; };
+		7E58162F2BE7C65A0078D9BB /* IconAppleToastView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconAppleToastView.swift; sourceTree = "<group>"; };
+		7E5816302BE7C65A0078D9BB /* ToastDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastDelegate.swift; sourceTree = "<group>"; };
+		7E5816312BE7C65A0078D9BB /* TextAppleToastView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextAppleToastView.swift; sourceTree = "<group>"; };
+		7E5816322BE7C65A0078D9BB /* AnimationType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationType.swift; sourceTree = "<group>"; };
+		7E5816332BE7C65A0078D9BB /* MulticastDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MulticastDelegate.swift; sourceTree = "<group>"; };
+		7E5816342BE7C65A0078D9BB /* ToastHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastHelper.swift; sourceTree = "<group>"; };
+		7E5816352BE7C65A0078D9BB /* ToastViewConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastViewConfiguration.swift; sourceTree = "<group>"; };
+		7E5816362BE7C65A0078D9BB /* Direction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Direction.swift; sourceTree = "<group>"; };
+		7E5816372BE7C65A0078D9BB /* AppleToastView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppleToastView.swift; sourceTree = "<group>"; };
+		7E5816382BE7C65A0078D9BB /* ToastQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastQueue.swift; sourceTree = "<group>"; };
+		7E5816392BE7C65A0078D9BB /* ToastQueueDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastQueueDelegate.swift; sourceTree = "<group>"; };
+		7E58163A2BE7C65A0078D9BB /* ToastView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
+		7E5816492BE7E5E90078D9BB /* DateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		7E58164B2BE7E5F40078D9BB /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		7E58164D2BE7E60D0078D9BB /* UICollectionViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICollectionViewExtension.swift; sourceTree = "<group>"; };
 		7E5ABD902BD419230079F5F6 /* HomeCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionCell.swift; sourceTree = "<group>"; };
 		7E5ABD912BD419230079F5F6 /* HomeCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCollectionCell.xib; sourceTree = "<group>"; };
 		7E5ABD942BD420250079F5F6 /* HomeCatagoryCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCatagoryCollectionCell.swift; sourceTree = "<group>"; };
@@ -111,9 +158,22 @@
 		7EB820A02BD8E6DA007DA6FD /* DateAndTimeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateAndTimeVC.swift; sourceTree = "<group>"; };
 		7EB820A22BD90716007DA6FD /* TimeSlotCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSlotCollectionCell.swift; sourceTree = "<group>"; };
 		7EB820A32BD90716007DA6FD /* TimeSlotCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeSlotCollectionCell.xib; sourceTree = "<group>"; };
+		7EC165052BE62A7900D005E3 /* DKChainableAnimationKit+Effects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DKChainableAnimationKit+Effects.swift"; sourceTree = "<group>"; };
+		7EC165062BE62A7900D005E3 /* DKChainableAnimationKit+Anchor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DKChainableAnimationKit+Anchor.swift"; sourceTree = "<group>"; };
+		7EC165072BE62A7900D005E3 /* DKKeyframeAnimationFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DKKeyframeAnimationFunction.swift; sourceTree = "<group>"; };
+		7EC165082BE62A7900D005E3 /* DKChainableAnimationKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DKChainableAnimationKit.swift; sourceTree = "<group>"; };
+		7EC165092BE62A7900D005E3 /* UIView+AnimationKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+AnimationKit.swift"; sourceTree = "<group>"; };
+		7EC1650A2BE62A7900D005E3 /* DKChainableAnimationKit+Bezier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DKChainableAnimationKit+Bezier.swift"; sourceTree = "<group>"; };
+		7EC1650B2BE62A7900D005E3 /* DKKeyFrameAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DKKeyFrameAnimation.swift; sourceTree = "<group>"; };
+		7EC1650C2BE62A7900D005E3 /* DKChainableAnimationKit+Extra.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DKChainableAnimationKit+Extra.swift"; sourceTree = "<group>"; };
+		7EC1650D2BE62A7900D005E3 /* DKChainableAnimationKit+Transform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DKChainableAnimationKit+Transform.swift"; sourceTree = "<group>"; };
+		7EC1650E2BE62A7900D005E3 /* DKChainableAnimationKit+Frame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DKChainableAnimationKit+Frame.swift"; sourceTree = "<group>"; };
+		7EC1651D2BE6489A00D005E3 /* Quick Cuts.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Quick Cuts.entitlements"; sourceTree = "<group>"; };
+		7EC1651E2BE6591300D005E3 /* ExploreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreModel.swift; sourceTree = "<group>"; };
 		7EDC08B22BD82C4500870986 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		7EDC08B42BD82CA000870986 /* ProfileTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableCell.swift; sourceTree = "<group>"; };
 		7EDC08B52BD82CA000870986 /* ProfileTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileTableCell.xib; sourceTree = "<group>"; };
+		97B1AE14B0511E83F3BCF01A /* Pods_Quick_Cuts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Quick_Cuts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9660B0B2BDF632300DBFAA6 /* CentreCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CentreCollectionViewCell.swift; sourceTree = "<group>"; };
 		A9660B0C2BDF632300DBFAA6 /* CentreCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CentreCollectionViewCell.xib; sourceTree = "<group>"; };
 		A9660B0F2BDF64A000DBFAA6 /* CentreVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CentreVC.swift; sourceTree = "<group>"; };
@@ -136,6 +196,7 @@
 		C068DE692BCFCA6500147AAF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C068DE6C2BCFCA6500147AAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C068DE6E2BCFCA6500147AAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C1095B832010A72D99A99E17 /* Pods-Quick Cuts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quick Cuts.debug.xcconfig"; path = "Target Support Files/Pods-Quick Cuts/Pods-Quick Cuts.debug.xcconfig"; sourceTree = "<group>"; };
 		FFE180412BE3C766005BB8F9 /* YourProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourProfileViewController.swift; sourceTree = "<group>"; };
 		FFFD336C2BDA5D920031B7C6 /* AlbumCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCollectionViewCell.swift; sourceTree = "<group>"; };
 		FFFD336D2BDA5D920031B7C6 /* AlbumCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlbumCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -147,6 +208,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76EAA6D4A510F0111B7318EB /* Pods_Quick_Cuts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,6 +226,11 @@
 		7E26FD842BD3C1650028D31B /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				7E58162C2BE7C6190078D9BB /* ToastMessage */,
+				7EC165042BE62A5D00D005E3 /* AnimationHandler */,
+				7E5816492BE7E5E90078D9BB /* DateExtension.swift */,
+				7E58164D2BE7E60D0078D9BB /* UICollectionViewExtension.swift */,
+				7E58164B2BE7E5F40078D9BB /* StringExtension.swift */,
 				7E26FD852BD3C17B0028D31B /* ViewExtensions.swift */,
 			);
 			path = Helpers;
@@ -221,6 +288,27 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		7E58162C2BE7C6190078D9BB /* ToastMessage */ = {
+			isa = PBXGroup;
+			children = (
+				7E5816322BE7C65A0078D9BB /* AnimationType.swift */,
+				7E5816372BE7C65A0078D9BB /* AppleToastView.swift */,
+				7E5816362BE7C65A0078D9BB /* Direction.swift */,
+				7E58162F2BE7C65A0078D9BB /* IconAppleToastView.swift */,
+				7E5816332BE7C65A0078D9BB /* MulticastDelegate.swift */,
+				7E5816312BE7C65A0078D9BB /* TextAppleToastView.swift */,
+				7E58162D2BE7C6590078D9BB /* Toast.swift */,
+				7E58162E2BE7C65A0078D9BB /* ToastConfiguration.swift */,
+				7E5816302BE7C65A0078D9BB /* ToastDelegate.swift */,
+				7E5816342BE7C65A0078D9BB /* ToastHelper.swift */,
+				7E5816382BE7C65A0078D9BB /* ToastQueue.swift */,
+				7E5816392BE7C65A0078D9BB /* ToastQueueDelegate.swift */,
+				7E58163A2BE7C65A0078D9BB /* ToastView.swift */,
+				7E5816352BE7C65A0078D9BB /* ToastViewConfiguration.swift */,
+			);
+			path = ToastMessage;
+			sourceTree = "<group>";
+		};
 		7E5ABD8F2BD419050079F5F6 /* Xibs */ = {
 			isa = PBXGroup;
 			children = (
@@ -268,8 +356,43 @@
 			isa = PBXGroup;
 			children = (
 				7EABEA862BDB67F000307D7C /* DataModels.swift */,
+				7EC1651E2BE6591300D005E3 /* ExploreModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		7EC165042BE62A5D00D005E3 /* AnimationHandler */ = {
+			isa = PBXGroup;
+			children = (
+				7EC165082BE62A7900D005E3 /* DKChainableAnimationKit.swift */,
+				7EC165062BE62A7900D005E3 /* DKChainableAnimationKit+Anchor.swift */,
+				7EC1650A2BE62A7900D005E3 /* DKChainableAnimationKit+Bezier.swift */,
+				7EC165052BE62A7900D005E3 /* DKChainableAnimationKit+Effects.swift */,
+				7EC1650C2BE62A7900D005E3 /* DKChainableAnimationKit+Extra.swift */,
+				7EC1650E2BE62A7900D005E3 /* DKChainableAnimationKit+Frame.swift */,
+				7EC1650D2BE62A7900D005E3 /* DKChainableAnimationKit+Transform.swift */,
+				7EC1650B2BE62A7900D005E3 /* DKKeyFrameAnimation.swift */,
+				7EC165072BE62A7900D005E3 /* DKKeyframeAnimationFunction.swift */,
+				7EC165092BE62A7900D005E3 /* UIView+AnimationKit.swift */,
+			);
+			path = AnimationHandler;
+			sourceTree = "<group>";
+		};
+		AC07C28D072FF253F596AC5A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				97B1AE14B0511E83F3BCF01A /* Pods_Quick_Cuts.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BE19FD05A6282AAFFE676021 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C1095B832010A72D99A99E17 /* Pods-Quick Cuts.debug.xcconfig */,
+				0C5D271293B1FE7BF8AB3D98 /* Pods-Quick Cuts.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 		C068DE542BCFCA6400147AAF = {
@@ -277,6 +400,8 @@
 			children = (
 				C068DE5F2BCFCA6400147AAF /* Quick Cuts */,
 				C068DE5E2BCFCA6400147AAF /* Products */,
+				BE19FD05A6282AAFFE676021 /* Pods */,
+				AC07C28D072FF253F596AC5A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -291,16 +416,17 @@
 		C068DE5F2BCFCA6400147AAF /* Quick Cuts */ = {
 			isa = PBXGroup;
 			children = (
-				7E0659872BDEBFF800A9A42E /* Managers */,
-				7EABEA852BDB627100307D7C /* Model */,
-				7E5ABD8F2BD419050079F5F6 /* Xibs */,
-				7E26FD842BD3C1650028D31B /* Helpers */,
-				7E4B90CF2BD3B13B0083D50A /* Resources */,
+				7EC1651D2BE6489A00D005E3 /* Quick Cuts.entitlements */,
 				C068DE6E2BCFCA6500147AAF /* Info.plist */,
 				C068DE692BCFCA6500147AAF /* Assets.xcassets */,
 				7E4B90CC2BD3AAB60083D50A /* Application */,
 				7E4B90CE2BD3ACB20083D50A /* Controllers */,
+				7E26FD842BD3C1650028D31B /* Helpers */,
+				7E0659872BDEBFF800A9A42E /* Managers */,
+				7EABEA852BDB627100307D7C /* Model */,
+				7E4B90CF2BD3B13B0083D50A /* Resources */,
 				7E4B90CD2BD3AC990083D50A /* View */,
+				7E5ABD8F2BD419050079F5F6 /* Xibs */,
 			);
 			path = "Quick Cuts";
 			sourceTree = "<group>";
@@ -312,9 +438,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C068DE712BCFCA6500147AAF /* Build configuration list for PBXNativeTarget "Quick Cuts" */;
 			buildPhases = (
+				13D20F0F2DD86DCC2F7E973E /* [CP] Check Pods Manifest.lock */,
 				C068DE592BCFCA6400147AAF /* Sources */,
 				C068DE5A2BCFCA6400147AAF /* Frameworks */,
 				C068DE5B2BCFCA6400147AAF /* Resources */,
+				C4940F49ACE0F755A4E5EC22 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -377,7 +505,6 @@
 				7E5ABD962BD420250079F5F6 /* HomeCatagoryCollectionCell.xib in Resources */,
 				7E5ABDA82BD50AD80079F5F6 /* BookingCompletedCollectionCell.xib in Resources */,
 				C02F855F2BD985D4009C6375 /* NotificationHeaderCell.xib in Resources */,
-				C0916EF02BE1F87100A8FF2F /* ReciptTableViewCell.xib in Resources */,
 				7E362AFE2BDAE11600E66A61 /* dummyTableCell.xib in Resources */,
 				C068DE6D2BCFCA6500147AAF /* Base in Resources */,
 				C007F2622BE1059400705C16 /* CheckoutTableViewCell.xib in Resources */,
@@ -391,54 +518,122 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		13D20F0F2DD86DCC2F7E973E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Quick Cuts-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C4940F49ACE0F755A4E5EC22 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Quick Cuts/Pods-Quick Cuts-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Quick Cuts/Pods-Quick Cuts-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Quick Cuts/Pods-Quick Cuts-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C068DE592BCFCA6400147AAF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				A9660B102BDF64A000DBFAA6 /* CentreVC.swift in Sources */,
+				7E58164A2BE7E5E90078D9BB /* DateExtension.swift in Sources */,
+				7EC165162BE62A7900D005E3 /* DKChainableAnimationKit+Extra.swift in Sources */,
+				7E5816402BE7C65A0078D9BB /* AnimationType.swift in Sources */,
 				7E6762F82BD77FEB005F914B /* CancelServiceVC.swift in Sources */,
 				7EABEA872BDB67F000307D7C /* DataModels.swift in Sources */,
+				7EC165172BE62A7900D005E3 /* DKChainableAnimationKit+Transform.swift in Sources */,
 				7EABEA822BDB5B3700307D7C /* PaymentVC.swift in Sources */,
+				7E5816452BE7C65A0078D9BB /* AppleToastView.swift in Sources */,
+				7E5816472BE7C65A0078D9BB /* ToastQueueDelegate.swift in Sources */,
+				7E5816482BE7C65A0078D9BB /* ToastView.swift in Sources */,
+				7EC165182BE62A7900D005E3 /* DKChainableAnimationKit+Frame.swift in Sources */,
 				A9A799422BE350D700CA4C8F /* ReceiptTableViewCell.swift in Sources */,
 				7E362B012BDAE2A600E66A61 /* profileHeadTableCell.swift in Sources */,
 				7E362AFD2BDAE11600E66A61 /* dummyTableCell.swift in Sources */,
 				A9660B0D2BDF632300DBFAA6 /* CentreCollectionViewCell.swift in Sources */,
 				7E5ABDA52BD506860079F5F6 /* BookingVC.swift in Sources */,
+				7EC165112BE62A7900D005E3 /* DKKeyframeAnimationFunction.swift in Sources */,
+				7EC1650F2BE62A7900D005E3 /* DKChainableAnimationKit+Effects.swift in Sources */,
 				FFE180422BE3C766005BB8F9 /* YourProfileViewController.swift in Sources */,
+				7EC1651F2BE6591300D005E3 /* ExploreModel.swift in Sources */,
 				7E6762F52BD77EE0005F914B /* CancelServiceCollectionCell.swift in Sources */,
 				7EB820A12BD8E6DA007DA6FD /* DateAndTimeVC.swift in Sources */,
 				7E5ABD932BD419230079F5F6 /* HomeCollectionCell.swift in Sources */,
+				7E5816422BE7C65A0078D9BB /* ToastHelper.swift in Sources */,
 				7EDC08B62BD82CA000870986 /* ProfileTableCell.swift in Sources */,
+				7E58163D2BE7C65A0078D9BB /* IconAppleToastView.swift in Sources */,
 				C007F2642BE105C900705C16 /* CheckoutVC.swift in Sources */,
 				7EB8209E2BD8BED3007DA6FD /* DateSelectCollectionViewCell.swift in Sources */,
 				7E5ABD9F2BD4E7A50079F5F6 /* ServiceCollectionCell.swift in Sources */,
 				A9A799462BE3514C00CA4C8F /* ReceiptVC.swift in Sources */,
 				7E5ABD992BD423290079F5F6 /* HomeVC.swift in Sources */,
+				7E58163C2BE7C65A0078D9BB /* ToastConfiguration.swift in Sources */,
 				7E5ABDA32BD4FD810079F5F6 /* BookingCollectionCell.swift in Sources */,
 				7E6CDC5F2BD99A8B00A81D46 /* SignUpVC.swift in Sources */,
 				7E6CDC5B2BD998C500A81D46 /* CustomTabbarVC.swift in Sources */,
-				C0916EF42BE1F8BB00A8FF2F /* ReciptVC.swift in Sources */,
 				C02F855A2BD97334009C6375 /* NotificationTableViewCell.swift in Sources */,
 				7E0659892BDEC00400A9A42E /* LocationManager.swift in Sources */,
+				7EC165132BE62A7900D005E3 /* UIView+AnimationKit.swift in Sources */,
+				7E5816442BE7C65A0078D9BB /* Direction.swift in Sources */,
 				7E5ABD9B2BD4E6A20079F5F6 /* SelectserviceVC.swift in Sources */,
 				C068DE652BCFCA6400147AAF /* ViewController.swift in Sources */,
+				7EC165152BE62A7900D005E3 /* DKKeyFrameAnimation.swift in Sources */,
 				7E6CDC612BD99EAE00A81D46 /* NewExploreVC.swift in Sources */,
+				7E58164E2BE7E60D0078D9BB /* UICollectionViewExtension.swift in Sources */,
+				7E58164C2BE7E5F40078D9BB /* StringExtension.swift in Sources */,
 				7E5ABD972BD420250079F5F6 /* HomeCatagoryCollectionCell.swift in Sources */,
 				7E5ABDAD2BD50C1A0079F5F6 /* BookingCancelledCollectionCell.swift in Sources */,
 				7EB820A42BD90716007DA6FD /* TimeSlotCollectionCell.swift in Sources */,
 				7E6CDC5D2BD999D600A81D46 /* SignInVC.swift in Sources */,
 				C007F2612BE1059400705C16 /* CheckoutTableViewCell.swift in Sources */,
 				FFFD336F2BDA5D920031B7C6 /* AlbumCollectionViewCell.swift in Sources */,
-				C0916EEF2BE1F87100A8FF2F /* ReciptTableViewCell.swift in Sources */,
 				C068DE612BCFCA6400147AAF /* AppDelegate.swift in Sources */,
+				7E5816462BE7C65A0078D9BB /* ToastQueue.swift in Sources */,
+				7EC165102BE62A7900D005E3 /* DKChainableAnimationKit+Anchor.swift in Sources */,
+				7E58163B2BE7C65A0078D9BB /* Toast.swift in Sources */,
+				7E5816412BE7C65A0078D9BB /* MulticastDelegate.swift in Sources */,
 				7EDC08B32BD82C4500870986 /* ProfileVC.swift in Sources */,
+				7EC165122BE62A7900D005E3 /* DKChainableAnimationKit.swift in Sources */,
 				C02F855C2BD98242009C6375 /* NotificationVC.swift in Sources */,
+				7EC165142BE62A7900D005E3 /* DKChainableAnimationKit+Bezier.swift in Sources */,
+				7E5816432BE7C65A0078D9BB /* ToastViewConfiguration.swift in Sources */,
 				FFFD33752BDA61340031B7C6 /* AlbumVC.swift in Sources */,
+				7E58163E2BE7C65A0078D9BB /* ToastDelegate.swift in Sources */,
 				7E5ABDA92BD50AD80079F5F6 /* BookingCompletedCollectionCell.swift in Sources */,
 				7E26FD862BD3C17B0028D31B /* ViewExtensions.swift in Sources */,
 				C068DE632BCFCA6400147AAF /* SceneDelegate.swift in Sources */,
 				7EABEA842BDB616100307D7C /* PaymentSuccessFulVC.swift in Sources */,
+				7E58163F2BE7C65A0078D9BB /* TextAppleToastView.swift in Sources */,
 				C02F85602BD985D4009C6375 /* NotificationHeaderCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -502,7 +697,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -565,7 +760,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -586,12 +781,14 @@
 		};
 		C068DE722BCFCA6500147AAF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C1095B832010A72D99A99E17 /* Pods-Quick Cuts.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Quick Cuts/Quick Cuts.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = MJWLK9T3B7;
+				DEVELOPMENT_TEAM = QUM623UT8W;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Quick Cuts/Info.plist";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Application requires user’s location for better user experience.";
@@ -600,29 +797,35 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ios.akshat.Quick-Cuts";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ios.amit.Quick-Cuts";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		C068DE732BCFCA6500147AAF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C5D271293B1FE7BF8AB3D98 /* Pods-Quick Cuts.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Quick Cuts/Quick Cuts.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = MJWLK9T3B7;
+				DEVELOPMENT_TEAM = QUM623UT8W;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Quick Cuts/Info.plist";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Application requires user’s location for better user experience.";
@@ -631,18 +834,22 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ios.akshat.Quick-Cuts";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ios.amit.Quick-Cuts";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

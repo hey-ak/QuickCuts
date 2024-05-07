@@ -55,6 +55,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="mainView" destination="ZFJ-Sg-d8v" id="lWA-fg-x85"/>
                 <outlet property="timeSlot" destination="usP-ye-b74" id="un4-hm-5yx"/>
             </connections>
             <point key="canvasLocation" x="138.93129770992365" y="62.323943661971832"/>

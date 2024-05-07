@@ -30,9 +30,55 @@ extension ReceiptVC: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CheckoutTableViewCell", for: indexPath) as! CheckoutTableViewCell
-        return cell
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "CheckoutTableViewCell", for: indexPath) as! CheckoutTableViewCell
+//        return cell
         
+        
+        let section = indexPath.section
+        switch section {
+        case 0:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "CheckoutTableViewCell", for: indexPath) as! CheckoutTableViewCell
+//            let data = profileDM[indexPath.section].profileData[indexPath.row]
+//            cell.userName.text = data.userProfileDetails?.userName
+//            cell.userPhoneNumber.text = data.userProfileDetails?.phoneNumber
+//            cell.userProfileImage.image = UIImage(named: data.userProfileDetails?.userImage ?? "profilePic")
+            
+            if indexPath.row == 0 {
+                cell.contentView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+                cell.contentView.layer.cornerRadius = 13
+            }
+            else if indexPath.row == profileDM[section].profileData.count - 1 {
+                cell.contentView.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
+                cell.contentView.layer.cornerRadius = 13
+            }
+            else {
+                cell.contentView.layer.maskedCorners = []
+                cell.contentView.layer.cornerRadius = 0
+            }
+            
+            return cell
+        case 1:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "CheckoutTableViewCell", for: indexPath) as! CheckoutTableViewCell
+//            let data = profileDM[indexPath.section].profileData[indexPath.row]
+//            cell.profileLabel.text = data.profileOption.rawValue
+//            cell.profileIcon.image = UIImage(named: data.profileOption.rawValue)
+            
+            if indexPath.row == 0 {
+                cell.contentView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+                cell.contentView.layer.cornerRadius = 13
+            }
+            else if indexPath.row == profileDM[section].profileData.count - 1 {
+                cell.contentView.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
+                cell.contentView.layer.cornerRadius = 13
+            }
+            else {
+                cell.contentView.layer.maskedCorners = []
+                cell.contentView.layer.cornerRadius = 0
+            }
+            
+            return cell
+        default : return UITableViewCell()
+        }
         
     }
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
