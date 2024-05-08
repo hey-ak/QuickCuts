@@ -7,7 +7,7 @@ class PaymentSuccessFulVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+      
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "BookingVC") as! BookingVC

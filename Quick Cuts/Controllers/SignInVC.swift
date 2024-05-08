@@ -32,11 +32,11 @@ class SignInVC: UIViewController {
 
             guard error == nil else {
                 guard let error = error?.localizedDescription else { return }
-                self.showToast(error)
+                self.showToastAfterFail(error)
                 return }
             
             DispatchQueue.main.async {
-                self.showToast("Forget Pass started.")
+                self.showToastAfterSuccess("Forget Pass started.")
             }
         }
     }
@@ -54,7 +54,7 @@ class SignInVC: UIViewController {
             guard let errorMessage = validatedData.errorMessage
             else { return }
             
-            showToast(errorMessage)
+            showToastAfterFail(errorMessage)
             return
         }
         
@@ -73,23 +73,32 @@ class SignInVC: UIViewController {
             
             guard error == nil else {
                 guard let error = error?.localizedDescription else { return }
-                self.showToast(error)
+                self.showToastAfterFail(error)
                 return }
             
             guard user != nil else { return }
             
             DispatchQueue.main.async {
                 print(user)
-                self.showToast("Account logined in sucessfully.")
+                self.showToastAfterSuccess("Account logined in sucessfully.")
                 GoToHomeVC()
             }
         }
     }
     
-    private func showToast(_ message:String) {
+    private func showToastAfterFail(_ message:String) {
         DispatchQueue.main.async {
             let toast = Toast.default(
                 image: UIImage(named: "mark")!,
+                title: message
+            )
+            toast.show()
+        }
+    }
+    private func showToastAfterSuccess(_ message:String) {
+        DispatchQueue.main.async {
+            let toast = Toast.default(
+                image: UIImage(named: "paymentSuccesful")!,
                 title: message
             )
             toast.show()
