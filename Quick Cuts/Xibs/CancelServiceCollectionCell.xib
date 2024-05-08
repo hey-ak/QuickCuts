@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -19,44 +20,47 @@
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="uMH-rk-RGz">
                         <rect key="frame" x="0.0" y="0.0" width="115" height="101"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8nc-PG-e0w">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AXn-JO-r1g">
                                 <rect key="frame" x="0.0" y="0.0" width="115" height="101"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="csq-lX-pnj">
-                                        <rect key="frame" x="-3" y="33" width="121" height="35"/>
-                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Poor Service"/>
-                                    </button>
-                                </subviews>
                                 <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <constraints>
-                                    <constraint firstItem="csq-lX-pnj" firstAttribute="centerY" secondItem="8nc-PG-e0w" secondAttribute="centerY" id="4Ya-1s-sgf"/>
-                                    <constraint firstItem="csq-lX-pnj" firstAttribute="centerX" secondItem="8nc-PG-e0w" secondAttribute="centerX" id="UJV-MI-xrK"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="13"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
+                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="8nc-PG-e0w" firstAttribute="centerX" secondItem="uMH-rk-RGz" secondAttribute="centerX" id="I69-LP-KHs"/>
-                            <constraint firstItem="8nc-PG-e0w" firstAttribute="centerY" secondItem="uMH-rk-RGz" secondAttribute="centerY" id="d8Q-wg-UGg"/>
+                            <constraint firstItem="AXn-JO-r1g" firstAttribute="centerY" relation="greaterThanOrEqual" secondItem="uMH-rk-RGz" secondAttribute="centerY" id="Lu9-B3-FQd"/>
+                            <constraint firstItem="AXn-JO-r1g" firstAttribute="leading" secondItem="uMH-rk-RGz" secondAttribute="leading" id="UaF-vk-73c"/>
+                            <constraint firstItem="AXn-JO-r1g" firstAttribute="centerX" secondItem="uMH-rk-RGz" secondAttribute="centerX" id="W1R-Le-b6B"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="13"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </stackView>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
                 <constraint firstItem="uMH-rk-RGz" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="9pX-Xk-ckX"/>
+                <constraint firstItem="uMH-rk-RGz" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="Ol7-Ax-Oxg"/>
+                <constraint firstItem="uMH-rk-RGz" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="TOn-YR-O8L"/>
                 <constraint firstAttribute="bottom" secondItem="uMH-rk-RGz" secondAttribute="bottom" id="WUi-CD-a3N"/>
                 <constraint firstItem="uMH-rk-RGz" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="lLI-IM-Uc0"/>
                 <constraint firstAttribute="trailing" secondItem="uMH-rk-RGz" secondAttribute="trailing" id="xRu-zW-vws"/>
             </constraints>
             <size key="customSize" width="115" height="101"/>
+            <connections>
+                <outlet property="cancelServiceReasonButton" destination="AXn-JO-r1g" id="4X8-Z0-kG1"/>
+            </connections>
             <point key="canvasLocation" x="135.1145038167939" y="37.676056338028168"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

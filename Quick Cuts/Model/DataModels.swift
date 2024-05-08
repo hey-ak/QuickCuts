@@ -199,3 +199,8 @@ let profileDM = [ProfileDM.init(section: 0,
                                               ProfileData(row: 3,
                                                           userProfileDetails: nil,
                                                           profileOption: .logOut)])]
+
+
+struct cancelReason {
+    let cancelServiceReason: String
+}

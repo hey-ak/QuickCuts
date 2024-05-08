@@ -17,6 +17,21 @@ class CancelServiceVC: UIViewController {
         }
     }
     
+    let salonCancelReasons: [cancelReason] = [
+        cancelReason(cancelServiceReason: "Not needed"),
+        cancelReason(cancelServiceReason: "Bad Service"),
+        cancelReason(cancelServiceReason: "Sickness"),
+        cancelReason(cancelServiceReason: "Not satisfied"),
+        cancelReason(cancelServiceReason: "Budget issue"),
+        cancelReason(cancelServiceReason: "Better offer"),
+        cancelReason(cancelServiceReason: "Unexpected"),
+        cancelReason(cancelServiceReason: "Personal"),
+        cancelReason(cancelServiceReason: "Unavailable"),
+        // Add more concise reasons as needed
+    ]
+
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // navigationController?.navigationBar.prefersLargeTitles = false
@@ -32,11 +47,13 @@ class CancelServiceVC: UIViewController {
 
 extension CancelServiceVC : UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        10
+        salonCancelReasons.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CancelServiceCollectionCell", for: indexPath) as! CancelServiceCollectionCell
+        let data = salonCancelReasons[indexPath.row]
+        cell.cancelServiceReasonButton.text = data.cancelServiceReason
         return cell
     }
     

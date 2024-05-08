@@ -59,6 +59,7 @@ class BookingVC: UIViewController {
     
     @objc func buttonPressed(){
         let nextVC = storyboard?.instantiateViewController(withIdentifier: "CancelServiceVC") as! CancelServiceVC
+        nextVC.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(nextVC, animated: true)
     }
     
