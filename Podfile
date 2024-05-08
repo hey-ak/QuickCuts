@@ -10,6 +10,10 @@ target 'Quick Cuts' do
 pod 'Cosmos'
 pod 'IQKeyboardManagerSwift'
 pod 'DropDown'
+pod 'Firebase/Core'
+pod 'Firebase/Database'
+pod 'Firebase/Auth'
+pod 'Firebase/Firestore'
 
 
 end

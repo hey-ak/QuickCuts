@@ -2,6 +2,8 @@ import UIKit
 import CoreLocation
 import IQKeyboardManagerSwift
 import DropDown
+import Firebase
+
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -11,6 +13,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         LocationManager.shared.requestAuthorization()
         LocationManager.shared.getCurrentLocation()
+        FirebaseApp.configure()
         IQKeyboardManager.shared.enable = true
         IQKeyboardManager.shared.resignOnTouchOutside = true
         IQKeyboardManager.shared.enableAutoToolbar = true
@@ -78,11 +81,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        static let TextColor = UIColor.black
 //        static let SelectedTextColor = UIColor.gray
 //        static let TextFont = UIFont.systemFont(ofSize: 15)
-//        static let BackgroundColor = UIColor(white: 1, alpha: 0.8)
-//        static let SelectionBackgroundColor = UIColor(white: 1, alpha: 0.8)
+//        static let BackgroundColor = UIColor(white: 1, alpha: 0.85)
+//        static let SelectionBackgroundColor = UIColor(white: 1, alpha: 0.85)
 //        static let SeparatorColor = UIColor.lightGray
 //        static let CornerRadius: CGFloat = 13
-//        static let RowHeight: CGFloat = 30
+//        static let RowHeight: CGFloat = 44
 //        static let HeightPadding: CGFloat = 5
 //
 //        struct Shadow {

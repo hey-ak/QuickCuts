@@ -25,7 +25,7 @@ public struct ToastViewConfiguration {
         minWidth: CGFloat = 150,
         darkBackgroundColor: UIColor = UIColor(red: 0.13, green: 0.13, blue: 0.13, alpha: 1.00),
         lightBackgroundColor: UIColor = UIColor(red: 0.99, green: 0.99, blue: 0.99, alpha: 1.00),
-        titleNumberOfLines: Int = 1,
+        titleNumberOfLines: Int = 5,
         subtitleNumberOfLines: Int = 1,
         cornerRadius: CGFloat? = nil
     ) {

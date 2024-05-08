@@ -417,6 +417,11 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" image="house.fill" catalog="system" id="HDj-iK-X6b"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="jq9-j9-i8o" id="DBC-fl-qsm"/>
+                        <outlet property="nameTextField" destination="0f7-SA-O8w" id="jaa-Lh-PCa"/>
+                        <outlet property="passwordTextField" destination="Wzi-dX-eIh" id="7Na-mx-tta"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ODb-Md-YuG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -619,6 +624,9 @@
                                                                                         </fragment>
                                                                                     </attributedString>
                                                                                 </state>
+                                                                                <connections>
+                                                                                    <action selector="forgotPassDidTapped:" destination="QzY-z3-UAK" eventType="touchUpInside" id="zNt-wL-QIm"/>
+                                                                                </connections>
                                                                             </button>
                                                                         </subviews>
                                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -810,6 +818,10 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" image="house.fill" catalog="system" id="rQW-HF-35X"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="2Sz-cl-FC6" id="CGZ-sm-7Tw"/>
+                        <outlet property="passwordTextField" destination="cWj-aB-291" id="4em-ap-cu1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="euS-xI-lda" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

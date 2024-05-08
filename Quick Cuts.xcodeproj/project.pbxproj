@@ -47,6 +47,8 @@
 		7E5ABDA92BD50AD80079F5F6 /* BookingCompletedCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5ABDA62BD50AD80079F5F6 /* BookingCompletedCollectionCell.swift */; };
 		7E5ABDAC2BD50C1A0079F5F6 /* BookingCancelledCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E5ABDAB2BD50C1A0079F5F6 /* BookingCancelledCollectionCell.xib */; };
 		7E5ABDAD2BD50C1A0079F5F6 /* BookingCancelledCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5ABDAA2BD50C1A0079F5F6 /* BookingCancelledCollectionCell.swift */; };
+		7E641FCB2BEADC1300623AB5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7E641FCA2BEADC1300623AB5 /* GoogleService-Info.plist */; };
+		7E641FCD2BEAE0CA00623AB5 /* ValidationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E641FCC2BEAE0CA00623AB5 /* ValidationManager.swift */; };
 		7E6762F52BD77EE0005F914B /* CancelServiceCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6762F32BD77EE0005F914B /* CancelServiceCollectionCell.swift */; };
 		7E6762F62BD77EE0005F914B /* CancelServiceCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E6762F42BD77EE0005F914B /* CancelServiceCollectionCell.xib */; };
 		7E6762F82BD77FEB005F914B /* CancelServiceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6762F72BD77FEB005F914B /* CancelServiceVC.swift */; };
@@ -143,6 +145,8 @@
 		7E5ABDA72BD50AD80079F5F6 /* BookingCompletedCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookingCompletedCollectionCell.xib; sourceTree = "<group>"; };
 		7E5ABDAA2BD50C1A0079F5F6 /* BookingCancelledCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingCancelledCollectionCell.swift; sourceTree = "<group>"; };
 		7E5ABDAB2BD50C1A0079F5F6 /* BookingCancelledCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookingCancelledCollectionCell.xib; sourceTree = "<group>"; };
+		7E641FCA2BEADC1300623AB5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7E641FCC2BEAE0CA00623AB5 /* ValidationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationManager.swift; sourceTree = "<group>"; };
 		7E6762F32BD77EE0005F914B /* CancelServiceCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelServiceCollectionCell.swift; sourceTree = "<group>"; };
 		7E6762F42BD77EE0005F914B /* CancelServiceCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CancelServiceCollectionCell.xib; sourceTree = "<group>"; };
 		7E6762F72BD77FEB005F914B /* CancelServiceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelServiceVC.swift; sourceTree = "<group>"; };
@@ -219,6 +223,7 @@
 			isa = PBXGroup;
 			children = (
 				7E0659882BDEC00400A9A42E /* LocationManager.swift */,
+				7E641FCC2BEAE0CA00623AB5 /* ValidationManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -418,6 +423,7 @@
 			children = (
 				7EC1651D2BE6489A00D005E3 /* Quick Cuts.entitlements */,
 				C068DE6E2BCFCA6500147AAF /* Info.plist */,
+				7E641FCA2BEADC1300623AB5 /* GoogleService-Info.plist */,
 				C068DE692BCFCA6500147AAF /* Assets.xcassets */,
 				7E4B90CC2BD3AAB60083D50A /* Application */,
 				7E4B90CE2BD3ACB20083D50A /* Controllers */,
@@ -510,6 +516,7 @@
 				C007F2622BE1059400705C16 /* CheckoutTableViewCell.xib in Resources */,
 				C068DE682BCFCA6400147AAF /* Base in Resources */,
 				A9660B0E2BDF632300DBFAA6 /* CentreCollectionViewCell.xib in Resources */,
+				7E641FCB2BEADC1300623AB5 /* GoogleService-Info.plist in Resources */,
 				A9A799412BE350D700CA4C8F /* Receipt TableViewCell.xib in Resources */,
 				7E4B90D12BD3B7D40083D50A /* SFHello-Regular.ttf in Resources */,
 				7E5ABDA22BD4FD810079F5F6 /* BookingCollectionCell.xib in Resources */,
@@ -618,6 +625,7 @@
 				C007F2612BE1059400705C16 /* CheckoutTableViewCell.swift in Sources */,
 				FFFD336F2BDA5D920031B7C6 /* AlbumCollectionViewCell.swift in Sources */,
 				C068DE612BCFCA6400147AAF /* AppDelegate.swift in Sources */,
+				7E641FCD2BEAE0CA00623AB5 /* ValidationManager.swift in Sources */,
 				7E5816462BE7C65A0078D9BB /* ToastQueue.swift in Sources */,
 				7EC165102BE62A7900D005E3 /* DKChainableAnimationKit+Anchor.swift in Sources */,
 				7E58163B2BE7C65A0078D9BB /* Toast.swift in Sources */,
