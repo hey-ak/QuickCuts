@@ -93,7 +93,7 @@ class HomeVC: UIViewController {
     ]
     
     
-
+    
     let FavouriteCardArray: [FavouriteCard] = [
         FavouriteCard(salonName: "Glamour Hair & Beauty", salonAddress: "123 Park Street, Springfield, ABC", reviewCount: 30, salonImage: "favouriteImage1"),
         FavouriteCard(salonName: "Chic Style Studio", salonAddress: "456 Elm Avenue, Rivertown, DEF", reviewCount: 22, salonImage: "favouriteImage2"),
@@ -101,7 +101,7 @@ class HomeVC: UIViewController {
         FavouriteCard(salonName: "Luxe Beauty Lounge", salonAddress: "101 Cedar Lane, Hillcrest, JKL", reviewCount: 28, salonImage: "favouriteImage4"),
         FavouriteCard(salonName: "Tranquil Retreat", salonAddress: "876 Oak Street, Meadowland, MNO", reviewCount: 40, salonImage: "favouriteImage5")
     ]
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         ratedCollectionSeeAllState = .unselected
@@ -139,38 +139,38 @@ extension HomeVC: UICollectionViewDelegate,UICollectionViewDataSource,UICollecti
         
         if collectionView == ratedCollectionView {
             if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeCollectionCell", for: indexPath) as? HomeCollectionCell {
-                    let data = allSalonData[indexPath.row]
-                    cell.salonName.text = data.salonName
-                    cell.salonImage.image = UIImage(named: data.image ?? "") // No need for "\(data.salonImage)"
-                    cell.reviewCount.text = "\(data.reviews ?? 0) Reviews"
-                    //cell.serviceID.text = "\(data.serviceID)"
-                    cell.salonAddress.text = data.address
-                    return cell
-                }
+                let data = allSalonData[indexPath.row]
+                cell.salonName.text = data.salonName
+                cell.salonImage.image = UIImage(named: data.image ?? "") // No need for "\(data.salonImage)"
+                cell.reviewCount.text = "\(data.reviews ?? 0) Reviews"
+                //cell.serviceID.text = "\(data.serviceID)"
+                cell.salonAddress.text = data.address
+                return cell
             }
+        }
         else if collectionView == mainCollectionView {
             if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeCollectionCell", for: indexPath) as? HomeCollectionCell {
-                    let data = FavouriteCardArray[indexPath.row]
-                    cell.salonName.text = data.salonName
-                    cell.salonImage.image = UIImage(named: data.salonImage) // No need for "\(data.salonImage)"
-                    cell.reviewCount.text = "\(data.reviewCount) Reviews"
-                    //cell.serviceID.text = "\(data.serviceID)"
-                    cell.salonAddress.text = data.salonAddress
-                    return cell
-                }
+                let data = FavouriteCardArray[indexPath.row]
+                cell.salonName.text = data.salonName
+                cell.salonImage.image = UIImage(named: data.salonImage) // No need for "\(data.salonImage)"
+                cell.reviewCount.text = "\(data.reviewCount) Reviews"
+                //cell.serviceID.text = "\(data.serviceID)"
+                cell.salonAddress.text = data.salonAddress
+                return cell
             }
+        }
         else {
-                if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeCatagoryCollectionCell", for: indexPath) as? HomeCatagoryCollectionCell {
-                    let data  = HomeServicesArray[indexPath.row]
-                    cell.serviceImage.image = UIImage(named: data.serviceImage) // No need for "\(data.serviceImage)"
-                    cell.serviceName.text = data.serviceName // No need for "\(data.serviceName)"
-                    return cell
-                }
+            if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeCatagoryCollectionCell", for: indexPath) as? HomeCatagoryCollectionCell {
+                let data  = HomeServicesArray[indexPath.row]
+                cell.serviceImage.image = UIImage(named: data.serviceImage) // No need for "\(data.serviceImage)"
+                cell.serviceName.text = data.serviceName // No need for "\(data.serviceName)"
+                return cell
             }
+        }
         
         return UICollectionViewCell()
     }
-
+    
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if collectionView == ratedCollectionView {
@@ -179,12 +179,19 @@ extension HomeVC: UICollectionViewDelegate,UICollectionViewDataSource,UICollecti
         else if collectionView == mainCollectionView {
             return CGSize(width: (collectionView.frame.size.width - 10) / 2 , height: collectionView.frame.size.height)
         }
-       return CGSize(width: 60, height: collectionView.frame.size.height)
+        return CGSize(width: 60, height: collectionView.frame.size.height)
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if collectionView == ratedCollectionView {
             let saloneData = allSalonData[indexPath.row]
+            let nextVC = storyboard?.instantiateViewController(withIdentifier: "SelectserviceVC") as! SelectserviceVC
+            nextVC.salonData = saloneData
+            nextVC.hidesBottomBarWhenPushed = true
+            navigationController?.pushViewController(nextVC, animated: true)
+        }
+        else if collectionView == mainCollectionView {
+            let saloneData = favouriteSalon[indexPath.row]
             let nextVC = storyboard?.instantiateViewController(withIdentifier: "SelectserviceVC") as! SelectserviceVC
             nextVC.salonData = saloneData
             nextVC.hidesBottomBarWhenPushed = true

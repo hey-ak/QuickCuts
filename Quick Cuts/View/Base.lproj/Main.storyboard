@@ -990,35 +990,17 @@
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="kc3-I0-zv8">
                                                                 <rect key="frame" x="15" y="55.333333333333343" width="400" height="100"/>
                                                                 <subviews>
-                                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bSS-UG-9PQ">
+                                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bSS-UG-9PQ">
                                                                         <rect key="frame" x="-5" y="0.0" width="410" height="100"/>
                                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="100" id="bGY-WO-igD"/>
                                                                         </constraints>
-                                                                        <attributedString key="attributedText">
-                                                                            <fragment>
-                                                                                <string key="content">Personal Care &amp; Personal Service 
+                                                                        <string key="text">Personal Care &amp; Personal Service 
 Our runway expects have curated some of the most popular services at Salon 
-</string>
-                                                                                <attributes>
-                                                                                    <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                                    <color key="NSColor" red="0.45097999999999999" green="0.45097999999999999" blue="0.45097999999999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                                    <font key="NSFont" size="15" name="HelveticaNeue"/>
-                                                                                    <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                                                                </attributes>
-                                                                            </fragment>
-                                                                            <fragment content="Read more">
-                                                                                <attributes>
-                                                                                    <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                                    <color key="NSColor" red="0.93213000000000001" green="0.13483000000000001" blue="0.046559999999999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                                    <font key="NSFont" size="15" name="HelveticaNeue"/>
-                                                                                    <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                                                                    <integer key="NSUnderline" value="1"/>
-                                                                                    <color key="NSUnderlineColor" red="0.93213000000000001" green="0.13483000000000001" blue="0.046559999999999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                                </attributes>
-                                                                            </fragment>
-                                                                        </attributedString>
+Read more</string>
+                                                                        <color key="textColor" red="0.45097999999999999" green="0.45097999999999999" blue="0.45097999999999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                                     </textView>
                                                                 </subviews>
@@ -3328,11 +3310,6 @@ Our runway expects have curated some of the most popular services at Salon
             <point key="canvasLocation" x="106" y="-1967"/>
         </scene>
     </scenes>
-    <designables>
-        <designable name="guH-pw-9KC">
-            <size key="intrinsicContentSize" width="120" height="20"/>
-        </designable>
-    </designables>
     <resources>
         <image name="CashOnPay" width="512" height="512"/>
         <image name="SalonReachedImage" width="376" height="376"/>
