@@ -84,6 +84,7 @@
 		A9A799412BE350D700CA4C8F /* Receipt TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9A7993F2BE350D700CA4C8F /* Receipt TableViewCell.xib */; };
 		A9A799422BE350D700CA4C8F /* ReceiptTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A799402BE350D700CA4C8F /* ReceiptTableViewCell.swift */; };
 		A9A799462BE3514C00CA4C8F /* ReceiptVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A799452BE3514C00CA4C8F /* ReceiptVC.swift */; };
+		A9F8D8012BEB8430009E0594 /* ReviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F8D8002BEB8430009E0594 /* ReviewVC.swift */; };
 		C007F2612BE1059400705C16 /* CheckoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C007F25F2BE1059400705C16 /* CheckoutTableViewCell.swift */; };
 		C007F2622BE1059400705C16 /* CheckoutTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C007F2602BE1059400705C16 /* CheckoutTableViewCell.xib */; };
 		C007F2642BE105C900705C16 /* CheckoutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C007F2632BE105C900705C16 /* CheckoutVC.swift */; };
@@ -184,6 +185,7 @@
 		A9A7993F2BE350D700CA4C8F /* Receipt TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Receipt TableViewCell.xib"; sourceTree = "<group>"; };
 		A9A799402BE350D700CA4C8F /* ReceiptTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiptTableViewCell.swift; sourceTree = "<group>"; };
 		A9A799452BE3514C00CA4C8F /* ReceiptVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiptVC.swift; sourceTree = "<group>"; };
+		A9F8D8002BEB8430009E0594 /* ReviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewVC.swift; sourceTree = "<group>"; };
 		C007F25F2BE1059400705C16 /* CheckoutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutTableViewCell.swift; sourceTree = "<group>"; };
 		C007F2602BE1059400705C16 /* CheckoutTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckoutTableViewCell.xib; sourceTree = "<group>"; };
 		C007F2632BE105C900705C16 /* CheckoutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutVC.swift; sourceTree = "<group>"; };
@@ -281,6 +283,7 @@
 				C007F2632BE105C900705C16 /* CheckoutVC.swift */,
 				A9A799452BE3514C00CA4C8F /* ReceiptVC.swift */,
 				FFE180412BE3C766005BB8F9 /* YourProfileViewController.swift */,
+				A9F8D8002BEB8430009E0594 /* ReviewVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -600,6 +603,7 @@
 				7EDC08B62BD82CA000870986 /* ProfileTableCell.swift in Sources */,
 				7E58163D2BE7C65A0078D9BB /* IconAppleToastView.swift in Sources */,
 				C007F2642BE105C900705C16 /* CheckoutVC.swift in Sources */,
+				A9F8D8012BEB8430009E0594 /* ReviewVC.swift in Sources */,
 				7EB8209E2BD8BED3007DA6FD /* DateSelectCollectionViewCell.swift in Sources */,
 				7E5ABD9F2BD4E7A50079F5F6 /* ServiceCollectionCell.swift in Sources */,
 				A9A799462BE3514C00CA4C8F /* ReceiptVC.swift in Sources */,

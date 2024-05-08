@@ -1635,6 +1635,32 @@ Read more</string>
             </objects>
             <point key="canvasLocation" x="5985" y="382"/>
         </scene>
+        <!--ReviewVC-->
+        <scene sceneID="g4e-pv-vgn">
+            <objects>
+                <viewController storyboardIdentifier="ReviewVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="pqb-ri-S6M" customClass="ReviewVC" customModule="Quick_Cuts" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mjb-ti-BcG">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="oHN-gI-eEq">
+                                <rect key="frame" x="0.0" y="0.0" width="430" height="898"/>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ZCw-tu-Bwf"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="oHN-gI-eEq" firstAttribute="bottom" secondItem="ZCw-tu-Bwf" secondAttribute="bottom" id="BL6-Jc-5E0"/>
+                            <constraint firstItem="oHN-gI-eEq" firstAttribute="trailing" secondItem="ZCw-tu-Bwf" secondAttribute="trailing" id="cGB-hv-S1f"/>
+                            <constraint firstItem="oHN-gI-eEq" firstAttribute="top" secondItem="mjb-ti-BcG" secondAttribute="top" id="k9k-lh-ppz"/>
+                            <constraint firstItem="oHN-gI-eEq" firstAttribute="leading" secondItem="ZCw-tu-Bwf" secondAttribute="leading" id="oQc-Jp-aXd"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xbU-Nl-PSt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6901" y="382"/>
+        </scene>
         <!--Centre-->
         <scene sceneID="uxB-K4-9Ea">
             <objects>
@@ -3315,6 +3341,11 @@ Read more</string>
             <point key="canvasLocation" x="106" y="-1967"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="guH-pw-9KC">
+            <size key="intrinsicContentSize" width="120" height="20"/>
+        </designable>
+    </designables>
     <resources>
         <image name="CashOnPay" width="512" height="512"/>
         <image name="SalonReachedImage" width="376" height="376"/>
