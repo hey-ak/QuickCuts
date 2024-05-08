@@ -1,9 +1,4 @@
-//
-//  HomeCatagoryCollectionCell.swift
-//  Quick Cuts
-//
-//  Created by Amit Kumar Dhal on 20/04/24.
-//
+
 
 import UIKit
 

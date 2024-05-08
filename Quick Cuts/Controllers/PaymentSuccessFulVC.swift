@@ -9,7 +9,7 @@ class PaymentSuccessFulVC: UIViewController {
 
       
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "BookingVC") as! BookingVC
             nextVC.hidesBottomBarWhenPushed = false
             self.navigationController?.pushViewController(nextVC, animated: true)

@@ -1,9 +1,4 @@
-//
-//  YourProfileViewController.swift
-//  Quick Cuts
-//
-//  Created by Akshat Gulati on 02/05/24.
-//
+
 
 import UIKit
 

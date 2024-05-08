@@ -1,9 +1,4 @@
-//
-//  AlbumVC.swift
-//  Quick Cuts
-//
-//  Created by Akshat Gulati on 25/04/24.
-//
+
 
 import UIKit
 
