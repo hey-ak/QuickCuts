@@ -1,9 +1,4 @@
-//
-//  CancelServiceCollectionCell.swift
-//  Quick Cuts
-//
-//  Created by Amit Kumar Dhal on 23/04/24.
-//
+
 
 import UIKit
 

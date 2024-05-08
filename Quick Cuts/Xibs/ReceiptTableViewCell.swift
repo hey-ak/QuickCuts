@@ -1,9 +1,4 @@
-//
-//  CheckoutTableViewCell.swift
-//  Quick Cuts
-//
-//  Created by Akshay Jha on 30/04/24.
-//
+
 
 import UIKit
 
