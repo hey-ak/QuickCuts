@@ -201,6 +201,7 @@
             </constraints>
             <size key="customSize" width="323" height="293"/>
             <connections>
+                <outlet property="reBookButton" destination="UB3-zE-3Mi" id="D1l-N1-K4h"/>
                 <outlet property="salonAddress" destination="f4W-Qf-fp2" id="xIh-hc-spJ"/>
                 <outlet property="salonImage" destination="xHo-r8-ZJn" id="WKP-ry-fMU"/>
                 <outlet property="salonName" destination="UiI-0l-bcz" id="yzS-jc-2x8"/>

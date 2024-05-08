@@ -9,6 +9,7 @@ import UIKit
 
 class BookingCompletedCollectionCell: UICollectionViewCell {
 
+    @IBOutlet weak var viewReceiptButton: UIButton!
     @IBOutlet weak var salonName: UILabel!
     @IBOutlet weak var salonImage: UIImageView!
     @IBOutlet weak var salonAddress: UILabel!

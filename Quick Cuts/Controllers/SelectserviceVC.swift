@@ -13,6 +13,7 @@ class SelectserviceVC: UIViewController {
         }
     }
     
+    @IBOutlet weak var salonName: UILabel!
     @IBOutlet weak var textViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var saloneImage: UIImageView!
     @IBOutlet weak var serviceCollectionHeightConstraint: NSLayoutConstraint!
@@ -84,6 +85,7 @@ class SelectserviceVC: UIViewController {
             self.serviceData = serviceData
         }
         aboutTextView.text = saloneData.about
+        salonName.text = salonData?.salonName
         saloneImage.image = UIImage(named: saloneData.image ?? "")
     }
 }

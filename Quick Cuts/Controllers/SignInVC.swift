@@ -80,7 +80,7 @@ class SignInVC: UIViewController {
             
             DispatchQueue.main.async {
                 print(user)
-                self.showToastAfterSuccess("Account logined in sucessfully.")
+                self.showToastAfterSuccess("Account logged in sucessfully.")
                 GoToHomeVC()
             }
         }

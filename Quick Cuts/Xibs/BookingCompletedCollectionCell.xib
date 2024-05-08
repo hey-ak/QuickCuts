@@ -233,6 +233,7 @@
                 <outlet property="salonImage" destination="dBb-FC-mgZ" id="ve8-3F-f8C"/>
                 <outlet property="salonName" destination="mb7-2S-7Zh" id="SWb-FR-fdj"/>
                 <outlet property="servviceId" destination="7Tb-Q3-MVf" id="UWt-YE-cwi"/>
+                <outlet property="viewReceiptButton" destination="wUo-tY-JFR" id="zd5-AB-Uh5"/>
             </connections>
             <point key="canvasLocation" x="158.77862595419847" y="62.676056338028175"/>
         </collectionViewCell>

@@ -1139,6 +1139,7 @@ Read more</string>
                         <outlet property="aboutTextView" destination="bSS-UG-9PQ" id="hY8-NX-qlz"/>
                         <outlet property="imageStackViewConstraint" destination="3Yr-Id-Cgr" id="lPk-Ln-Lau"/>
                         <outlet property="mainScrollView" destination="0TO-l3-1Wj" id="c47-Jy-Aj9"/>
+                        <outlet property="salonName" destination="Nqx-IK-ceE" id="jhd-py-sRy"/>
                         <outlet property="saloneImage" destination="laB-Yb-7Fu" id="UAy-0y-tsm"/>
                         <outlet property="serviceCollectionHeightConstraint" destination="ios-6C-v7Z" id="rDQ-7G-UG3"/>
                         <outlet property="serviceCollectionView" destination="WWy-Bc-F1W" id="1sM-Mt-skJ"/>
@@ -3279,6 +3280,11 @@ Read more</string>
                                                 <buttonConfiguration key="configuration" style="plain" title="Download Receipt">
                                                     <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="19"/>
                                                 </buttonConfiguration>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="13"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -3309,11 +3315,6 @@ Read more</string>
             <point key="canvasLocation" x="106" y="-1967"/>
         </scene>
     </scenes>
-    <designables>
-        <designable name="guH-pw-9KC">
-            <size key="intrinsicContentSize" width="120" height="20"/>
-        </designable>
-    </designables>
     <resources>
         <image name="CashOnPay" width="512" height="512"/>
         <image name="SalonReachedImage" width="376" height="376"/>

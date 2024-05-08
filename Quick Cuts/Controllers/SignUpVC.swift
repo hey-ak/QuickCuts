@@ -70,7 +70,7 @@ class SignUpVC: UIViewController {
                 
                 DispatchQueue.main.async {
                     print(authUser)
-                    self.showToast("Account creatd sucessfully.")
+                    self.showToast("Account created successfully.")
                 }
                 
             }

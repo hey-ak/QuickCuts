@@ -150,12 +150,12 @@ extension HomeVC: UICollectionViewDelegate,UICollectionViewDataSource,UICollecti
         }
         else if collectionView == mainCollectionView {
             if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeCollectionCell", for: indexPath) as? HomeCollectionCell {
-                let data = FavouriteCardArray[indexPath.row]
+                let data = favouriteSalon[indexPath.row]
                 cell.salonName.text = data.salonName
-                cell.salonImage.image = UIImage(named: data.salonImage) // No need for "\(data.salonImage)"
-                cell.reviewCount.text = "\(data.reviewCount) Reviews"
+                cell.salonImage.image = UIImage(named: data.image ?? "") // No need for "\(data.salonImage)"
+                //cell.reviewCount.text = "\(data.reviews) Reviews"
                 //cell.serviceID.text = "\(data.serviceID)"
-                cell.salonAddress.text = data.salonAddress
+                cell.salonAddress.text = data.address
                 return cell
             }
         }

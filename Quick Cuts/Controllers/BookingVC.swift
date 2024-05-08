@@ -65,6 +65,19 @@ class BookingVC: UIViewController {
     
     @objc func ReceiptbuttonPressed(){
         let nextVC = storyboard?.instantiateViewController(withIdentifier: "ReceiptVC") as! ReceiptVC
+        nextVC.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(nextVC, animated: true)
+    }
+    
+    @objc func ReBookbuttonPressed(){
+        let nextVC = storyboard?.instantiateViewController(withIdentifier: "SelectserviceVC") as! SelectserviceVC
+        nextVC.salonData = allSalonData[0]
+        navigationController?.pushViewController(nextVC, animated: true)
+    }
+    
+    @objc func ReceiptButtonPressed(){
+        let nextVC = storyboard?.instantiateViewController(withIdentifier: "ReceiptVC") as! ReceiptVC
+        nextVC.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(nextVC, animated: true)
     }
     
@@ -103,6 +116,8 @@ extension BookingVC: UICollectionViewDelegate,UICollectionViewDataSource,UIColle
             
         case 1:
             if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BookingCompletedCollectionCell", for: indexPath) as? BookingCompletedCollectionCell {
+                
+                cell.viewReceiptButton.addTarget(self, action: #selector(ReceiptButtonPressed),for: .touchUpInside)
                 let data = completedData[indexPath.row]
                 cell.salonName.text = data.salonName
                 cell.salonImage.image = UIImage(named: "\(data.salonImage)")
@@ -113,6 +128,8 @@ extension BookingVC: UICollectionViewDelegate,UICollectionViewDataSource,UIColle
             
         case 2:
             if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BookingCancelledCollectionCell", for: indexPath) as? BookingCancelledCollectionCell {
+                
+                cell.reBookButton.addTarget(self, action: #selector(ReBookbuttonPressed),for: .touchUpInside)
                 let data = cancelledData[indexPath.row]
                 cell.salonName.text = data.salonName
                 cell.salonImage.image = UIImage(named: "\(data.salonImage)")
