@@ -97,14 +97,21 @@ class AppDataManager {
     
     
     
-//    public func createUserProfile(_ userId:String) {
-//        do {
-//            let orgRef = db.collection("userProfile").document()
-//            try orgRef.collection(userId).document().setData(from: )
-//        }
-//        catch {
-//            print(error)
-//        }
-//    }
+    public func createUserProfile(_ userId:String) {
+        do {
+            let orgRef = db.collection("userProfile").document()
+           // try orgRef.collection(userId).document().setData(from: )
+        }
+        catch {
+            DispatchQueue.main.async {
+                let toast = Toast.default(
+                    image: UIImage(named: "mark")!,
+                    title: error.localizedDescription
+                )
+                toast.show()
+            }
+        }
+    }
 }
 
+//struct UserProfile
