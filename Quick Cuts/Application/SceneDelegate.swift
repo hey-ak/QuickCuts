@@ -1,23 +1,32 @@
 import UIKit
+import FirebaseAuth
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
-
+    
     var window: UIWindow?
-
-
+    
+    
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        GoToSigninVC()
+        handleAuthNavigation()
         guard let _ = (scene as? UIWindowScene) else { return }
     }
-
+    
+    private func handleAuthNavigation() {
+        if Auth.auth().currentUser != nil {
+            GoToHomeVC()
+        } else {
+            GoToSigninVC()
+        }
+    }
+    
     func sceneDidDisconnect(_ scene: UIScene) { }
-
+    
     func sceneDidBecomeActive(_ scene: UIScene) { }
-
+    
     func sceneWillResignActive(_ scene: UIScene) { }
-
+    
     func sceneWillEnterForeground(_ scene: UIScene) { }
-
+    
     func sceneDidEnterBackground(_ scene: UIScene) { }
 }
 

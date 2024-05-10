@@ -11,14 +11,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        FirebaseApp.configure()
         LocationManager.shared.requestAuthorization()
         LocationManager.shared.getCurrentLocation()
-        FirebaseApp.configure()
         IQKeyboardManager.shared.enable = true
         IQKeyboardManager.shared.resignOnTouchOutside = true
         IQKeyboardManager.shared.enableAutoToolbar = true
         DropDown.startListeningToKeyboard()
         setApperance()
+        
         return true
     }
     
@@ -41,25 +42,67 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//func testAddSalonWithImage() {
+//        let salon = SalonModel(id: 1, salonName: "Test Salon", subTitle: "Test Subtitle", about: "Test About", address: "Test Address", rating: 4.5, reviews: 10, latitude: 123.456, longitude: 78.901, openDays: nil, openingTime: Date(), closingTime: Date(), services: nil)
+//        
+//        // Create a sample image for testing
+//        let testImage = UIImage(named: "sample_image") // Replace "sample_image" with the name of your test image asset
+//    var firebaseManager = FirebaseManager()
+//        firebaseManager.addSalon(salon: salon, image: testImage) { error in
+//            if let error = error {
+//                print("Error adding salon with image: \(error.localizedDescription)")
+//            } else {
+//                print("Salon added successfully with image!")
+//            }
+//        }
+//    }
+//
+//    func testUpdateSalon() {
+//        // Replace 'salonId' with the actual ID of the salon you want to update
+//        let salonId = "your_salon_id_here"
+//        
+//        let updatedSalon = SalonModel(id: 1, salonName: "Updated Salon Name", subTitle: "Updated Subtitle", about: "Updated About", address: "Updated Address", rating: 4.7, reviews: 15, latitude: 123.456, longitude: 78.901, openDays: nil, openingTime: Date(), closingTime: Date(), services: nil)
+//        var firebaseManager = FirebaseManager()
+//        firebaseManager.updateSalon(salonId: salonId, salon: updatedSalon, image: UIImage(named: "location")) { error in
+//            if let error = error {
+//                print("Error updating salon: \(error.localizedDescription)")
+//            } else {
+//                print("Salon updated successfully!")
+//            }
+//        }
+//    }
+//
+//    func testFetchAllSalons() {
+//        getAllSalons { (salons, error) in
+//            if let error = error {
+//                print("Error fetching salons: \(error.localizedDescription)")
+//            } else if let salons = salons {
+//                print("Fetched \(salons.count) salons successfully!")
+//                for salon in salons {
+//                    print("Salon Name: \(salon.salonName)")
+//                }
+//            }
+//        }
+//    }
+//
+//func getAllSalons(completion: @escaping ([SalonModel]?, Error?) -> Void) {
+//    let db: Firestore = Firestore.firestore()
+//    db.collection("salons").getDocuments { (querySnapshot, error) in
+//        if let error = error {
+//            completion(nil, error)
+//        } else {
+//            let salons = querySnapshot?.documents.compactMap { document -> SalonModel? in
+//                do {
+//                    return try document.data(as: SalonModel.self)
+//                } catch {
+//                    print("Error decoding salon: \(error.localizedDescription)")
+//                    return nil
+//                }
+//            }
+//            completion(salons, nil)
+//        }
+//    }
+//}
 
 
 //internal struct DPDConstant {

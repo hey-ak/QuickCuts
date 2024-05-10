@@ -1158,6 +1158,7 @@ Our runway expects have curated some of the most popular services at Salon
                         <outlet property="imageStackViewConstraint" destination="3Yr-Id-Cgr" id="lPk-Ln-Lau"/>
                         <outlet property="mainScrollView" destination="0TO-l3-1Wj" id="c47-Jy-Aj9"/>
                         <outlet property="saloneImage" destination="laB-Yb-7Fu" id="UAy-0y-tsm"/>
+                        <outlet property="salonena" destination="Nqx-IK-ceE" id="71Q-7x-Itr"/>
                         <outlet property="serviceCollectionHeightConstraint" destination="ios-6C-v7Z" id="rDQ-7G-UG3"/>
                         <outlet property="serviceCollectionView" destination="WWy-Bc-F1W" id="1sM-Mt-skJ"/>
                         <outlet property="textViewHeightConstraint" destination="bGY-WO-igD" id="3fC-N7-65I"/>
@@ -3328,11 +3329,6 @@ Our runway expects have curated some of the most popular services at Salon
             <point key="canvasLocation" x="106" y="-1967"/>
         </scene>
     </scenes>
-    <designables>
-        <designable name="guH-pw-9KC">
-            <size key="intrinsicContentSize" width="120" height="20"/>
-        </designable>
-    </designables>
     <resources>
         <image name="CashOnPay" width="512" height="512"/>
         <image name="SalonReachedImage" width="376" height="376"/>

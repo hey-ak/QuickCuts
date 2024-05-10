@@ -1,9 +1,9 @@
 import Foundation
 
-struct SalonModel {
-    let id:Int
-    let image:String?
-    let salonName:String
+struct SalonModel:Codable {
+    let id:String
+    var image:String?
+    let salonName:String?
     let subTitle:String?
     let about:String?
     let address:String?
@@ -12,21 +12,21 @@ struct SalonModel {
     let latitude:Double?
     let longitude:Double?
     let openDays:[OpenDays]?
-    let openingTime:Date
-    let closingTime:Date
+    let openingTime:Date?
+    let closingTime:Date?
     let services:[SalonServices]?
 }
 
-struct SalonServices {
+struct SalonServices:Codable {
     let id:Int
     let serviceImage:String?
     let serviceName:String?
     let servicePrice:Double?
 }
 
-struct OpenDays {
-    let id:Int
-    let dayNumber:Int
+struct OpenDays:Codable {
+    let id:Int?
+    let dayNumber:Int?
 }
 
 // Dummy data for SalonServices
@@ -42,7 +42,7 @@ let thursday = OpenDays(id: 4, dayNumber: 4)
 let friday = OpenDays(id: 5, dayNumber: 5)
 
 // Dummy data for SalonModel
-let salon = SalonModel(id: 1,
+let salon = SalonModel(id: "1",
                        image: "salonImage1",
                        salonName: "Glamorous Salon",
                        subTitle: "Hum bata ke kat te hain",
@@ -67,7 +67,7 @@ let saturday = OpenDays(id: 6, dayNumber: 6)
 let sunday = OpenDays(id: 7, dayNumber: 7)
 
 // Dummy data for SalonModel
-let salon2 = SalonModel(id: 2,
+let salon2 = SalonModel(id: "2",
                         image: "salonImage3",
                         salonName: "Chic Hair Studio",
                         subTitle: "Hum bata ke kat te hain",
@@ -83,7 +83,7 @@ let salon2 = SalonModel(id: 2,
                         services: [service1, service4, service5,service5])
 
 // Dummy data for SalonModel
-let salon3 = SalonModel(id: 3,
+let salon3 = SalonModel(id: "3",
                         image: "salonImage5",
                         salonName: "Beauty Bliss Spa",
                         subTitle: "Hum bata ke kat te hain",
@@ -99,7 +99,7 @@ let salon3 = SalonModel(id: 3,
                         services: [service2, service3, service6])
 
 // Dummy data for SalonModel
-let salon4 = SalonModel(id: 4,
+let salon4 = SalonModel(id: "4",
                         image: "salonImage6",
                         salonName: "Nail Artistry",
                         subTitle: "Hum bata ke kat te hain",
@@ -115,7 +115,7 @@ let salon4 = SalonModel(id: 4,
                         services: [service2, service4, service5])
 
 // Dummy data for SalonModel
-let salon5 = SalonModel(id: 5,
+let salon5 = SalonModel(id: "5",
                         image: "salonImage7",
                         salonName: "Gentlemen's Grooming",
                         subTitle: "Hum bata ke kat te hain",
@@ -131,7 +131,7 @@ let salon5 = SalonModel(id: 5,
                         services: [service1, service4, service6])
 
 // Dummy data for SalonModel
-let salon6 = SalonModel(id: 6,
+let salon6 = SalonModel(id: "6",
                         image: "salonImage3",
                         salonName: "Crazy's Grooming",
                         subTitle: "Hum bata ke kat te hain",
@@ -146,4 +146,4 @@ let salon6 = SalonModel(id: 6,
                         closingTime: Date(),
                         services: [service1, service4, service6])
 
-var allSalonData:[SalonModel] = [salon,salon2,salon3,salon4,salon5,salon6]
+var allSalonData:[SalonModel] = []

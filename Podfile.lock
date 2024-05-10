@@ -968,6 +968,9 @@ PODS:
   - Firebase/Firestore (10.25.0):
     - Firebase/CoreOnly
     - FirebaseFirestore (~> 10.25.0)
+  - Firebase/Storage (10.25.0):
+    - Firebase/CoreOnly
+    - FirebaseStorage (~> 10.25.0)
   - FirebaseAnalytics (10.25.0):
     - FirebaseAnalytics/AdIdSupport (= 10.25.0)
     - FirebaseCore (~> 10.0)
@@ -994,6 +997,7 @@ PODS:
     - GoogleUtilities/Environment (~> 7.8)
     - GTMSessionFetcher/Core (< 4.0, >= 2.1)
     - RecaptchaInterop (~> 100.0)
+  - FirebaseAuthInterop (10.25.0)
   - FirebaseCore (10.25.0):
     - FirebaseCoreInternal (~> 10.0)
     - GoogleUtilities/Environment (~> 7.12)
@@ -1034,6 +1038,13 @@ PODS:
     - GoogleUtilities/UserDefaults (~> 7.8)
     - PromisesObjC (~> 2.1)
   - FirebaseSharedSwift (10.25.0)
+  - FirebaseStorage (10.25.0):
+    - FirebaseAppCheckInterop (~> 10.0)
+    - FirebaseAuthInterop (~> 10.25)
+    - FirebaseCore (~> 10.0)
+    - FirebaseCoreExtension (~> 10.0)
+    - GoogleUtilities/Environment (~> 7.12)
+    - GTMSessionFetcher/Core (< 4.0, >= 2.1)
   - GoogleAppMeasurement (10.25.0):
     - GoogleAppMeasurement/AdIdSupport (= 10.25.0)
     - GoogleUtilities/AppDelegateSwizzler (~> 7.11)
@@ -1178,6 +1189,7 @@ DEPENDENCIES:
   - Firebase/Core
   - Firebase/Database
   - Firebase/Firestore
+  - Firebase/Storage
   - IQKeyboardManagerSwift
 
 SPEC REPOS:
@@ -1190,6 +1202,7 @@ SPEC REPOS:
     - FirebaseAnalytics
     - FirebaseAppCheckInterop
     - FirebaseAuth
+    - FirebaseAuthInterop
     - FirebaseCore
     - FirebaseCoreExtension
     - FirebaseCoreInternal
@@ -1198,6 +1211,7 @@ SPEC REPOS:
     - FirebaseFirestoreInternal
     - FirebaseInstallations
     - FirebaseSharedSwift
+    - FirebaseStorage
     - GoogleAppMeasurement
     - GoogleUtilities
     - "gRPC-C++"
@@ -1218,6 +1232,7 @@ SPEC CHECKSUMS:
   FirebaseAnalytics: ec00fe8b93b41dc6fe4a28784b8e51da0647a248
   FirebaseAppCheckInterop: 5da5ce93e8797a215e3f677fb0654b74e736c8b8
   FirebaseAuth: c0f93dcc570c9da2bffb576969d793e95c344fbb
+  FirebaseAuthInterop: 2753ef68cb3cd5aefebe0f58082671cede78350f
   FirebaseCore: 7ec4d0484817f12c3373955bc87762d96842d483
   FirebaseCoreExtension: 8a47811d0b155501559ef05d089518152a0a1677
   FirebaseCoreInternal: 910a81992c33715fec9263ca7381d59ab3a750b7
@@ -1226,6 +1241,7 @@ SPEC CHECKSUMS:
   FirebaseFirestoreInternal: 04b8afa77b4e5b84e86ab5ad985193e9573239fa
   FirebaseInstallations: 91950fe859846fff0fbd296180909dd273103b09
   FirebaseSharedSwift: 0274086954b1b2d5fd7e829eccc587044d72a4ba
+  FirebaseStorage: 44f4e25073f6fa0d4d8c09f5bec299ee9e4eb985
   GoogleAppMeasurement: 9abf64b682732fed36da827aa2a68f0221fd2356
   GoogleUtilities: c56430aef51a1aa57b25da78c3f8397e522c67b7
   "gRPC-C++": e725ef63c4475d7cdb7e2cf16eb0fde84bd9ee51
@@ -1237,6 +1253,6 @@ SPEC CHECKSUMS:
   PromisesObjC: f5707f49cb48b9636751c5b2e7d227e43fba9f47
   RecaptchaInterop: 7d1a4a01a6b2cb1610a47ef3f85f0c411434cb21
 
-PODFILE CHECKSUM: f31d435e42ba202c251f560ccb0195bc268188cb
+PODFILE CHECKSUM: 0edffabf44784c9856864f15e757d5ecf5835d2a
 
 COCOAPODS: 1.15.2

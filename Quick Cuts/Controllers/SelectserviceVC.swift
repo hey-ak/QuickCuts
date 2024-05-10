@@ -13,6 +13,7 @@ class SelectserviceVC: UIViewController {
         }
     }
     
+    @IBOutlet weak var salonena: UILabel!
     @IBOutlet weak var textViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var saloneImage: UIImageView!
     @IBOutlet weak var serviceCollectionHeightConstraint: NSLayoutConstraint!
@@ -64,6 +65,7 @@ class SelectserviceVC: UIViewController {
         
         let nextVC = storyboard?.instantiateViewController(withIdentifier: "DateAndTimeVC") as! DateAndTimeVC
         nextVC.serviceData = services
+        nextVC.salonData = salonData
         nextVC.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(nextVC, animated: true)
     }
@@ -83,8 +85,9 @@ class SelectserviceVC: UIViewController {
         if let serviceData = saloneData.services {
             self.serviceData = serviceData
         }
+        salonena.text = saloneData.salonName
         aboutTextView.text = saloneData.about
-        saloneImage.image = UIImage(named: saloneData.image ?? "")
+        saloneImage.image = UIImage(named: saloneData.image ?? "favouriteImage4")
     }
 }
 extension SelectserviceVC : UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {

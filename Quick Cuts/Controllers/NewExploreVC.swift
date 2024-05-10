@@ -44,7 +44,6 @@ class NewExploreVC: UIViewController, MKMapViewDelegate, UISearchBarDelegate {
                                                  longitude: long)
                 
                 let distanceInMeters = salonCoordinate.distance(from: coordinate) / 1000
-                print("dfdfsdfds",distanceInMeters,item.salonName)
                 
                 if distanceInMeters < 5 {
                     filteredSalons.append(item)
@@ -84,7 +83,7 @@ class NewExploreVC: UIViewController, MKMapViewDelegate, UISearchBarDelegate {
             self.reinitilizeAllAnotations()
             return
         }
-        let filteredData = allSalonData.filter ({ $0.salonName.contains(searchText) })
+        let filteredData = allSalonData.filter ({ $0.salonName!.contains(searchText) })
         if filteredData.count > 0 {
             let salonName = filteredData.compactMap { $0.salonName }
             print(salonName)

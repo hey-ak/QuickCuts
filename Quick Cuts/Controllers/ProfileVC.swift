@@ -1,14 +1,7 @@
-//
-//  ProfileVC.swift
-//  Quick Cuts
-//
-//  Created by Amit Kumar Dhal on 23/04/24.
-//
-
 import UIKit
 
 class ProfileVC: UIViewController {
-
+    
     @IBOutlet weak var profileTableView: UITableView! {
         didSet {
             profileTableView.registerCellFromNib(cellID: "ProfileTableCell")
@@ -19,13 +12,9 @@ class ProfileVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         profileTableView.sectionHeaderTopPadding = 0
     }
-
 }
-
-
 extension ProfileVC : UITableViewDataSource, UITableViewDelegate {
     
     
@@ -89,13 +78,58 @@ extension ProfileVC : UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        // guard section > 0 else { return nil }
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: "dummyTableCell") as! dummyTableCell
         return cell.contentView
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
         profileDM.count
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.section == 2 && indexPath.row == 3 {
+            showLogoutAlert()
+        }
+    }
+    
+    private func showLogoutAlert() {
+        let alertController = UIAlertController(title: "Logout",
+                                                message: "Are you sure you want to log out?",
+                                                preferredStyle: .alert)
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        let logoutAction = UIAlertAction(title: "Logout", style: .destructive) {[weak self] (action) in
+            DispatchQueue.main.async {
+                self?.logout()
+            }
+        }
+        alertController.addAction(cancelAction)
+        alertController.addAction(logoutAction)
+        present(alertController, animated: true, completion: nil)
+    }
+    
+    private func logout() {
+        let result = AppDataManager.shared.logoutUser()
+        DispatchQueue.main.async {
+            if case let .failure(error) = result {
+                switch error {
+                case .signOutFailed(let reason):
+                    self.showToast(reason)
+                }
+            }
+            else {
+                GoToSigninVC()
+            }
+        }
+    }
+    
+    private func showToast(_ message:String) {
+        DispatchQueue.main.async {
+            let toast = Toast.default(
+                image: UIImage(named: "mark")!,
+                title: message
+            )
+            toast.show()
+        }
     }
 }

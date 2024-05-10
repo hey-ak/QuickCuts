@@ -76,11 +76,17 @@ class SignInVC: UIViewController {
                 self.showToast(error)
                 return }
             
-            guard user != nil else { return }
+            guard let userData = user else { return }
             
             DispatchQueue.main.async {
-                print(user)
                 self.showToast("Account logined in sucessfully.")
+                
+                guard let userId = user?.user.uid else { return }
+                AppDataManager.shared.saveLoggedUserID(userId)
+                
+
+                GoToHomeVC()
+                
             }
         }
     }

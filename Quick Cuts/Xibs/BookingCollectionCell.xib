@@ -257,6 +257,7 @@
                 <outlet property="salonImage" destination="t6x-fz-khi" id="scI-7c-hPw"/>
                 <outlet property="salonName" destination="zQU-9g-PlP" id="yuV-Kh-aNl"/>
                 <outlet property="serviceID" destination="T8x-do-uNv" id="cWr-NN-67L"/>
+                <outlet property="timeLable" destination="hMa-T2-hAU" id="dGj-d8-gjd"/>
                 <outlet property="viewReceiptButton" destination="FOc-XK-72h" id="nyu-YP-Ti7"/>
             </connections>
             <point key="canvasLocation" x="156.4885496183206" y="94.366197183098592"/>

@@ -1,4 +1,6 @@
 import UIKit
+import FirebaseFirestoreInternal
+import FirebaseCore
 
 enum SeeAllState {
     case selected
@@ -70,18 +72,7 @@ class HomeVC: UIViewController {
         }
     }
     
-    let HomeCardArray: [HomeCard] = [
-        HomeCard(salonName: "Ramesh Salon", salonAddress: "SCO- 285, Ground Floor Sec, Sector 35D, Chandigarh, 160022", reviewCount: 10, salonImage: "salonImage1"),
-        HomeCard(salonName: "Anita's Beauty Salon", salonAddress: "123 Main Street, Cityville, XYZ", reviewCount: 15, salonImage: "salonImage2"),
-        HomeCard(salonName: "Glamour World Salon", salonAddress: "789 Elm Street, Townsville, ABC", reviewCount: 20, salonImage: "salonImage3"),
-        HomeCard(salonName: "Style Diva Salon", salonAddress: "456 Oak Avenue, Villagetown, DEF", reviewCount: 8, salonImage: "salonImage4"),
-        HomeCard(salonName: "Elegance Salon & Spa", salonAddress: "101 Pine Road, Hamletville, GHI", reviewCount: 12, salonImage: "salonImage5"),
-        HomeCard(salonName: "Radiance Hair Studio", salonAddress: "876 Maple Lane, Boroughburg, JKL", reviewCount: 18, salonImage: "salonImage6"),
-        HomeCard(salonName: "Chic Beauty Lounge", salonAddress: "543 Cedar Court, Township, MNO", reviewCount: 6, salonImage: "salonImage7"),
-        HomeCard(salonName: "Serenity Spa & Salon", salonAddress: "222 Walnut Drive, County, PQR", reviewCount: 25, salonImage: "salonImage8"),
-        HomeCard(salonName: "Blissful Beauty Haven", salonAddress: "999 Pineapple Street, District, STU", reviewCount: 9, salonImage: "salonImage9"),
-        HomeCard(salonName: "Tranquility Wellness Center", salonAddress: "777 Waterfall Road, Precinct, VWX", reviewCount: 14, salonImage: "salonImage10")
-    ]
+    let HomeCardArray: [HomeCard] = [ ]
     
     let HomeServicesArray: [HomeServices] = [
         HomeServices(serviceImage: "serviceImage1", serviceName: "HairCut"),
@@ -94,19 +85,34 @@ class HomeVC: UIViewController {
     
     
 
-    let FavouriteCardArray: [FavouriteCard] = [
-        FavouriteCard(salonName: "Glamour Hair & Beauty", salonAddress: "123 Park Street, Springfield, ABC", reviewCount: 30, salonImage: "favouriteImage1"),
-        FavouriteCard(salonName: "Chic Style Studio", salonAddress: "456 Elm Avenue, Rivertown, DEF", reviewCount: 22, salonImage: "favouriteImage2"),
-        FavouriteCard(salonName: "Elegant Touch Spa", salonAddress: "789 Maple Road, Lakeside, GHI", reviewCount: 35, salonImage: "favouriteImage3"),
-        FavouriteCard(salonName: "Luxe Beauty Lounge", salonAddress: "101 Cedar Lane, Hillcrest, JKL", reviewCount: 28, salonImage: "favouriteImage4"),
-        FavouriteCard(salonName: "Tranquil Retreat", salonAddress: "876 Oak Street, Meadowland, MNO", reviewCount: 40, salonImage: "favouriteImage5")
-    ]
+    let FavouriteCardArray: [FavouriteCard] = [ ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
         ratedCollectionSeeAllState = .unselected
         mainCollectionSeeAllState = .unselected
         catagoryCollectionView.reloadData()
+        
+        
+        
+        fetchAllSalons { (salons, error) in
+            if let error = error {
+                // Handle error
+                print("Error fetching salons: \(error.localizedDescription)")
+            } else {
+                if let salons = salons {
+                    DispatchQueue.main.async {
+                        allSalonData = salons
+                        self.mainCollectionView.reloadData()
+                        self.ratedCollectionView.reloadData()
+                    }
+                    
+                } else {
+                    // Handle nil result
+                    print("No salons found")
+                }
+            }
+        }
     }
     
     @IBAction func ratedCollectionSeeAllDidTapped(_ sender: Any) {
@@ -121,17 +127,45 @@ class HomeVC: UIViewController {
         let nextVC = storyboard?.instantiateViewController(withIdentifier: "NotificationVC") as! NotificationVC
         navigationController?.pushViewController(nextVC, animated: true)
     }
+    
+    public func fetchAllSalons(completion: @escaping ([SalonModel]?, Error?) -> Void) {
+        var db = Firestore.firestore()
+        let salonsCollectionRef = db.collection("salons")
+        
+        // Fetch all documents from the collection
+        salonsCollectionRef.getDocuments { (querySnapshot, error) in
+            if let error = error {
+                // Handle error
+                completion(nil, error)
+            } else {
+                var salons: [SalonModel] = []
+                // Iterate through documents
+                for document in querySnapshot!.documents {
+                    do {
+                        // Try to decode each document into a SalonModel object
+                        let salon = try! document.data(as: SalonModel.self)
+                        salons.append(salon)
+                    } catch {
+                        // Handle decoding error
+                        completion(nil, error)
+                    }
+                }
+                // Completion with the array of SalonModel objects
+                completion(salons, nil)
+            }
+        }
+    }
 }
 extension HomeVC: UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == ratedCollectionView {
-            return ratedCollectionViewData ?? 4
+            return allSalonData.count
         }
         else if collectionView == catagoryCollectionView {
             return HomeServicesArray.count
         }
-        return mainCollectionViewData ?? 2
+        return allSalonData.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -141,7 +175,7 @@ extension HomeVC: UICollectionViewDelegate,UICollectionViewDataSource,UICollecti
             if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeCollectionCell", for: indexPath) as? HomeCollectionCell {
                     let data = allSalonData[indexPath.row]
                     cell.salonName.text = data.salonName
-                    cell.salonImage.image = UIImage(named: data.image ?? "") // No need for "\(data.salonImage)"
+                    cell.salonImage.image = UIImage(named: data.image ?? "favouriteImage4") // No need for "\(data.salonImage)"
                     cell.reviewCount.text = "\(data.reviews ?? 0) Reviews"
                     //cell.serviceID.text = "\(data.serviceID)"
                     cell.salonAddress.text = data.address
@@ -150,12 +184,12 @@ extension HomeVC: UICollectionViewDelegate,UICollectionViewDataSource,UICollecti
             }
         else if collectionView == mainCollectionView {
             if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeCollectionCell", for: indexPath) as? HomeCollectionCell {
-                    let data = FavouriteCardArray[indexPath.row]
-                    cell.salonName.text = data.salonName
-                    cell.salonImage.image = UIImage(named: data.salonImage) // No need for "\(data.salonImage)"
-                    cell.reviewCount.text = "\(data.reviewCount) Reviews"
-                    //cell.serviceID.text = "\(data.serviceID)"
-                    cell.salonAddress.text = data.salonAddress
+                let data = allSalonData[indexPath.row]
+                cell.salonName.text = data.salonName
+                cell.salonImage.image = UIImage(named: data.image ?? "favouriteImage4") // No need for "\(data.salonImage)"
+                cell.reviewCount.text = "\(data.reviews ?? 0) Reviews"
+                //cell.serviceID.text = "\(data.serviceID)"
+                cell.salonAddress.text = data.address
                     return cell
                 }
             }
