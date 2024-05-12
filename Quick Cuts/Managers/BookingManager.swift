@@ -89,7 +89,7 @@ class BookingManager {
             return nil
         }
         
-        let expiryDate = data["expiryDate"] as? Date
+        let expiryDate = data["expiryDate"] as? Date 
         let isCancled = data["isCancled"] as? Bool
         
         let saloneImgae = data["saloneImgae"] as? String

@@ -8,6 +8,9 @@ class BookingVC: UIViewController {
     
     private var bookings = [BookingModel]()
     
+    private var expiredBooking = [BookingModel]()
+    private var UpcommingBooking = [BookingModel]()
+    
     @IBOutlet weak var segmentControl: UISegmentedControl!
     @IBOutlet weak var bookingCollectionView: UICollectionView!{
         didSet{
@@ -63,6 +66,7 @@ class BookingVC: UIViewController {
                 if let bookings = bookings {
                     DispatchQueue.main.async {
                         self.bookings = bookings
+                        self.sortBookingAccoringToTime(bookings)
                         self.bookingCollectionView.reloadData()
                     }
                 } else {
@@ -70,6 +74,22 @@ class BookingVC: UIViewController {
                 }
             }
         }
+    }
+    
+    private func sortBookingAccoringToTime(_ bookings: [BookingModel]) {
+        let currentDate = Date()
+        let (upcomingBookings, expiredBookings) = bookings.reduce(into: ([BookingModel](), [BookingModel]())) { result, booking in
+            if let expiryDate = booking.expiryDate {
+                if expiryDate > currentDate {
+                    result.0.append(booking)
+                } else {
+                    result.1.append(booking)
+                }
+            }
+        }
+        expiredBooking = expiredBookings
+        UpcommingBooking = upcomingBookings
+        bookingCollectionView.reloadData()
     }
     
     @IBAction func segmentControlDidChange(_ sender: UISegmentedControl) {
@@ -98,7 +118,13 @@ class BookingVC: UIViewController {
 extension BookingVC: UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return bookings.count
+        let currentSegment = segmentControl.selectedSegmentIndex
+        switch currentSegment {
+        case 0: return UpcommingBooking.count
+        case 1: return expiredBooking.count
+        case 2: return bookings.count
+        default: return 0
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -110,7 +136,7 @@ extension BookingVC: UICollectionViewDelegate,UICollectionViewDataSource,UIColle
                 cell.cancelServiceButton.addTarget(self, action: #selector(buttonPressed),for: .touchUpInside)
                 cell.viewReceiptButton.addTarget(self, action: #selector(ReceiptbuttonPressed),for: .touchUpInside)
        
-                let data = bookings[indexPath.row]
+                let data = UpcommingBooking[indexPath.row]
                 
                 if let url = data.saloneImgae,
                    let profileUrl = URL(string: url) {
@@ -131,7 +157,7 @@ extension BookingVC: UICollectionViewDelegate,UICollectionViewDataSource,UIColle
             
         case 1:
             if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BookingCompletedCollectionCell", for: indexPath) as? BookingCompletedCollectionCell {
-                let data = bookings[indexPath.row]
+                let data = expiredBooking[indexPath.row]
                 cell.salonName.text = data.saloneName
                 
                 if let url = data.saloneImgae,

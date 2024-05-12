@@ -13,6 +13,7 @@ class HomeVC: UIViewController {
     
     
     private var contentSizeObservation:NSKeyValueObservation?
+    private var topRatedSalons = [SalonModel]()
     
     private var ratedCollectionViewData:Int? {
         didSet {
@@ -31,7 +32,7 @@ class HomeVC: UIViewController {
         didSet {
             switch ratedCollectionSeeAllState {
             case .selected:
-                self.ratedCollectionViewData = allSalonData.count
+                self.ratedCollectionViewData = topRatedSalons.count
                 
             case .unselected:
                 self.ratedCollectionViewData = nil
@@ -124,12 +125,26 @@ class HomeVC: UIViewController {
                 if let salons = salons {
                     DispatchQueue.main.async {
                         allSalonData = salons
+                        self.sortSalonsForTopRated(salons)
                         self.mainCollectionView.reloadData()
                         self.ratedCollectionView.reloadData()
                     }
                 }
             }
         }
+    }
+    
+    private func sortSalonsForTopRated(_ salons: [SalonModel]) {
+        let sortedSalons = salons.sorted { (salone1, salone2) -> Bool in
+            if let rating1 = salone1.rating, let rating2 = salone2.rating {
+                return rating1 > rating2
+            } else if salone1.rating != nil {
+                return true
+            } else {
+                return false
+            }
+        }
+        topRatedSalons = sortedSalons
     }
     
     private func fetchAllSalons(completion: @escaping ([SalonModel]?, Error?) -> Void) {
@@ -208,7 +223,7 @@ extension HomeVC: UICollectionViewDelegate,UICollectionViewDataSource,UICollecti
         
         if collectionView == ratedCollectionView {
             if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeCollectionCell", for: indexPath) as? HomeCollectionCell {
-                let data = allSalonData[indexPath.row]
+                let data = topRatedSalons[indexPath.row]
                 cell.salonName.text = data.salonName
                 cell.reviewCount.text = "\(data.reviews ?? 0) Reviews"
                 cell.salonAddress.text = data.address
@@ -222,6 +237,8 @@ extension HomeVC: UICollectionViewDelegate,UICollectionViewDataSource,UICollecti
                 else {
                     cell.salonImage.image = UIImage(named: "profilePic")
                 }
+                
+                cell.starView.rating = data.rating ?? 0.0
 
                 return cell
             }
@@ -242,6 +259,7 @@ extension HomeVC: UICollectionViewDelegate,UICollectionViewDataSource,UICollecti
                 else {
                     cell.salonImage.image = UIImage(named: "profilePic")
                 }
+                cell.starView.rating = data.rating ?? 0.0
                 return cell
             }
         }

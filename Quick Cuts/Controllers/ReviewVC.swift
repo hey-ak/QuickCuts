@@ -9,6 +9,7 @@ class ReviewVC: UIViewController {
     public var saloneId:String?
     private var db = Firestore.firestore()
     private var previousComments:[UserRatingData]?
+    private var saloneData:SalonModel?
     
     
     @IBOutlet weak var saloneImage: UIImageView!
@@ -35,12 +36,15 @@ class ReviewVC: UIViewController {
     }
     
     @IBAction func saveDidTapped(_ sender: Any) {
-        guard let userId = Auth.auth().currentUser?.uid else { return }
-        getSalonReview(userId)
+        saveReviewData()
     }
     
     private func saveReviewData() {
+        guard let userId = Auth.auth().currentUser?.uid else { return }
+        guard let salonId = saloneId else { return }
         guard let comment = reviewTextView.text else { return }
+        guard let saloneData = self.saloneData else { return }
+        guard let userData = AppDataManager.shared.loadUserProfile() else { return }
         
         var serviceRating: Double = 0.0
         var hygieneRating: Double = 0.0
@@ -54,11 +58,46 @@ class ReviewVC: UIViewController {
         moneyRating = self.moneyRating.rating
         experienceRating = self.experienceRating.rating
         
+        var commentsData = [UserRatingData]()
         
+        if let previousComments = previousComments {
+            commentsData = previousComments
+        }
         
+        let userCommentedData = UserRatingData(userId:userId,
+                                               image: userData.profile,
+                                               name: userData.name,
+                                               address: "",
+                                               reviewCountLabel: "",
+                                               serviceRating: Int(serviceRating),
+                                               hygieneRating: Int(hygieneRating),
+                                               staffRating: Int(staffRating),
+                                               moneyRating: Int(moneyRating),
+                                               experienceRating: Int(experienceRating),
+                                               comment: comment)
         
+        commentsData.append(userCommentedData)
         
-        
+        let newReview = SalonReview(id: salonId,
+                                    image: saloneData.image,
+                                    saloneName: saloneData.salonName,
+                                    serviceNames: saloneData.services?.first?.serviceName ?? "",
+                                    address: saloneData.address,
+                                    timingLabel: "",
+                                    overAllRating: "0",
+                                    reviewCountLabel: "0",
+                                    serviceRating: 5,
+                                    hygieneRating: 4,
+                                    staffRating: 5,
+                                    moneyRating: 4,
+                                    experienceRating: 5,
+                                    userCommentData: commentsData)
+
+        ReviewManager.shared.createReview(newReview) {[weak self] error in
+            DispatchQueue.main.async {
+                self?.getSalonReview(salonId)
+            }
+        }
     }
     
     private func getSaloneData(_ saloneId:String) {
@@ -71,6 +110,7 @@ class ReviewVC: UIViewController {
     }
     
     private func populateSaloneData(_ salone: SalonModel) {
+        self.saloneData = salone
         if let url = salone.image,
            let profileUrl = URL(string: url) {
             saloneImage.sd_imageIndicator = SDWebImageActivityIndicator.gray
@@ -83,40 +123,45 @@ class ReviewVC: UIViewController {
         saloneName.text = salone.salonName
         saloneAddress.text = salone.address
         saloneServiceNames.text = salone.services?.first?.serviceName
-        reviewCountLable.text = "\(salone.reviews ?? 0) Reviews"
+        reviewCountLable.text = "\(salone.reviews ?? 0) Reviews \(salone.rating ?? 0.0) Stars"
     }
     
     private func getSalonReview(_ salonId:String) {
         ReviewManager.shared.getReviews(forUserId: salonId) { [weak self] reviews, error in
             if let error = error { print( error.localizedDescription ) }
             else if let reviews = reviews {
-                if reviews.count > 0,let firstReview = reviews.first {
-                    self?.processRating(firstReview)
+                if reviews.count > 0 {
+                    self?.processRating(reviews)
                 }
             }
         }
     }
     
-    private func processRating(_ reviews: SalonReview) {
-        guard let comments = reviews.userCommentData else { return }
-        self.previousComments = comments
-        let totleStarsCount = comments.count * 5 * 5
-        
+    private func processRating(_ reviews: [SalonReview]) {
+        var totleStarsCount = 0
         var allUserTotleStars:Int = 0
+        var commentsTotle = 0
         
-        for review in comments {
-            if let serviceRating = review.serviceRating,
-               let hygieneRating = review.hygieneRating,
-               let staffRating = review.staffRating,
-               let moneyRating = review.moneyRating,
-               let experienceRating = review.experienceRating {
-                
-                let totleStars = serviceRating + hygieneRating + staffRating + moneyRating + experienceRating
-                allUserTotleStars = allUserTotleStars + totleStars
+        for review in reviews {
+            guard let comments = review.userCommentData else { continue }
+            commentsTotle = commentsTotle + comments.count
+            totleStarsCount = totleStarsCount + (comments.count * 5 * 5)
+            
+            for review1 in comments {
+                if let serviceRating = review1.serviceRating,
+                   let hygieneRating = review1.hygieneRating,
+                   let staffRating = review1.staffRating,
+                   let moneyRating = review1.moneyRating,
+                   let experienceRating = review1.experienceRating {
+                    
+                    let totleStars = serviceRating + hygieneRating + staffRating + moneyRating + experienceRating
+                    allUserTotleStars = allUserTotleStars + totleStars
+                }
             }
         }
+        
         let averageStar = Int(allUserTotleStars / (totleStarsCount / 5))
-        updateReviewData(averageStar, commentCount: comments.count)
+        updateReviewData(averageStar, commentCount: commentsTotle)
     }
     
     private func updateReviewData(_ averageRating:Int,commentCount:Int) {
@@ -132,11 +177,25 @@ class ReviewVC: UIViewController {
             self?.updateUserProfile(for: saloneId, with: userProfile) { result in
                 switch result {
                 case .success:
-                    DispatchQueue.main.async {  }
+                    DispatchQueue.main.async {
+                        self?.showToast("Review submited sucessfully.")
+                    }
                 case .failure(let error):
-                    DispatchQueue.main.async {  }
+                    DispatchQueue.main.async {
+                        self?.showToast("Review submission Failed.")
+                    }
                 }
             }
+        }
+    }
+    
+    private func showToast(_ message:String) {
+        DispatchQueue.main.async {
+            let toast = Toast.default(
+                image: UIImage(named: "mark")!,
+                title: message
+            )
+            toast.show()
         }
     }
     

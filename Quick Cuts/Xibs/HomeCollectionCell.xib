@@ -114,7 +114,7 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ntE-Ge-AER">
                                                         <rect key="frame" x="0.0" y="0.0" width="122.66666666666667" height="20"/>
                                                         <subviews>
-                                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Z4-4y-hMf" customClass="CosmosView" customModule="Cosmos">
+                                                            <view clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Z4-4y-hMf" customClass="CosmosView" customModule="Cosmos">
                                                                 <rect key="frame" x="0.0" y="2" width="100" height="16"/>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                 <userDefinedRuntimeAttributes>
@@ -195,15 +195,11 @@
                 <outlet property="salonAddress" destination="87O-f0-KtT" id="Un5-L2-7vg"/>
                 <outlet property="salonImage" destination="NnG-TP-GzR" id="MSg-fZ-K6h"/>
                 <outlet property="salonName" destination="ZzZ-9z-ArC" id="o5E-T0-nWz"/>
+                <outlet property="starView" destination="9Z4-4y-hMf" id="sFn-tb-JDZ"/>
             </connections>
             <point key="canvasLocation" x="315.26717557251908" y="81.338028169014095"/>
         </collectionViewCell>
     </objects>
-    <designables>
-        <designable name="9Z4-4y-hMf">
-            <size key="intrinsicContentSize" width="100" height="16"/>
-        </designable>
-    </designables>
     <resources>
         <image name="Favourites" width="256" height="256"/>
         <image name="navigator" width="512" height="512"/>
