@@ -44,12 +44,15 @@ class SignUpVC: UIViewController {
         guard let email = validatedData.email,
               let password = validatedData.password else { return }
         
-        handleFirebaseAuthentication(email, password)
+        handleFirebaseAuthentication(email,
+                                     password,
+                                     name)
     }
     
     
     private func handleFirebaseAuthentication(_ email:String,
-                                              _ password:String) {
+                                              _ password:String,
+                                              _ name:String?) {
         Auth.auth().createUser(withEmail: email,
                                password: password) { authResult, error in
             
@@ -61,18 +64,17 @@ class SignUpVC: UIViewController {
             guard let authResult = authResult else { return }
             let authUser = authResult.user
             
-            Auth.auth().currentUser?.sendEmailVerification { (error) in
-                if let error = error {
-                    let errorMessage = error.localizedDescription
-                    self.showToast(errorMessage)
-                    return
-                }
+            DispatchQueue.main.async {
+                self.showToast("Account creatd sucessfully.")
+                let userData = UserProfile(userId: authUser.uid,
+                                           name: name,
+                                           profile: authUser.photoURL?.absoluteString,
+                                           userType: UserType.user.rawValue)
                 
-                DispatchQueue.main.async {
-                    print(authUser)
-                    self.showToast("Account creatd sucessfully.")
-                }
-                
+                AppDataManager.shared.createUserProfile(authUser.uid, userData)
+                AppDataManager.shared.saveLoggedUserID(authUser.uid)
+                AppDataManager.shared.saveUserProfile(userData)
+                GoToHomeVC()
             }
         }
     }
@@ -87,24 +89,3 @@ class SignUpVC: UIViewController {
         }
     }
 }
-
-
-class AppDataManager {
-    
-    static let shared = AppDataManager()
-    private var db = Firestore.firestore()
-    
-    
-    
-    
-//    public func createUserProfile(_ userId:String) {
-//        do {
-//            let orgRef = db.collection("userProfile").document()
-//            try orgRef.collection(userId).document().setData(from: )
-//        }
-//        catch {
-//            print(error)
-//        }
-//    }
-}
-

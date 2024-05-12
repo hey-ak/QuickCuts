@@ -229,6 +229,7 @@
             </constraints>
             <size key="customSize" width="372" height="260"/>
             <connections>
+                <outlet property="reviewButton" destination="ugX-qJ-76t" id="aky-xz-NXa"/>
                 <outlet property="salonAddress" destination="EUz-qv-ov1" id="I5W-EB-b6U"/>
                 <outlet property="salonImage" destination="dBb-FC-mgZ" id="ve8-3F-f8C"/>
                 <outlet property="salonName" destination="mb7-2S-7Zh" id="SWb-FR-fdj"/>

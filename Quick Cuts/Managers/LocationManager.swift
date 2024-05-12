@@ -43,13 +43,13 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
         // Handle updated locations
         guard let location = locations.last else { return }
         currentLocation = location
+        locationUpdateHandler?(location)
         if continuousUpdates == true {
             locationUpdateHandler?(location)
         }
         else {
             locationManager.stopUpdatingLocation()
         }
-       
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {

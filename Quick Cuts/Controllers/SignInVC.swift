@@ -76,11 +76,26 @@ class SignInVC: UIViewController {
                 self.showToast(error)
                 return }
             
-            guard user != nil else { return }
-            
             DispatchQueue.main.async {
-                print(user)
-                self.showToast("Account logined in sucessfully.")
+                
+                
+                guard let userId = user?.user.uid else { return }
+                
+                
+                AppDataManager.shared.fetchUserProfile(for: userId) { result in
+                    switch result {
+                    case .success(let userProfile):
+                        DispatchQueue.main.async {
+                            self.showToast("Account logined in sucessfully.")
+                            AppDataManager.shared.saveUserProfile(userProfile)
+                            AppDataManager.shared.saveLoggedUserID(userId)
+                            GoToHomeVC()
+                        }
+                        
+                    case .failure(let error):
+                        self.showToast("Login failed.")
+                    }
+                }
             }
         }
     }

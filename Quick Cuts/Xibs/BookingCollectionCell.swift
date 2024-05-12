@@ -9,6 +9,9 @@ import UIKit
 
 class BookingCollectionCell: UICollectionViewCell {
 
+    
+    
+    @IBOutlet weak var timeLable: UILabel!
     @IBOutlet weak var viewReceiptButton: UIButton!
     @IBOutlet weak var cancelServiceButton: UIButton!
     @IBOutlet weak var salonImage: UIImageView!

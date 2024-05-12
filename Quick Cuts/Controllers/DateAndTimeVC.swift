@@ -1,4 +1,5 @@
 import UIKit
+import FirebaseAuth
 
 class DateAndTimeVC: UIViewController {
     
@@ -9,6 +10,7 @@ class DateAndTimeVC: UIViewController {
     private var selectedIndexPaths = [IndexPath]()
     private var selectedSlotes = [Int]()
     private var mySlotSelection = [IndexPath]()
+    public var salonData:SalonModel?
     
     
     let timeSlotData: [BookingTimeSlot] = [
@@ -102,10 +104,95 @@ class DateAndTimeVC: UIViewController {
     }
     
     @IBAction func paymentMethodButtonDidTapped(_ sender: Any) {
-        let nextVC = storyboard?.instantiateViewController(withIdentifier: "PaymentVC") as! PaymentVC
-        navigationController?.pushViewController(nextVC, animated: true)
+        guard let salonData = salonData else { return }
+        let userData = AppDataManager.shared.loadUserProfile()
+        guard let userId = Auth.auth().currentUser?.uid else { return }
+        
+        guard let slots = getSelectedSlots(mySlotSelection) else { return }
+        guard let date =  getFormattedDateString() else { return }
+        
+        let timeStamp = Int((Date().timeIntervalSince1970) * 1000)
+        
+        guard let timeSlotData = getTimeSlotdata(selectedIndexPaths) else { return }
+        guard let lastEndTimeOfService = getLastEndTimeOfService(slots) else {
+            return
+        }
+        
+        guard let expiryDate = combineDateAndTime(timeSlotData.timeSlot,lastEndTimeOfService) else { return }
+        
+        let newBooking = BookingModel(
+            id: timeStamp,
+            saloneImgae: salonData.image,
+            salonId: salonData.id,
+            userId: userId,
+            saloneName: salonData.salonName,
+            userName: userData?.name,
+            address: salonData.address,
+            services: serviceData,
+            selectedTimeIds: slots,
+            bookingDate: date,
+            isCancled:false,
+            expiryDate:expiryDate
+        )
+
+        BookingManager.shared.createBooking(newBooking) { error in
+            DispatchQueue.main.async {
+                let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "PaymentVC") as! PaymentVC
+                self.navigationController?.pushViewController(nextVC, animated: true)
+            }
+        }
     }
     
+    private func getLastEndTimeOfService(_ selectedTimeIds: [Int]) -> Date? {
+        guard let greatestId = selectedTimeIds.max() else {
+            return nil
+        }
+        var date = dates[greatestId]
+        let calendar = Calendar.current
+        date = calendar.date(byAdding: .minute, value: 30, to: date)!
+        return date
+    }
+    
+    private func getTimeSlotdata(_ timeslot:[IndexPath]) -> BookingTimeSlot? {
+        guard timeslot.count > 0 else {
+            return nil
+        }
+        let timeSlotCount = timeslot.count
+        return timeSlotData[timeslot[timeSlotCount - 1].row]
+    }
+    
+    func combineDateAndTime(_ dateString: String,_ selectedDate:Date) -> Date? {
+        let calendar = Calendar.current
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "h:mm a"
+        dateFormatter.timeZone = TimeZone.current
+        
+        guard let date = dateFormatter.date(from: dateString) else {
+            print("Error: Invalid date format")
+            return nil
+        }
+        
+        let dateComponents = calendar.dateComponents([.minute, .second, .hour], from: date)
+        
+        var components = calendar.dateComponents([.year, .month, .day], from: selectedDate)
+        
+        components.minute = dateComponents.minute
+        components.hour = dateComponents.hour
+        components.second = dateComponents.second
+        
+        let combinedDate = calendar.date(from: components)
+        
+        return combinedDate
+    }
+    
+    private func getFormattedDateString() -> String? {
+        let calendar = Calendar.current
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MMM dd, yyyy - hh:mm a"
+        let dateString = dateFormatter.string(from: Date())
+        return dateString
+    }
+
     private func selectToday() {
         let firstIndexPath = IndexPath(row: 0, section: 0) // TODO: Change to today
         if DayAndDateCollectionView.validate(firstIndexPath) {
@@ -113,6 +200,17 @@ class DateAndTimeVC: UIViewController {
             DayAndDateCollectionView.reloadItems(at: [firstIndexPath])
             selectCellAt(firstIndexPath)
         }
+    }
+    
+    private func getSelectedSlots(_ indexPath:[IndexPath]) -> [Int]? {
+        var ints = [Int]()
+        
+        for i in indexPath {
+            let dd = i.row + 1
+            ints.append(dd)
+        }
+        
+        return ints
     }
     
     private func selectCellAt(_ indexPath: IndexPath) {
@@ -240,4 +338,20 @@ extension DateAndTimeVC : UICollectionViewDelegate, UICollectionViewDataSource, 
             toast.show()
         }
     }
+}
+
+
+struct BookingModel:Codable {
+    let id:Int
+    let saloneImgae:String?
+    let salonId:String
+    let userId:String
+    let saloneName:String?
+    let userName:String?
+    let address:String?
+    let services:[SalonServices]?
+    let selectedTimeIds:[Int]?
+    let bookingDate:String?
+    let isCancled:Bool?
+    let expiryDate:Date?
 }

@@ -26,11 +26,14 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2zH-4e-4Ro">
                                         <rect key="frame" x="0.0" y="0.0" width="356" height="100"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profilePic" translatesAutoresizingMaskIntoConstraints="NO" id="gqJ-XL-eAB">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profilePic" translatesAutoresizingMaskIntoConstraints="NO" id="gqJ-XL-eAB">
                                                 <rect key="frame" x="10" y="16" width="68" height="68"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="gqJ-XL-eAB" secondAttribute="height" id="yX7-YH-vhA"/>
                                                 </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="fullyRoundedCorners" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
                                             </imageView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="8dM-PD-IUY">
                                                 <rect key="frame" x="98" y="25.333333333333332" width="213" height="49.666666666666671"/>

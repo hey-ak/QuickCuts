@@ -1,4 +1,5 @@
 import UIKit
+import SDWebImage
 import MapKit
 import DropDown
 
@@ -44,7 +45,6 @@ class NewExploreVC: UIViewController, MKMapViewDelegate, UISearchBarDelegate {
                                                  longitude: long)
                 
                 let distanceInMeters = salonCoordinate.distance(from: coordinate) / 1000
-                print("dfdfsdfds",distanceInMeters,item.salonName)
                 
                 if distanceInMeters < 5 {
                     filteredSalons.append(item)
@@ -84,7 +84,7 @@ class NewExploreVC: UIViewController, MKMapViewDelegate, UISearchBarDelegate {
             self.reinitilizeAllAnotations()
             return
         }
-        let filteredData = allSalonData.filter ({ $0.salonName.contains(searchText) })
+        let filteredData = allSalonData.filter ({ $0.salonName!.lowercased().contains(searchText) })
         if filteredData.count > 0 {
             let salonName = filteredData.compactMap { $0.salonName }
             print(salonName)
@@ -259,7 +259,15 @@ class NewExploreVC: UIViewController, MKMapViewDelegate, UISearchBarDelegate {
     }
     
     private func populateCardData(_ salonData:SalonModel) {
-        salonDetailedInfoCardImage.image = UIImage(named: salonData.image ?? "location")
+        if let url = salonData.image,
+           let profileUrl = URL(string: url) {
+            salonDetailedInfoCardImage.sd_imageIndicator = SDWebImageActivityIndicator.gray
+            salonDetailedInfoCardImage.sd_setImage(with: profileUrl,
+                                              placeholderImage: UIImage(named: "profilePic"))
+        }
+        else {
+            salonDetailedInfoCardImage.image = UIImage(named: "profilePic")
+        }
         salonDetailedInfoCardName.text = salonData.salonName
         salonDetailedInfoCardAddress.text = salonData.address
     }

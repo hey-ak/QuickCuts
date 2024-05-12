@@ -28,9 +28,19 @@
 		</dict>
 	</dict>
     
+    <key>NSCameraUsageDescription</key>
+    <string>yourWording</string>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>yourWording</string>
+    <key>NSMicrophoneUsageDescription</key>
+    <string>yourWording</string>
     
-    
-    
-    
+    <key>NSAppTransportSecurity</key>
+    <dict>
+      <!--Include to allow all connections (DANGER)-->
+      <key>NSAllowsArbitraryLoads</key>
+          <true/>
+    </dict>
+
 </dict>
 </plist>

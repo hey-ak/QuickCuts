@@ -1,10 +1,3 @@
-//
-//  BookingCompletedCollectionCell.swift
-//  Quick Cuts
-//
-//  Created by Amit Kumar Dhal on 21/04/24.
-//
-
 import UIKit
 
 class BookingCompletedCollectionCell: UICollectionViewCell {
@@ -13,10 +6,9 @@ class BookingCompletedCollectionCell: UICollectionViewCell {
     @IBOutlet weak var salonImage: UIImageView!
     @IBOutlet weak var salonAddress: UILabel!
     @IBOutlet weak var servviceId: UILabel!
+    @IBOutlet weak var reviewButton: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
-
 }

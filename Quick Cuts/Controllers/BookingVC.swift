@@ -1,8 +1,12 @@
 import UIKit
+import SDWebImage
+import FirebaseAuth
 
 
 
 class BookingVC: UIViewController {
+    
+    private var bookings = [BookingModel]()
     
     @IBOutlet weak var segmentControl: UISegmentedControl!
     @IBOutlet weak var bookingCollectionView: UICollectionView!{
@@ -47,14 +51,38 @@ class BookingVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
-    
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        guard let userId = Auth.auth().currentUser?.uid else { return }
+        BookingManager.shared.getBookings(forUserId:userId) { bookings, error in
+            if let error = error {
+                print("Error retrieving bookings: \(error.localizedDescription)")
+            } else {
+                if let bookings = bookings {
+                    DispatchQueue.main.async {
+                        self.bookings = bookings
+                        self.bookingCollectionView.reloadData()
+                    }
+                } else {
+                    print("No bookings found for the user.")
+                }
+            }
+        }
+    }
     
     @IBAction func segmentControlDidChange(_ sender: UISegmentedControl) {
         bookingCollectionView.reloadData()
+    }
+    
+    @objc 
+    func connected(sender: UIButton){
+        let buttonTag = sender.tag
+        let salonId = bookings[buttonTag].salonId
+        let nextVC = storyboard?.instantiateViewController(withIdentifier: "ReviewVC") as! ReviewVC
+        nextVC.saloneId = salonId
+        navigationController?.pushViewController(nextVC, animated: true)
     }
     
     @objc func buttonPressed(){
@@ -66,21 +94,11 @@ class BookingVC: UIViewController {
         let nextVC = storyboard?.instantiateViewController(withIdentifier: "ReceiptVC") as! ReceiptVC
         navigationController?.pushViewController(nextVC, animated: true)
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        navigationController?.navigationBar.prefersLargeTitles = true
-    }
-    
-    
 }
-
-
-
 extension BookingVC: UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return currentData.count
+        return bookings.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -91,24 +109,57 @@ extension BookingVC: UICollectionViewDelegate,UICollectionViewDataSource,UIColle
                 
                 cell.cancelServiceButton.addTarget(self, action: #selector(buttonPressed),for: .touchUpInside)
                 cell.viewReceiptButton.addTarget(self, action: #selector(ReceiptbuttonPressed),for: .touchUpInside)
-                let data = currentData[indexPath.row]
-                cell.salonName.text = data.salonName
-                cell.salonImage.image = UIImage(named: "\(data.salonImage)")
-                //cell.serviceID.text = "\(data.serviceID)"
-                cell.salonAddress.text = data.salonAddress
-                return cell
+       
+                let data = bookings[indexPath.row]
                 
+                if let url = data.saloneImgae,
+                   let profileUrl = URL(string: url) {
+                    cell.salonImage.sd_imageIndicator = SDWebImageActivityIndicator.gray
+                    cell.salonImage.sd_setImage(with: profileUrl,
+                                                      placeholderImage: UIImage(named: "profilePic"))
+                }
+                else {
+                    cell.salonImage.image = UIImage(named: "profilePic")
+                }
+                
+                cell.salonName.text = data.saloneName
+                cell.serviceID.text = "#\(data.id)"
+                cell.salonAddress.text = data.address
+                cell.timeLable.text = data.bookingDate
+                return cell
             }
             
         case 1:
             if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BookingCompletedCollectionCell", for: indexPath) as? BookingCompletedCollectionCell {
-                let data = completedData[indexPath.row]
-                cell.salonName.text = data.salonName
-                cell.salonImage.image = UIImage(named: "\(data.salonImage)")
-                //cell.serviceID.text = "\(data.serviceID)"
-                cell.salonAddress.text = data.salonAddress
+                let data = bookings[indexPath.row]
+                cell.salonName.text = data.saloneName
+                
+                if let url = data.saloneImgae,
+                   let profileUrl = URL(string: url) {
+                    cell.salonImage.sd_imageIndicator = SDWebImageActivityIndicator.gray
+                    cell.salonImage.sd_setImage(with: profileUrl,
+                                                      placeholderImage: UIImage(named: "profilePic"))
+                }
+                else {
+                    cell.salonImage.image = UIImage(named: "profilePic")
+                }
+                cell.salonAddress.text = data.address
+                cell.reviewButton.tag = indexPath.row
+                cell.reviewButton.addTarget(self, action: #selector(connected(sender:)), for: .touchUpInside)
                 return cell
             }
+            
+//            if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BookingCollectionCell", for: indexPath) as? BookingCollectionCell {
+//                
+//                cell.cancelServiceButton.addTarget(self, action: #selector(buttonPressed),for: .touchUpInside)
+//                cell.viewReceiptButton.addTarget(self, action: #selector(ReceiptbuttonPressed),for: .touchUpInside)
+//                let data = bookings[indexPath.row]
+//                cell.salonName.text = data.saloneName
+//                cell.salonImage.image = UIImage(named: "\(data.saloneImgae ?? "favouriteImage3" )")
+//                cell.serviceID.text = "\(data.id)"
+//                cell.salonAddress.text = data.address
+//                return cell
+//            }
             
         case 2:
             if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BookingCancelledCollectionCell", for: indexPath) as? BookingCancelledCollectionCell {
@@ -120,8 +171,22 @@ extension BookingVC: UICollectionViewDelegate,UICollectionViewDataSource,UIColle
                 return cell
             }
             
+//            if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BookingCollectionCell", for: indexPath) as? BookingCollectionCell {
+//                
+//                cell.cancelServiceButton.addTarget(self, action: #selector(buttonPressed),for: .touchUpInside)
+//                cell.viewReceiptButton.addTarget(self, action: #selector(ReceiptbuttonPressed),for: .touchUpInside)
+//                let data = bookings[indexPath.row]
+//                cell.salonName.text = data.saloneName
+//                cell.salonImage.image = UIImage(named: "\(data.saloneImgae ?? "favouriteImage3" )")
+//                cell.serviceID.text = "\(data.id)"
+//                cell.salonAddress.text = data.address
+//                return cell
+//                
+//            }
+            
         default:break
         }
+        
         return UICollectionViewCell()
     }
     
@@ -130,6 +195,3 @@ extension BookingVC: UICollectionViewDelegate,UICollectionViewDataSource,UIColle
        return CGSize(width: collectionView.frame.size.width, height: side)
     }
 }
-
-
-
