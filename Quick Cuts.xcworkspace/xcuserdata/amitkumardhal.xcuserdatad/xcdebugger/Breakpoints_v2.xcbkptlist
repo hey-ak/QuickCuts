@@ -18,36 +18,6 @@
             endingLineNumber = "180"
             landmarkName = "updateReviewData(_:commentCount:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "1D0F6FB0-0A72-447B-A37B-BCEFCD7AEC0E - fd00f0fc6f9cc424"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Result&lt;(), Swift.Error&gt;) -&gt; () in closure #1 (Swift.Optional&lt;Quick_Cuts.SalonModel&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Quick_Cuts.ReviewVC.updateReviewData(_: Swift.Int, commentCount: Swift.Int) -&gt; ()"
-                  moduleName = "Quick Cuts"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/amitkumardhal/Desktop/Amit&apos;s%20Project/QuickCuts/Quick%20Cuts/Controllers/ReviewVC.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "180"
-                  endingLineNumber = "180">
-               </Location>
-               <Location
-                  uuid = "1D0F6FB0-0A72-447B-A37B-BCEFCD7AEC0E - 6919763441d11e90"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Result&lt;(), Swift.Error&gt;) -&gt; () in closure #1 (Swift.Optional&lt;Quick_Cuts.SalonModel&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Quick_Cuts.ReviewVC.updateReviewData(_: Swift.Int, commentCount: Swift.Int) -&gt; ()"
-                  moduleName = "Quick Cuts"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/amitkumardhal/Desktop/Amit&apos;s%20Project/QuickCuts/Quick%20Cuts/Controllers/ReviewVC.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "170"
-                  endingLineNumber = "170">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -64,43 +34,13 @@
             endingLineNumber = "184"
             landmarkName = "updateReviewData(_:commentCount:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "08BC6248-21DF-4FDD-975F-81C8A57BB742 - fd00f0fc6f9cc5a8"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Result&lt;(), Swift.Error&gt;) -&gt; () in closure #1 (Swift.Optional&lt;Quick_Cuts.SalonModel&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Quick_Cuts.ReviewVC.updateReviewData(_: Swift.Int, commentCount: Swift.Int) -&gt; ()"
-                  moduleName = "Quick Cuts"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/amitkumardhal/Desktop/Amit&apos;s%20Project/QuickCuts/Quick%20Cuts/Controllers/ReviewVC.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "184"
-                  endingLineNumber = "184">
-               </Location>
-               <Location
-                  uuid = "08BC6248-21DF-4FDD-975F-81C8A57BB742 - 40365a23e5fc68d1"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 @Swift.MainActor () -&gt; () in closure #1 (Swift.Result&lt;(), Swift.Error&gt;) -&gt; () in closure #1 (Swift.Optional&lt;Quick_Cuts.SalonModel&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Quick_Cuts.ReviewVC.updateReviewData(_: Swift.Int, commentCount: Swift.Int) -&gt; ()"
-                  moduleName = "Quick Cuts"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/amitkumardhal/Desktop/Amit&apos;s%20Project/QuickCuts/Quick%20Cuts/Controllers/ReviewVC.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "170"
-                  endingLineNumber = "170">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "F9AB096E-4FF9-4E5B-84E4-A7211A8AA886"
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Quick Cuts/Controllers/HomeVC.swift"
@@ -131,22 +71,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "6BC7EC43-B32B-4F9B-8A6F-643C0B333D8A"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Quick Cuts/Controllers/BookingVC.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "92"
-            endingLineNumber = "92"
-            landmarkName = "sortBookingAccoringToTime(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "EB60C60C-FA8D-496D-BB2F-D89D13C7E5C5"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -154,8 +78,8 @@
             filePath = "Quick Cuts/Controllers/DateAndTimeVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "123"
-            endingLineNumber = "123"
+            startingLineNumber = "126"
+            endingLineNumber = "126"
             landmarkName = "paymentMethodButtonDidTapped(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -174,6 +98,54 @@
             endingLineNumber = "93"
             landmarkName = "booking(from:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "16321840-ADC9-4E5D-90B8-01DCFE92AE16"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Quick Cuts/Controllers/BookingVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
+            landmarkName = "sortBookingAccoringToTime(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "55A792DB-345F-4894-9C9E-2EA2DC979593"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Quick Cuts/Controllers/DateAndTimeVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "225"
+            endingLineNumber = "225"
+            landmarkName = "combineDateAndTime(_:_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "49A3903A-6105-4109-BCDC-0EC9FB4D0F4C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Quick Cuts/Controllers/DateAndTimeVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "190"
+            endingLineNumber = "190"
+            landmarkName = "DateAndTimeVC"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -288,7 +288,7 @@ extension HomeVC: UICollectionViewDelegate,UICollectionViewDataSource,UICollecti
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if collectionView == ratedCollectionView {
-            let saloneData = allSalonData[indexPath.row]
+            let saloneData = topRatedSalons[indexPath.row]
             let nextVC = storyboard?.instantiateViewController(withIdentifier: "SelectserviceVC") as! SelectserviceVC
             nextVC.salonData = saloneData
             nextVC.hidesBottomBarWhenPushed = true

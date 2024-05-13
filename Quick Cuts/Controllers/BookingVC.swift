@@ -78,8 +78,11 @@ class BookingVC: UIViewController {
     
     private func sortBookingAccoringToTime(_ bookings: [BookingModel]) {
         let currentDate = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss ZZZZ"
+
         let (upcomingBookings, expiredBookings) = bookings.reduce(into: ([BookingModel](), [BookingModel]())) { result, booking in
-            if let expiryDate = booking.expiryDate {
+            if let expiryDateString = booking.expiryDate, let expiryDate = dateFormatter.date(from: expiryDateString) {
                 if expiryDate > currentDate {
                     result.0.append(booking)
                 } else {
@@ -87,6 +90,7 @@ class BookingVC: UIViewController {
                 }
             }
         }
+        
         expiredBooking = expiredBookings
         UpcommingBooking = upcomingBookings
         bookingCollectionView.reloadData()
@@ -99,7 +103,7 @@ class BookingVC: UIViewController {
     @objc 
     func connected(sender: UIButton){
         let buttonTag = sender.tag
-        let salonId = bookings[buttonTag].salonId
+        let salonId = expiredBooking[buttonTag].salonId
         let nextVC = storyboard?.instantiateViewController(withIdentifier: "ReviewVC") as! ReviewVC
         nextVC.saloneId = salonId
         navigationController?.pushViewController(nextVC, animated: true)

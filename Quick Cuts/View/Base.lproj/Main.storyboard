@@ -2443,10 +2443,19 @@ Our runway expects have curated some of the most popular services at Salon
                                                             <constraint firstItem="A4L-p6-nsN" firstAttribute="centerX" secondItem="Yxk-Uh-8t8" secondAttribute="centerX" id="OGd-gL-PCH"/>
                                                         </constraints>
                                                     </stackView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vY6-fb-ulj">
+                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="185.33333333333334"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <connections>
+                                                            <action selector="cardDidTapped:" destination="g4H-bR-Kge" eventType="touchUpInside" id="Jme-nt-9nI"/>
+                                                        </connections>
+                                                    </button>
                                                 </subviews>
                                                 <color key="backgroundColor" name="EC6E57"/>
                                                 <constraints>
                                                     <constraint firstItem="XtT-Yw-KOL" firstAttribute="leading" secondItem="l2I-5P-5vh" secondAttribute="leading" constant="10" id="0ei-il-ycd"/>
+                                                    <constraint firstItem="vY6-fb-ulj" firstAttribute="bottom" secondItem="JKn-qo-udc" secondAttribute="bottom" id="4Zr-HP-kTd"/>
+                                                    <constraint firstItem="vY6-fb-ulj" firstAttribute="top" secondItem="5ey-yb-sEG" secondAttribute="top" id="5js-jv-3ik"/>
                                                     <constraint firstItem="5ey-yb-sEG" firstAttribute="top" secondItem="l2I-5P-5vh" secondAttribute="top" id="6tm-BS-Fu9"/>
                                                     <constraint firstItem="XtT-Yw-KOL" firstAttribute="top" relation="greaterThanOrEqual" secondItem="5ey-yb-sEG" secondAttribute="bottom" constant="10" id="Ccz-qE-cde"/>
                                                     <constraint firstItem="MfV-tY-DR3" firstAttribute="leading" secondItem="l2I-5P-5vh" secondAttribute="leading" constant="1" id="Dgu-ly-h4O"/>
@@ -2457,7 +2466,9 @@ Our runway expects have curated some of the most popular services at Salon
                                                     <constraint firstAttribute="trailing" secondItem="5ey-yb-sEG" secondAttribute="trailing" id="Xr8-zr-0bk"/>
                                                     <constraint firstAttribute="bottom" secondItem="XtT-Yw-KOL" secondAttribute="bottom" constant="10" id="iif-tw-wPr"/>
                                                     <constraint firstItem="5ey-yb-sEG" firstAttribute="height" secondItem="l2I-5P-5vh" secondAttribute="height" multiplier="0.65" id="lR9-A3-tj0"/>
+                                                    <constraint firstItem="vY6-fb-ulj" firstAttribute="leading" secondItem="5ey-yb-sEG" secondAttribute="leading" id="uDc-5m-w6g"/>
                                                     <constraint firstItem="5ey-yb-sEG" firstAttribute="leading" secondItem="l2I-5P-5vh" secondAttribute="leading" id="yUI-KY-RUm"/>
+                                                    <constraint firstItem="vY6-fb-ulj" firstAttribute="trailing" secondItem="5ey-yb-sEG" secondAttribute="trailing" id="yqi-TH-M2H"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -2502,11 +2513,13 @@ Our runway expects have curated some of the most popular services at Salon
                         <outlet property="animatingView" destination="VAP-ag-oup" id="2Yx-hf-pAL"/>
                         <outlet property="detailViewTopConstarint" destination="eYi-CT-ko5" id="l8J-PD-KMq"/>
                         <outlet property="mapView" destination="pcb-3k-kWm" id="xUk-oX-iuo"/>
+                        <outlet property="ratingView" destination="guH-pw-9KC" id="nYh-lu-Jpg"/>
                         <outlet property="salonDetailedInfoCardAddress" destination="4hc-NS-l0Z" id="qUz-6M-M13"/>
                         <outlet property="salonDetailedInfoCardImage" destination="JKn-qo-udc" id="tbV-Fq-6yu"/>
                         <outlet property="salonDetailedInfoCardName" destination="MAd-qM-F3g" id="qT7-Vx-Cye"/>
                         <outlet property="salonDetailedInfoCardTotalReview" destination="A4L-p6-nsN" id="3JH-oq-3zd"/>
                         <outlet property="searchBar" destination="zzN-d4-cym" id="8Hg-vI-ryi"/>
+                        <outlet property="totalReviews" destination="A4L-p6-nsN" id="qeE-jN-ll5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zYa-dc-ndQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

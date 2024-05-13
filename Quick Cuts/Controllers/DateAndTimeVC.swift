@@ -113,12 +113,15 @@ class DateAndTimeVC: UIViewController {
         
         let timeStamp = Int((Date().timeIntervalSince1970) * 1000)
         
+        guard let selectedDateOfService = getSelectedDate() else { return }
+        
         guard let timeSlotData = getTimeSlotdata(selectedIndexPaths) else { return }
-        guard let lastEndTimeOfService = getLastEndTimeOfService(slots) else {
+        guard let lastEndTimeOfService = getLastEndTimeOfService(slots, forDay: selectedDateOfService) else {
             return
         }
         
-        guard let expiryDate = combineDateAndTime(timeSlotData.timeSlot,lastEndTimeOfService) else { return }
+        guard let expiryDate = combineDateAndTime(timeSlotData.timeSlot,lastEndTimeOfService),
+                let formattedDate = convertDateFormat(lastEndTimeOfService) else { return }
         
         let newBooking = BookingModel(
             id: timeStamp,
@@ -132,7 +135,7 @@ class DateAndTimeVC: UIViewController {
             selectedTimeIds: slots,
             bookingDate: date,
             isCancled:false,
-            expiryDate:expiryDate
+            expiryDate:formattedDate
         )
 
         BookingManager.shared.createBooking(newBooking) { error in
@@ -143,15 +146,61 @@ class DateAndTimeVC: UIViewController {
         }
     }
     
-    private func getLastEndTimeOfService(_ selectedTimeIds: [Int]) -> Date? {
+    private func getSelectedDate() -> Date? {
+        let selectedDate = selectedIndexPaths.first
+        guard let selectedDate = selectedDate else { return nil }
+        let date = dates[selectedDate.row]
+        return date
+    }
+    
+    private func getLastEndTimeOfService(_ selectedTimeIds: [Int], forDay day: Date) -> Date? {
         guard let greatestId = selectedTimeIds.max() else {
             return nil
         }
-        var date = dates[greatestId]
+        let timeSlot = timeSlotData[greatestId].timeSlot
+        
         let calendar = Calendar.current
-        date = calendar.date(byAdding: .minute, value: 30, to: date)!
-        return date
+        var dateComponents = calendar.dateComponents([.year, .month, .day], from: day)
+        
+        // Parse the timeSlot string to get hours and minutes
+        let timeFormatter = DateFormatter()
+        timeFormatter.dateFormat = "h:mm a"
+        guard let time = timeFormatter.date(from: timeSlot) else {
+            return nil
+        }
+        
+        let timeComponents = calendar.dateComponents([.hour, .minute], from: time)
+        
+        // Set the given day's date with the hours and minutes from the timeSlot
+        dateComponents.hour = timeComponents.hour
+        dateComponents.minute = timeComponents.minute
+        
+        guard let startTime = calendar.date(from: dateComponents) else {
+            return nil
+        }
+        
+        // Add 30 minutes to the start time to get the end time
+        let endTime = calendar.date(byAdding: .minute, value: 30, to: startTime)
+        
+        return endTime
     }
+
+//    
+//    private func getLastEndTimeOfService(_ selectedTimeIds: [Int]) -> Date? {
+//        guard let greatestId = selectedTimeIds.max() else {
+//            return nil
+//        }
+//        var timeSlot = timeSlotData[greatestId].timeSlot
+//        let calendar = Calendar.current
+//        
+//        // BookingTimeSlot(id: 1, timeSlot: "12:00 AM")
+//        
+//        // add today s day month and year in "12:00 AM" and add 30 minutes in "12:00 AM"
+//        
+//        
+//        let date = calendar.date(byAdding: .minute, value: 30, to: date)!
+//        return date
+//    }
     
     private func getTimeSlotdata(_ timeslot:[IndexPath]) -> BookingTimeSlot? {
         guard timeslot.count > 0 else {
@@ -159,6 +208,12 @@ class DateAndTimeVC: UIViewController {
         }
         let timeSlotCount = timeslot.count
         return timeSlotData[timeslot[timeSlotCount - 1].row]
+    }
+    
+    func convertDateFormat(_ inputDate:Date) -> String? {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss ZZZZ"
+        return dateFormatter.string(from: inputDate)
     }
     
     func combineDateAndTime(_ dateString: String,_ selectedDate:Date) -> Date? {
@@ -353,5 +408,5 @@ struct BookingModel:Codable {
     let selectedTimeIds:[Int]?
     let bookingDate:String?
     let isCancled:Bool?
-    let expiryDate:Date?
+    let expiryDate:String?
 }

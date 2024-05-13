@@ -1,4 +1,5 @@
 import UIKit
+import Cosmos
 import SDWebImage
 import MapKit
 import DropDown
@@ -12,6 +13,8 @@ class NewExploreVC: UIViewController, MKMapViewDelegate, UISearchBarDelegate {
     private var isCardSelected:Bool = false
     
     
+    @IBOutlet weak var totalReviews: UILabel!
+    @IBOutlet weak var ratingView: CosmosView!
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var animatingView: UIView!
     @IBOutlet weak var mapView: MKMapView!
@@ -77,6 +80,15 @@ class NewExploreVC: UIViewController, MKMapViewDelegate, UISearchBarDelegate {
         }
     }
     
+    @IBAction func cardDidTapped(_ sender: Any) {
+        if let currentSalonData = currentSalonData {
+            let nextVC = storyboard?.instantiateViewController(withIdentifier: "SelectserviceVC") as! SelectserviceVC
+            nextVC.salonData = currentSalonData
+            nextVC.hidesBottomBarWhenPushed = true
+            navigationController?.pushViewController(nextVC, animated: true)
+        }
+    }
+    
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         guard allSalonData.count > 0 else { return }
         if searchText.isEmpty == true {
@@ -84,7 +96,7 @@ class NewExploreVC: UIViewController, MKMapViewDelegate, UISearchBarDelegate {
             self.reinitilizeAllAnotations()
             return
         }
-        let filteredData = allSalonData.filter ({ $0.salonName!.lowercased().contains(searchText) })
+        let filteredData = allSalonData.filter ({ $0.salonName!.lowercased().contains(searchText.lowercased()) })
         if filteredData.count > 0 {
             let salonName = filteredData.compactMap { $0.salonName }
             print(salonName)
@@ -270,6 +282,9 @@ class NewExploreVC: UIViewController, MKMapViewDelegate, UISearchBarDelegate {
         }
         salonDetailedInfoCardName.text = salonData.salonName
         salonDetailedInfoCardAddress.text = salonData.address
+        totalReviews.text = "\(salonData.reviews ?? 0) Reviews"
+        ratingView.rating = salonData.rating ?? 0.0
+        
     }
     
     private func clearAllAnotations() {
